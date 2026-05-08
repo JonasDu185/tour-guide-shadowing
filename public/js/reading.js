@@ -6,7 +6,9 @@ let currentScript = null;
 let isShadowingMode = false;
 let selectedText = '';
 let selectedRange = null;
-let aiChatContext = '';  // 当前分析句子的上下文
+let aiCurrentText = '';   // 持久保存，不随 hideFab 清空
+let aiChatContext = '';
+let aiAbort = null;
 
 // AI Sheet DOM
 const aiFab = document.getElementById('aiFab');
@@ -120,11 +122,19 @@ document.addEventListener('mousedown', (e) => {
 
 async function openAiSheet() {
   if (!selectedText) return;
+  aiCurrentText = selectedText;  // 持久保存，不被 hideFab 清空
   hideFab();
-  const text = selectedText;
+
+  // 取消上一次未完成的请求
+  if (aiAbort) aiAbort.abort();
+  aiAbort = new AbortController();
+
+  // 重置语法按钮状态
+  aiGrammarBtn.textContent = '📖 语法分析';
+  aiGrammarBtn.disabled = false;
 
   // 显示面板
-  aiOriginal.textContent = text;
+  aiOriginal.textContent = aiCurrentText;
   aiSheetLabel.textContent = '翻译中...';
   aiTranslation.innerHTML = '<div class="ai-loading">AI 翻译中...</div>';
   aiPhonetic.textContent = '';
@@ -137,7 +147,8 @@ async function openAiSheet() {
   try {
     const data = await fetchJSON(API.ai, {
       method: 'POST',
-      body: JSON.stringify({ text, action: 'translate' }),
+      body: JSON.stringify({ text: aiCurrentText, action: 'translate' }),
+      signal: aiAbort.signal,
     });
 
     aiSheetLabel.textContent = data.textType === 'word' ? '查词' : '翻译';
@@ -153,16 +164,20 @@ async function openAiSheet() {
     if (data.textType === 'sentence') {
       aiGrammarBtn.style.display = '';
       aiChatArea.style.display = '';
-      aiChatContext = text;
+      aiChatContext = aiCurrentText;
     }
   } catch (err) {
+    if (err.name === 'AbortError') return;  // 被新请求取消，静默
     aiSheetLabel.textContent = '出错了';
-    aiTranslation.textContent = '翻译失败：' + (err.message || '未知错误');
+    aiTranslation.textContent = '翻译失败：' + (err.message || '未知错误').slice(0, 100);
     console.error('AI translate failed:', err);
   }
 }
 
 async function askGrammar() {
+  if (aiAbort) aiAbort.abort();
+  aiAbort = new AbortController();
+
   aiGrammarBtn.disabled = true;
   aiGrammarBtn.textContent = '⏳ 分析中...';
   aiGrammarResult.style.display = '';
@@ -171,7 +186,8 @@ async function askGrammar() {
   try {
     const data = await fetchJSON(API.ai, {
       method: 'POST',
-      body: JSON.stringify({ text: selectedText, action: 'grammar' }),
+      body: JSON.stringify({ text: aiCurrentText, action: 'grammar' }),
+      signal: aiAbort.signal,
     });
     aiGrammarResult.innerHTML = data.result
       .split('\n')
@@ -180,7 +196,7 @@ async function askGrammar() {
       .join('');
     aiGrammarBtn.textContent = '📖 语法分析';
   } catch (err) {
-    aiGrammarResult.innerHTML = '<div class="ai-error">分析失败，请重试</div>';
+    aiGrammarResult.innerHTML = '<div class="ai-error">分析失败：' + (err.name === 'AbortError' ? '已取消' : (err.message || '未知错误')).slice(0, 100) + '</div>';
     console.error('AI grammar failed:', err);
   }
   aiGrammarBtn.disabled = false;
@@ -195,6 +211,9 @@ async function askChat() {
   aiChatMessages.innerHTML += '<div class="ai-chat-msg ai-chat-ai">⏳</div>';
   aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
 
+  if (aiAbort) aiAbort.abort();
+  aiAbort = new AbortController();
+
   try {
     const data = await fetchJSON(API.ai, {
       method: 'POST',
@@ -204,13 +223,15 @@ async function askChat() {
         context: aiChatContext,
         question: input,
       }),
+      signal: aiAbort.signal,
     });
     // 替换占位
     const lastMsg = aiChatMessages.querySelector('.ai-chat-ai:last-child');
     if (lastMsg) lastMsg.textContent = data.result;
   } catch (err) {
     const lastMsg = aiChatMessages.querySelector('.ai-chat-ai:last-child');
-    if (lastMsg) lastMsg.textContent = '回复失败';
+    const reason = err.name === 'AbortError' ? '已取消' : (err.message || '未知错误');
+    if (lastMsg) lastMsg.textContent = '回复失败：' + reason.slice(0, 60);
     console.error('AI chat failed:', err);
   }
 }
@@ -231,7 +252,9 @@ function closeAiSheet() {
   aiSheetBackdrop.style.display = 'none';
   aiSheet.style.display = 'none';
   selectedText = '';
+  aiCurrentText = '';
   aiChatContext = '';
+  if (aiAbort) { aiAbort.abort(); aiAbort = null; }
 }
 
 // ---------- Mode Toggle ----------

@@ -96,7 +96,7 @@ function buildSystemPrompt(action, text) {
       return '你是一个中英翻译助手。请将以下英文翻译成准确自然的中文。只返回翻译。';
     }
     case 'grammar':
-      return '你是一个英语语法教师。请用中文详细分析以下句子的语法结构，包括主谓宾、从句类型、时态语态、关键语法点。分层级讲解，适合英语学习者阅读。';
+      return '分析句子语法，用中文简要列出：1.主谓宾 2.时态语态 3.从句类型（如有） 4.关键语法点。控制在150字以内。';
     case 'chat':
       return '你是一个英语学习助教，正在帮学生阅读英文导游词。用中文耐心解答学生的疑问。';
     default:
@@ -124,24 +124,28 @@ app.post('/api/ai', async (req, res) => {
     ];
 
     if (act === 'chat') {
-      // 多轮对话：带上原句上下文
       if (context) messages.push({ role: 'user', content: `我正在读这句话："${context}"` });
       messages.push({ role: 'user', content: question || text });
     } else {
       messages.push({ role: 'user', content: text.trim() });
     }
 
-    const aiRes = await axios.post(ARK_URL, {
+    // 全部关闭推理模式，速度快
+    const body = {
       model: ARK_MODEL,
       messages,
-      max_tokens: 800,
       temperature: 0.3,
-    }, {
+      max_tokens: act === 'translate' ? 300 : 300,
+      thinking: { type: 'disabled' },
+    };
+    const timeout = act === 'translate' ? 15000 : 30000;
+
+    const aiRes = await axios.post(ARK_URL, body, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${ARK_KEY}`,
       },
-      timeout: 30000,
+      timeout,
     });
 
     const content = aiRes.data?.choices?.[0]?.message?.content || '';
