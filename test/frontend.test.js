@@ -22,7 +22,6 @@ function buildDiff(orig, rec) {
       dp[i][j] = orig[i - 1] === rec[j - 1]
         ? dp[i - 1][j - 1] + 1
         : Math.max(dp[i - 1][j], dp[i][j - 1]);
-  const result = [];
   let i = m, j = n;
   const stack = [];
   while (i > 0 || j > 0) {

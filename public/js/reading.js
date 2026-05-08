@@ -157,7 +157,7 @@ async function openAiSheet() {
     }
   } catch (err) {
     aiSheetLabel.textContent = '出错了';
-    aiTranslation.textContent = '翻译失败，请重试';
+    aiTranslation.textContent = '翻译失败：' + (err.message || '未知错误');
     console.error('AI translate failed:', err);
   }
 }

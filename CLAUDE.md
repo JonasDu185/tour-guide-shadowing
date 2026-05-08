@@ -56,10 +56,10 @@ test/              单元测试
 - 移动优先: 768px 断点, safe-area-inset 适配
 - 中国风暖色调，不要用冷色系
 
-## 开发流程（7 步）
+## 开发流程（8 步）
 
 ```
-1. 设计蓝图 → 2. 写测试 → 3. 写代码 → 4. 跑测试 → 5. 审查 → 6. commit → 7. push
+1. 设计蓝图 → 2. 写测试 → 3. 写代码 → 4. 跑测试 → 5. 审查 → 6. commit → 7. 本地测试 → 8. push
 ```
 
 | 步骤 | 做什么 | 谁主导 |
@@ -70,7 +70,8 @@ test/              单元测试
 | 4. 验证 | `npm test` 确保全部通过 | Claude 跑 |
 | 5. 审查 | `/simplify` + `/security-review` 检查质量安全 | Claude 跑 |
 | 6. commit | 本地提交，中文 commit message | Claude 做 |
-| 7. push | `git push origin main` 推到 GitHub | Claude 做（需用户确认） |
+| 7. 本地测试 | 启动 `node server.js`，用户在手机 Safari 打开 `https://<Mac-IP>:3443` 实测 | 用户测 |
+| 8. push | `git push origin main` 推到 GitHub | Claude 做（需用户确认） |
 
 ## 待实现
 

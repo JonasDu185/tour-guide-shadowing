@@ -1,6 +1,5 @@
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
-const crypto = require('crypto');
 
 // ---------- 从 server.js 移植的纯函数 ----------
 

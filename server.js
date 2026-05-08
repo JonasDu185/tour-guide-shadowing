@@ -6,6 +6,14 @@ const path = require('path');
 
 const app = express();
 app.use(express.json({ limit: '5mb' }));
+
+// JS/CSS/SW 禁止缓存，确保手机端总是拿到最新版本
+app.use((req, res, next) => {
+  if (/\.(js|css)$/.test(req.path) || req.path === '/sw.js') {
+    res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+  }
+  next();
+});
 app.use(express.static(path.join(__dirname, 'public')));
 
 const crypto = require('crypto');
@@ -362,7 +370,6 @@ function wsSend(socket, data) {
 function createFrameReader(socket) {
   let buffer = Buffer.alloc(0);
   let resolver = null;
-  let rejecter = null;
   let timer = null;
 
   socket.on('data', (data) => {
@@ -398,7 +405,7 @@ function createFrameReader(socket) {
       const maskKey = masked ? buffer.slice(offset, offset + 4) : null;
       offset += maskLen;
 
-      let payload = buffer.slice(offset, offset + payloadLen);
+      const payload = buffer.slice(offset, offset + payloadLen);
       if (masked) {
         for (let i = 0; i < payload.length; i++) payload[i] ^= maskKey[i % 4];
       }
@@ -409,7 +416,6 @@ function createFrameReader(socket) {
       const resolve = resolver;
       clearTimeout(timer);
       resolver = null;
-      rejecter = null;
       timer = null;
 
       if (opcode === 0x08) {
@@ -423,10 +429,8 @@ function createFrameReader(socket) {
   return function readFrame(timeout = 30000) {
     return new Promise((resolve, reject) => {
       resolver = resolve;
-      rejecter = reject;
       timer = setTimeout(() => {
         resolver = null;
-        rejecter = null;
         reject(new Error('WS read timeout'));
       }, timeout);
       // Try to read immediately if data already in buffer
@@ -511,7 +515,7 @@ app.post('/api/stt', async (req, res) => {
           const msg = JSON.parse(frame.payload.toString());
           console.log('ASR plain:', JSON.stringify(msg).slice(0, 300));
           if (msg.text) finalText = msg.text;
-        } catch {}
+        } catch { /* plain text frame, ignore */ }
       }
     }
 

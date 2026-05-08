@@ -8,9 +8,7 @@ let currentIdx = 0;
 let mediaRecorder = null;
 let recordedChunks = [];
 let recordingBlob = null;
-let recordingWav = null;
 let ttsState = 'idle';
-let sttLoading = false;
 let speedIdx = 0;
 const SPEEDS = [1, 0.75, 1.25];
 const STORAGE_KEY = 'shadowing_progress';
@@ -41,7 +39,6 @@ function cleanupShadowing() {
   stopRecording();
   if (recordingBlob) URL.revokeObjectURL(recordingBlob);
   recordingBlob = null;
-  recordingWav = null;
   document.getElementById('recordingSection').style.display = 'none';
   document.getElementById('comparisonSection').style.display = 'none';
 }
@@ -62,7 +59,7 @@ function loadProgress() {
     if (!raw) return -1;
     const data = JSON.parse(raw);
     if (data.scriptId === currentScript.id) return data.index;
-  } catch {}
+  } catch { /* localStorage 解析失败，忽略 */ }
   return -1;
 }
 
@@ -124,8 +121,8 @@ function closeSentenceList() { const el = document.getElementById('sentenceListM
 // ---------- TTS Playback ----------
 
 async function playOriginal() {
-  if (ttsState !== 'idle') return;
   if (ttsState === 'playing') { stopTTS(); return; }
+  if (ttsState !== 'idle') return;  // loading 中不响应
   const s = sentences[currentIdx];
   if (!s) return;
 
@@ -244,7 +241,6 @@ function showRecordingPlayback() {
 function hideRecording() {
   document.getElementById('recordingSection').style.display = 'none';
   if (recordingBlob) { URL.revokeObjectURL(recordingBlob); recordingBlob = null; }
-  recordingWav = null;
   recordingAudio.src = '';
   updateRecordingUI(false);
 }
@@ -262,7 +258,6 @@ async function runASR() {
   try {
     // Convert browser audio blob to 16kHz WAV
     const wavBlob = await blobToWav(recordingBlob);
-    recordingWav = wavBlob;
 
     // Base64 encode and send to backend
     const reader = new FileReader();
@@ -346,7 +341,6 @@ function buildDiff(orig, rec) {
         : Math.max(dp[i - 1][j], dp[i][j - 1]);
 
   // Backtrack
-  const result = [];
   let i = m, j = n;
   const stack = [];
 
