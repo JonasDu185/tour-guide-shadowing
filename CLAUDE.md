@@ -6,16 +6,17 @@
 - 前端: 原生 HTML/CSS/JS + PWA（单页面应用），不要引入 React/Vue 等框架
 - 后端: Express 5.x (Node.js) 做代理中转
 - 部署: 本地 `npm start` → HTTPS 端口 3443 + HTTP 3000 重定向
-- 测试: `npm test` → 18 个单元测试（Node 20 自带 test runner）
+- 测试: `npm test` → 29 个单元测试（Node 20 自带 test runner）
 - 手机测试: Safari 打开 `https://<Mac-IP>:3443` → 添加到主屏幕
 - 不要新增依赖，保持轻量
 
 ## 环境变量 (.env)
 
-- VOLC_API_KEY = 火山引擎 API Key（同时用于 TTS + ASR V3）
+- VOLC_API_KEY = 火山引擎 API Key（TTS + ASR V3）
 - VOLC_RESOURCE_ID = seed-tts-2.0（TTS 资源 ID）
 - VOLC_SPEAKER = TTS 音色 ID
-- ASR 使用 V3 协议（`volc.seedasr.sauc.duration`），与 TTS 共用 API Key，无需单独配置
+- ARK_API_KEY = 火山方舟 API Key（豆包大模型，翻译 + 语法分析 + 追问）
+- ARK_MODEL = 豆包接入点 ID（如 ep-20260509013108-hhw96）
 
 ## 项目结构
 
@@ -28,7 +29,7 @@ public/            前端静态文件
   css/style.css    全局样式 (中国风暖色调, 移动优先)
   js/common.js     通用工具
   js/home.js       首页逻辑
-  js/reading.js    阅读模式 + 点词翻译 popover
+  js/reading.js    阅读模式 + AI 智能查词（拖动选择 → 翻译/语法分析/追问）
   js/shadowing.js  影子跟读 (TTS 播放 + 录音 + ASR + LCS diff 对比) ✅ 已实现
   manifest.json    PWA
   sw.js            Service Worker
@@ -43,10 +44,10 @@ test/              单元测试
 |------|------|------|
 | GET | /api/scripts | 列出所有导游词 |
 | GET | /api/scripts/:id | 获取单篇 |
-| GET | /api/dict/:word | 查词典 (Free Dictionary API 代理) |
 | GET | /api/tts/:scriptId/:index | 获取已缓存的 TTS 音频 |
 | POST | /api/tts | 语音合成 (火山引擎 TTS) |
 | POST | /api/stt | 语音识别 (火山引擎 ASR V3) |
+| POST | /api/ai | AI 翻译 / 语法分析 / 追问 (豆包 Lite) |
 
 ## 设计规范
 

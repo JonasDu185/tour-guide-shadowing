@@ -76,14 +76,31 @@
     <button class="btn-primary" onclick="toggleMode()">🎤 进入影子跟读</button>
   </div>
 
-  <!-- Dictionary Popover -->
-  <div class="popover" id="popover" style="display:none;">
-    <div class="popover-head">
-      <span class="popover-word" id="popWord"></span>
-      <button class="popover-audio-btn" id="popAudioBtn" style="display:none;" title="发音">🔊</button>
+  <!-- AI Floating Button (选中文本后出现) -->
+  <button class="ai-fab" id="aiFab" style="display:none;" onclick="openAiSheet()">✨</button>
+
+  <!-- AI Bottom Sheet -->
+  <div class="ai-sheet-backdrop" id="aiSheetBackdrop" style="display:none;" onclick="closeAiSheet()"></div>
+  <div class="ai-sheet" id="aiSheet" style="display:none;">
+    <div class="ai-sheet-handle" onclick="closeAiSheet()"><span class="ai-sheet-handle-bar"></span></div>
+    <div class="ai-sheet-head">
+      <span class="ai-sheet-label" id="aiSheetLabel">翻译</span>
+      <button class="ai-sheet-close" onclick="closeAiSheet()">✕</button>
     </div>
-    <div class="popover-phonetic" id="popPhonetic"></div>
-    <div id="popMeanings"></div>
+    <div class="ai-sheet-body" id="aiSheetBody">
+      <div class="ai-original" id="aiOriginal"></div>
+      <div class="ai-translation" id="aiTranslation"></div>
+      <div class="ai-phonetic" id="aiPhonetic"></div>
+      <button class="ai-grammar-btn" id="aiGrammarBtn" style="display:none;" onclick="askGrammar()">📖 语法分析</button>
+      <div class="ai-grammar-result" id="aiGrammarResult" style="display:none;"></div>
+      <div class="ai-chat" id="aiChatArea" style="display:none;">
+        <div class="ai-chat-messages" id="aiChatMessages"></div>
+        <div class="ai-chat-input-row">
+          <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="追问 AI...">
+          <button class="ai-chat-send" onclick="askChat()">发送</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="/js/common.js"></script>

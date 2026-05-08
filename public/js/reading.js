@@ -1,19 +1,26 @@
 /* ===========================
-   reading.js — Reading mode + word-click dictionary
+   reading.js — 阅读模式 + AI 智能查词
    =========================== */
 
 let currentScript = null;
-let currentWordEl = null;
-let dictAudio = null;
 let isShadowingMode = false;
-const dictCache = {};
+let selectedText = '';
+let selectedRange = null;
+let aiChatContext = '';  // 当前分析句子的上下文
 
-// Popover elements
-const popover = document.getElementById('popover');
-const popWord = document.getElementById('popWord');
-const popPhonetic = document.getElementById('popPhonetic');
-const popMeanings = document.getElementById('popMeanings');
-const popAudioBtn = document.getElementById('popAudioBtn');
+// AI Sheet DOM
+const aiFab = document.getElementById('aiFab');
+const aiSheet = document.getElementById('aiSheet');
+const aiSheetBackdrop = document.getElementById('aiSheetBackdrop');
+const aiSheetLabel = document.getElementById('aiSheetLabel');
+const aiOriginal = document.getElementById('aiOriginal');
+const aiTranslation = document.getElementById('aiTranslation');
+const aiPhonetic = document.getElementById('aiPhonetic');
+const aiGrammarBtn = document.getElementById('aiGrammarBtn');
+const aiGrammarResult = document.getElementById('aiGrammarResult');
+const aiChatArea = document.getElementById('aiChatArea');
+const aiChatMessages = document.getElementById('aiChatMessages');
+const aiChatInput = document.getElementById('aiChatInput');
 
 // ---------- Load & Render ----------
 
@@ -45,121 +52,202 @@ function renderParagraphs() {
   container.style.display = '';
   const html = currentScript.paragraphs.map((p, i) => `
     <div class="para-block">
-      <p class="para-en">${makeWordsClickable(p.en)}</p>
+      <p class="para-en">${escapeHTML(p.en)}</p>
       <p class="para-zh">${escapeHTML(p.zh)}</p>
     </div>
     ${i < currentScript.paragraphs.length - 1 ? '<hr class="para-divider">' : ''}
   `).join('');
   container.innerHTML = html;
-
-  // Attach click handlers to all words
-  container.querySelectorAll('.word').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.stopPropagation();
-      onWordClick(el);
-    });
-  });
 }
 
-function makeWordsClickable(text) {
-  return escapeHTML(text).replace(/([A-Za-z]+(?:[''][A-Za-z]+)?)/g, '<span class="word">$1</span>');
+// ---------- Text Selection → Floating Button ----------
+
+document.addEventListener('mouseup', onTextSelection);
+document.addEventListener('touchend', onTextSelection);
+
+function onTextSelection(e) {
+  // 延迟等浏览器完成选区更新
+  setTimeout(() => {
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.toString().trim()) {
+      hideFab();
+      return;
+    }
+
+    const text = sel.toString().trim();
+    if (text.length > 3000) { hideFab(); return; }
+
+    // 确保选区在阅读区域内
+    const readingView = document.getElementById('readingView');
+    if (!readingView || readingView.style.display === 'none') { hideFab(); return; }
+    if (!sel.anchorNode || !readingView.contains(sel.anchorNode)) { hideFab(); return; }
+
+    selectedText = text;
+    selectedRange = sel.getRangeAt(0);
+
+    // 定位浮动按钮
+    const rect = selectedRange.getBoundingClientRect();
+    const fabSize = 44;
+    let left = rect.right + window.scrollX - fabSize / 2;
+    let top = rect.top + window.scrollY - fabSize - 8;
+
+    if (left < 8) left = 8;
+    if (left + fabSize > window.innerWidth - 8) left = window.innerWidth - fabSize - 8;
+    if (top < 60) top = rect.bottom + window.scrollY + 8;
+
+    aiFab.style.left = left + 'px';
+    aiFab.style.top = top + 'px';
+    aiFab.style.display = '';
+    aiFab.classList.add('ai-fab-show');
+  }, 10);
 }
 
-// ---------- Dictionary Popover ----------
+function hideFab() {
+  aiFab.style.display = 'none';
+  aiFab.classList.remove('ai-fab-show');
+  selectedText = '';
+  selectedRange = null;
+}
 
-async function onWordClick(el) {
-  const word = el.textContent.trim().toLowerCase();
-
-  if (currentWordEl === el && popover.style.display === 'block') {
-    hidePopover();
-    return;
+// 点击浮动按钮外部关闭
+document.addEventListener('mousedown', (e) => {
+  if (aiFab.style.display !== 'none' && !aiFab.contains(e.target)) {
+    hideFab();
   }
+});
 
-  if (currentWordEl) currentWordEl.classList.remove('active');
-  currentWordEl = el;
-  el.classList.add('active');
+// -------- AI Sheet --------
 
-  showPopover(el, { loading: true });
+async function openAiSheet() {
+  if (!selectedText) return;
+  hideFab();
+  const text = selectedText;
+
+  // 显示面板
+  aiOriginal.textContent = text;
+  aiSheetLabel.textContent = '翻译中...';
+  aiTranslation.innerHTML = '<div class="ai-loading">AI 翻译中...</div>';
+  aiPhonetic.textContent = '';
+  aiGrammarBtn.style.display = 'none';
+  aiGrammarResult.style.display = 'none';
+  aiChatArea.style.display = 'none';
+  aiChatMessages.innerHTML = '';
+  showSheet();
 
   try {
-    const data = dictCache[word] || await fetchJSON(API.dict(word));
-    dictCache[word] = data;
-    showPopover(el, data.notFound ? { word, notFound: true } : data);
-  } catch {
-    hidePopover();
+    const data = await fetchJSON(API.ai, {
+      method: 'POST',
+      body: JSON.stringify({ text, action: 'translate' }),
+    });
+
+    aiSheetLabel.textContent = data.textType === 'word' ? '查词' : '翻译';
+    aiTranslation.textContent = data.result || '未返回结果';
+
+    // 解析音标
+    const phoneticMatch = data.result.match(/音标[：:]\s*\/?(.+?)\/?\s*$/m);
+    if (phoneticMatch && data.textType === 'word') {
+      aiPhonetic.textContent = '/ˈ' + phoneticMatch[1].replace(/^\/|\/$/g, '') + '/';
+    }
+
+    // 语法分析按钮：句子级别显示
+    if (data.textType === 'sentence') {
+      aiGrammarBtn.style.display = '';
+      aiChatArea.style.display = '';
+      aiChatContext = text;
+    }
+  } catch (err) {
+    aiSheetLabel.textContent = '出错了';
+    aiTranslation.textContent = '翻译失败，请重试';
+    console.error('AI translate failed:', err);
   }
 }
 
-function showPopover(el, data) {
-  if (data.loading) {
-    popWord.textContent = el.textContent.trim();
-    popPhonetic.textContent = '';
-    popMeanings.innerHTML = '<div class="popover-loading">查询中...</div>';
-    popAudioBtn.style.display = 'none';
-  } else if (data.notFound) {
-    popWord.textContent = data.word;
-    popPhonetic.textContent = '';
-    popMeanings.innerHTML = '<div class="popover-notfound">未找到释义</div>';
-    popAudioBtn.style.display = 'none';
-  } else {
-    popWord.textContent = data.word;
-    popPhonetic.textContent = data.phonetic ? `/${data.phonetic}/` : '';
-    let html = '';
-    if (data.zhText) {
-      html += `<div class="popover-meaning"><div class="popover-def popover-zh">${escapeHTML(data.zhText)}</div></div>`;
-    }
-    if (data.enDefinitions?.length) {
-      html += data.enDefinitions.map(m => `
-        <div class="popover-meaning">
-          <div class="popover-pos">${m.partOfSpeech}</div>
-          ${m.definitions.map(d => `<div class="popover-def">${escapeHTML(d)}</div>`).join('')}
-        </div>
-      `).join('');
-    }
-    popMeanings.innerHTML = html;
-    popAudioBtn.style.display = data.audio ? '' : 'none';
-    if (data.audio) {
-      popAudioBtn.onclick = (e) => { e.stopPropagation(); playDictAudio(data.audio); };
-    }
+async function askGrammar() {
+  aiGrammarBtn.disabled = true;
+  aiGrammarBtn.textContent = '⏳ 分析中...';
+  aiGrammarResult.style.display = '';
+  aiGrammarResult.innerHTML = '<div class="ai-loading">AI 正在分析句子结构...</div>';
+
+  try {
+    const data = await fetchJSON(API.ai, {
+      method: 'POST',
+      body: JSON.stringify({ text: selectedText, action: 'grammar' }),
+    });
+    aiGrammarResult.innerHTML = data.result
+      .split('\n')
+      .filter(line => line.trim())
+      .map(line => `<p>${escapeHTML(line)}</p>`)
+      .join('');
+    aiGrammarBtn.textContent = '📖 语法分析';
+  } catch (err) {
+    aiGrammarResult.innerHTML = '<div class="ai-error">分析失败，请重试</div>';
+    console.error('AI grammar failed:', err);
   }
-
-  const rect = el.getBoundingClientRect();
-  const popWidth = 260;
-  let left = rect.left + window.scrollX;
-  let top = rect.bottom + window.scrollY + 6;
-  if (left + popWidth > window.innerWidth) left = window.innerWidth - popWidth - 8;
-  if (left < 8) left = 8;
-  if (rect.bottom + 200 > window.innerHeight) top = rect.top + window.scrollY - 200 - 6;
-
-  popover.style.left = left + 'px';
-  popover.style.top = top + 'px';
-  popover.style.display = 'block';
+  aiGrammarBtn.disabled = false;
 }
 
-function hidePopover() {
-  popover.style.display = 'none';
-  if (currentWordEl) { currentWordEl.classList.remove('active'); currentWordEl = null; }
-  stopDictAudio();
+async function askChat() {
+  const input = aiChatInput.value.trim();
+  if (!input) return;
+
+  aiChatInput.value = '';
+  aiChatMessages.innerHTML += `<div class="ai-chat-msg ai-chat-user">${escapeHTML(input)}</div>`;
+  aiChatMessages.innerHTML += '<div class="ai-chat-msg ai-chat-ai">⏳</div>';
+  aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+
+  try {
+    const data = await fetchJSON(API.ai, {
+      method: 'POST',
+      body: JSON.stringify({
+        text: input,
+        action: 'chat',
+        context: aiChatContext,
+        question: input,
+      }),
+    });
+    // 替换占位
+    const lastMsg = aiChatMessages.querySelector('.ai-chat-ai:last-child');
+    if (lastMsg) lastMsg.textContent = data.result;
+  } catch (err) {
+    const lastMsg = aiChatMessages.querySelector('.ai-chat-ai:last-child');
+    if (lastMsg) lastMsg.textContent = '回复失败';
+    console.error('AI chat failed:', err);
+  }
 }
 
-function playDictAudio(url) { stopDictAudio(); dictAudio = new Audio(url); dictAudio.play(); }
-function stopDictAudio() { if (dictAudio) { dictAudio.pause(); dictAudio = null; } }
+// 回车发送追问
+aiChatInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') askChat();
+});
+
+function showSheet() {
+  aiSheetBackdrop.style.display = '';
+  aiSheet.style.display = '';
+  aiSheet.classList.add('ai-sheet-open');
+}
+
+function closeAiSheet() {
+  aiSheet.classList.remove('ai-sheet-open');
+  aiSheetBackdrop.style.display = 'none';
+  aiSheet.style.display = 'none';
+  selectedText = '';
+  aiChatContext = '';
+}
 
 // ---------- Mode Toggle ----------
 
 function toggleMode() {
   isShadowingMode = !isShadowingMode;
   if (isShadowingMode) {
-    // Switch to shadowing
     document.getElementById('readingView').style.display = 'none';
     document.getElementById('readingBottomBar').style.display = 'none';
     document.getElementById('shadowingView').style.display = '';
     document.getElementById('modeToggleBtn').textContent = '阅读 ←';
     document.getElementById('backBtn').setAttribute('onclick', 'toggleMode()');
-    hidePopover();
+    hideFab();
+    closeAiSheet();
     initShadowing();
   } else {
-    // Switch back to reading
     document.getElementById('shadowingView').style.display = 'none';
     document.getElementById('readingView').style.display = '';
     document.getElementById('readingBottomBar').style.display = '';
@@ -169,13 +257,6 @@ function toggleMode() {
     cleanupShadowing();
   }
 }
-
-// Hide popover on outside clicks
-document.addEventListener('click', (e) => {
-  if (popover.style.display === 'block' && !popover.contains(e.target) && e.target !== currentWordEl) {
-    hidePopover();
-  }
-});
 
 // Save progress when leaving page
 window.addEventListener('pagehide', () => {

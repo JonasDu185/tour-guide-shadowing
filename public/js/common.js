@@ -5,7 +5,7 @@
 const API = {
   scripts:  '/api/scripts',
   script:   (id) => `/api/scripts/${id}`,
-  dict:     (word) => `/api/dict/${encodeURIComponent(word)}`,
+  ai:       '/api/ai',
   stt:      '/api/stt',
 };
 
@@ -64,9 +64,13 @@ function writeStr(view, offset, str) {
   for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
 }
 
-async function fetchJSON(url) {
-  const resp = await fetch(url);
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+async function fetchJSON(url, options = {}) {
+  const defaults = { headers: { 'Content-Type': 'application/json' } };
+  const resp = await fetch(url, { ...defaults, ...options });
+  if (!resp.ok) {
+    const text = await resp.text().catch(() => '');
+    throw new Error(`HTTP ${resp.status}: ${text}`);
+  }
   return resp.json();
 }
 

@@ -20,9 +20,10 @@ function isValidId(id) {
   return /^[a-zA-Z0-9_-]{1,32}$/.test(id);
 }
 const CACHE_DIR = path.join(__dirname, 'cache');
-const DICT_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en';
-const TRANSLATE_URL = 'https://api.mymemory.translated.net/get';
 const TTS_URL = 'https://openspeech.bytedance.com/api/v3/tts/unidirectional';
+const ARK_URL = 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
+const ARK_KEY = process.env.ARK_API_KEY;  // 火山方舟 API Key（豆包模型）
+const ARK_MODEL = process.env.ARK_MODEL || 'ep-20260509013108-hhw96';  // Doubao-lite 接入点
 // Ensure cache directory exists
 if (!fs.existsSync(CACHE_DIR)) {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -65,44 +66,92 @@ app.get('/api/scripts/:id', (req, res) => {
   }
 });
 
-// Dictionary lookup proxy (Free Dictionary API + MyMemory EN→ZH translation)
-app.get('/api/dict/:word', async (req, res) => {
-  const word = req.params.word.trim().toLowerCase();
-  if (word.length > 50) return res.status(400).json({ error: 'Word too long' });
-  const encoded = encodeURIComponent(word);
+// ---------- AI 工具函数 ----------
+
+function detectTextType(text) {
+  const trimmed = text.trim();
+  const words = trimmed.split(/\s+/);
+  const wc = words.length;
+  const endsWithPunct = /[.!?]$/.test(trimmed);
+  if (!endsWithPunct && wc <= 2) return 'word';
+  if (endsWithPunct || wc >= 6) return 'sentence';
+  return 'phrase';
+}
+
+function buildSystemPrompt(action, text) {
+  switch (action) {
+    case 'translate': {
+      const wc = text.trim().split(/\s+/).length;
+      if (wc <= 2) {
+        return '你是一个中英翻译助手。翻译以下英文，同时标注国际音标。\n格式：\n翻译：<中文>\n音标：/<IPA>/';
+      }
+      return '你是一个中英翻译助手。请将以下英文翻译成准确自然的中文。只返回翻译。';
+    }
+    case 'grammar':
+      return '你是一个英语语法教师。请用中文详细分析以下句子的语法结构，包括主谓宾、从句类型、时态语态、关键语法点。分层级讲解，适合英语学习者阅读。';
+    case 'chat':
+      return '你是一个英语学习助教，正在帮学生阅读英文导游词。用中文耐心解答学生的疑问。';
+    default:
+      return '你是一个英语学习助手。';
+  }
+}
+
+// AI 翻译 / 语法分析 / 追问（豆包 Lite）
+app.post('/api/ai', async (req, res) => {
+  const { text, action, question, context } = req.body;
+
+  if (!text || typeof text !== 'string' || text.length > 3000) {
+    return res.status(400).json({ error: 'text 无效或过长' });
+  }
+  const act = ['translate', 'grammar', 'chat'].includes(action) ? action : 'translate';
+
+  if (!ARK_KEY) {
+    return res.status(500).json({ error: 'ARK_API_KEY 未配置' });
+  }
 
   try {
-    // Fetch English definition + Chinese translation in parallel
-    const [enRes, zhRes] = await Promise.allSettled([
-      axios.get(`${DICT_URL}/${encoded}`, { timeout: 5000 }),
-      axios.get(TRANSLATE_URL, { params: { q: word, langpair: 'en|zh-CN' }, timeout: 5000 }),
-    ]);
+    const systemPrompt = buildSystemPrompt(act, text.trim());
+    const messages = [
+      { role: 'system', content: systemPrompt },
+    ];
 
-    // Parse English definition
-    let phonetic = '', audio = '', enDefinitions = [];
-    if (enRes.status === 'fulfilled' && enRes.value.data?.length) {
-      const data = enRes.value.data;
-      phonetic = data[0]?.phonetic || data[0]?.phonetics?.find(p => p.text)?.text || '';
-      audio = data[0]?.phonetics?.find(p => p.audio)?.audio || '';
-      enDefinitions = data[0]?.meanings?.slice(0, 2).map(m => ({
-        partOfSpeech: m.partOfSpeech,
-        definitions: m.definitions.slice(0, 2).map(d => d.definition),
-      })) || [];
+    if (act === 'chat') {
+      // 多轮对话：带上原句上下文
+      if (context) messages.push({ role: 'user', content: `我正在读这句话："${context}"` });
+      messages.push({ role: 'user', content: question || text });
+    } else {
+      messages.push({ role: 'user', content: text.trim() });
     }
 
-    // Parse Chinese translation
-    let zhText = '';
-    if (zhRes.status === 'fulfilled' && zhRes.value.data?.responseData?.translatedText) {
-      zhText = zhRes.value.data.responseData.translatedText;
-      // If the translation is just the same word, it's not useful
-      if (zhText.toLowerCase() === word.toLowerCase()) zhText = '';
-    }
+    const aiRes = await axios.post(ARK_URL, {
+      model: ARK_MODEL,
+      messages,
+      max_tokens: 800,
+      temperature: 0.3,
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${ARK_KEY}`,
+      },
+      timeout: 30000,
+    });
 
-    const notFound = !phonetic && !enDefinitions.length && !zhText;
+    const content = aiRes.data?.choices?.[0]?.message?.content || '';
+    const usage = aiRes.data?.usage || {};
 
-    res.json({ word, phonetic, audio, enDefinitions, zhText, notFound });
+    res.json({
+      text: text.trim(),
+      action: act,
+      result: content,
+      textType: detectTextType(text),
+      usage: { prompt: usage.prompt_tokens, completion: usage.completion_tokens, total: usage.total_tokens },
+    });
   } catch (err) {
-    res.status(500).json({ error: 'Dictionary lookup failed' });
+    const detail = err.response?.data || err.message;
+    console.error('AI error:', detail);
+    if (!res.headersSent) {
+      res.status(500).json({ error: 'AI 请求失败', detail });
+    }
   }
 });
 
