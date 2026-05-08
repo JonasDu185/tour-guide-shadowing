@@ -6,6 +6,7 @@
 - 前端: 原生 HTML/CSS/JS + PWA（单页面应用），不要引入 React/Vue 等框架
 - 后端: Express 5.x (Node.js) 做代理中转
 - 部署: 本地 `npm start` → HTTPS 端口 3443 + HTTP 3000 重定向
+- 测试: `npm test` → 18 个单元测试（Node 20 自带 test runner）
 - 手机测试: Safari 打开 `https://<Mac-IP>:3443` → 添加到主屏幕
 - 不要新增依赖，保持轻量
 
@@ -33,6 +34,7 @@ public/            前端静态文件
   sw.js            Service Worker
 cache/             音频缓存目录
 scripts/           数据清洗脚本
+test/              单元测试
 ```
 
 ## API 路由
