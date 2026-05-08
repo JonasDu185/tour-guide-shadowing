@@ -9,8 +9,7 @@ let mediaRecorder = null;
 let recordedChunks = [];
 let recordingBlob = null;
 let recordingWav = null;
-let ttsPlaying = false;
-let ttsLoading = false;
+let ttsState = 'idle';
 let sttLoading = false;
 let speedIdx = 0;
 const SPEEDS = [1, 0.75, 1.25];
@@ -125,8 +124,8 @@ function closeSentenceList() { const el = document.getElementById('sentenceListM
 // ---------- TTS Playback ----------
 
 async function playOriginal() {
-  if (ttsLoading) return;
-  if (ttsPlaying) { stopTTS(); return; }
+  if (ttsState !== 'idle') return;
+  if (ttsState === 'playing') { stopTTS(); return; }
   const s = sentences[currentIdx];
   if (!s) return;
 
@@ -134,7 +133,7 @@ async function playOriginal() {
   const idx = currentIdx;
   const cacheUrl = `/api/tts/${scriptId}/${idx}`;
 
-  setTTSLoading(true);
+  ttsState = 'loading'; updateTTSButton();
   try {
     let resp = await fetch(cacheUrl);
     if (!resp.ok) {
@@ -149,30 +148,26 @@ async function playOriginal() {
     const url = URL.createObjectURL(blob);
     ttsAudio.src = url;
     ttsAudio.playbackRate = SPEEDS[speedIdx];
-    ttsAudio.onplay = () => { setTTSLoading(false); setTTSPlaying(true); };
-    ttsAudio.onended = () => { setTTSPlaying(false); URL.revokeObjectURL(url); };
+    ttsAudio.onplay = () => { ttsState = 'playing'; updateTTSButton(); };
+    ttsAudio.onended = () => { ttsState = 'idle'; URL.revokeObjectURL(url); updateTTSButton(); };
     ttsAudio.onpause = () => {
-      if (ttsAudio.currentTime > 0 && !ttsAudio.ended) { setTTSPlaying(false); ttsAudio.currentTime = 0; }
+      if (ttsAudio.currentTime > 0 && !ttsAudio.ended) { ttsState = 'idle'; ttsAudio.currentTime = 0; updateTTSButton(); }
     };
     ttsAudio.play();
   } catch (err) {
     console.error('TTS error:', err);
-    setTTSLoading(false);
+    ttsState = 'idle'; updateTTSButton();
   }
 }
 
-function onTTSEnded() { setTTSPlaying(false); }
-
-function stopTTS() { ttsAudio.pause(); ttsAudio.currentTime = 0; setTTSPlaying(false); setTTSLoading(false); }
-
-function setTTSLoading(l) { ttsLoading = l; updateTTSButton(); }
-function setTTSPlaying(p) { ttsPlaying = p; updateTTSButton(); }
+function onTTSEnded() { ttsState = 'idle'; updateTTSButton(); }
+function stopTTS() { ttsAudio.pause(); ttsAudio.currentTime = 0; ttsState = 'idle'; updateTTSButton(); }
 
 function updateTTSButton() {
   const btn = document.getElementById('btnPlay');
   const label = btn.querySelector('.btn-label');
-  if (ttsLoading) { label.textContent = '生成中...'; btn.disabled = true; }
-  else if (ttsPlaying) { label.textContent = '⏹ 停止'; btn.disabled = false; }
+  if (ttsState === 'loading') { label.textContent = '生成中...'; btn.disabled = true; }
+  else if (ttsState === 'playing') { label.textContent = '⏹ 停止'; btn.disabled = false; }
   else { label.textContent = '听原音'; btn.disabled = false; }
 }
 
@@ -300,8 +295,8 @@ function showComparison(recognized) {
   const original = sentences[currentIdx].en;
 
   // Simple word-level diff
-  const origWords = original.replace(/[.,!?;:]/g, '').toLowerCase().split(/\s+/).filter(Boolean);
-  const recWords = recognized.replace(/[.,!?;:]/g, '').toLowerCase().split(/\s+/).filter(Boolean);
+  const origWords = tokenizeWords(original);
+  const recWords = tokenizeWords(recognized);
 
   // Build diff using LCS-like approach
   const diff = buildDiff(origWords, recWords);

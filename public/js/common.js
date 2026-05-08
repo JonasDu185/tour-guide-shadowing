@@ -81,3 +81,8 @@ function escapeHTML(str) {
   div.textContent = str;
   return div.innerHTML;
 }
+
+// Tokenize English text to lowercase words (for diff comparison)
+function tokenizeWords(text) {
+  return text.replace(/[.,!?;:]/g, '').toLowerCase().split(/\s+/).filter(Boolean);
+}

@@ -6,6 +6,7 @@ let currentScript = null;
 let currentWordEl = null;
 let dictAudio = null;
 let isShadowingMode = false;
+const dictCache = {};
 
 // Popover elements
 const popover = document.getElementById('popover');
@@ -81,7 +82,8 @@ async function onWordClick(el) {
   showPopover(el, { loading: true });
 
   try {
-    const data = await fetchJSON(API.dict(word));
+    const data = dictCache[word] || await fetchJSON(API.dict(word));
+    dictCache[word] = data;
     showPopover(el, data.notFound ? { word, notFound: true } : data);
   } catch {
     hidePopover();

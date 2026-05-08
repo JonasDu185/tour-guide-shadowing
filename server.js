@@ -14,6 +14,11 @@ const http = require('http');
 const tls = require('tls');
 
 const DATA_DIR = path.join(__dirname, 'data');
+
+// 校验 ID 只包含安全字符，防止路径遍历
+function isValidId(id) {
+  return /^[a-zA-Z0-9_-]{1,32}$/.test(id);
+}
 const CACHE_DIR = path.join(__dirname, 'cache');
 const DICT_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 const TRANSLATE_URL = 'https://api.mymemory.translated.net/get';
@@ -46,6 +51,9 @@ app.get('/api/scripts', (req, res) => {
 // Get a single script by id
 app.get('/api/scripts/:id', (req, res) => {
   try {
+    if (!isValidId(req.params.id)) {
+      return res.status(400).json({ error: 'Invalid script id' });
+    }
     const filePath = path.join(DATA_DIR, `${req.params.id}.json`);
     if (!fs.existsSync(filePath)) {
       return res.status(404).json({ error: 'Script not found' });
@@ -60,6 +68,7 @@ app.get('/api/scripts/:id', (req, res) => {
 // Dictionary lookup proxy (Free Dictionary API + MyMemory EN→ZH translation)
 app.get('/api/dict/:word', async (req, res) => {
   const word = req.params.word.trim().toLowerCase();
+  if (word.length > 50) return res.status(400).json({ error: 'Word too long' });
   const encoded = encodeURIComponent(word);
 
   try {
@@ -97,30 +106,37 @@ app.get('/api/dict/:word', async (req, res) => {
   }
 });
 
-// TTS synthesis with local caching
-// GET /api/tts/:scriptId/:sentenceIndex — returns cached audio if exists
-// POST /api/tts — generates new audio, caches it, returns audio
-app.get('/api/tts/:scriptId/:index', (req, res) => {
-  const cacheFile = path.join(CACHE_DIR, `${req.params.scriptId}_${req.params.index}.mp3`);
+// 尝试从缓存返回音频，成功返回 true
+function serveCachedAudio(scriptId, index, res) {
+  const cacheFile = path.join(CACHE_DIR, `${scriptId}_${index}.mp3`);
   if (fs.existsSync(cacheFile)) {
     res.set({ 'Content-Type': 'audio/mpeg', 'X-Cache': 'HIT' });
-    return fs.createReadStream(cacheFile).pipe(res);
+    const stream = fs.createReadStream(cacheFile);
+    stream.on('error', () => { if (!res.headersSent) res.status(500).json({ error: 'Stream error' }); });
+    stream.pipe(res);
+    return true;
   }
-  res.status(404).json({ error: 'Not cached yet' });
+  return false;
+}
+
+// GET /api/tts/:scriptId/:index — 获取缓存音频
+app.get('/api/tts/:scriptId/:index', (req, res) => {
+  if (!isValidId(req.params.scriptId)) return res.status(400).json({ error: 'Invalid scriptId' });
+  const idx = parseInt(req.params.index);
+  if (isNaN(idx) || idx < 0 || idx > 9999) return res.status(400).json({ error: 'Invalid index' });
+  if (!serveCachedAudio(req.params.scriptId, idx, res)) {
+    res.status(404).json({ error: 'Not cached yet' });
+  }
 });
 
+// POST /api/tts — 生成新音频并缓存
 app.post('/api/tts', async (req, res) => {
   try {
     const { text, scriptId, index } = req.body;
     if (!text) return res.status(400).json({ error: 'text is required' });
 
-    // Check cache first
-    if (scriptId !== undefined && index !== undefined) {
-      const cacheFile = path.join(CACHE_DIR, `${scriptId}_${index}.mp3`);
-      if (fs.existsSync(cacheFile)) {
-        res.set({ 'Content-Type': 'audio/mpeg', 'X-Cache': 'HIT' });
-        return fs.createReadStream(cacheFile).pipe(res);
-      }
+    if (scriptId !== undefined && index !== undefined && isValidId(String(scriptId))) {
+      if (serveCachedAudio(scriptId, index, res)) return;
     }
 
     const apiKey = process.env.VOLC_API_KEY;
