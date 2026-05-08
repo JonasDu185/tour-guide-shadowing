@@ -1,0 +1,57 @@
+{
+  "id": "yiheyuan",
+  "title_zh": "颐和园",
+  "title_en": "The Summer Palace",
+  "paragraphs": [
+    {
+      "en": "The Summer Palace, located in the northwestern suburbs of Beijing, is the largest and best-preserved imperial garden in China. First built in 1750 during the Qing Dynasty, it served as a royal summer retreat where emperors could escape the sweltering heat of the Forbidden City.",
+      "zh": "颐和园位于北京西北郊，是中国现存规模最大、保存最完整的皇家园林。它始建于1750年清朝乾隆年间，是皇帝避暑的皇家行宫，让皇室可以远离紫禁城的酷暑。"
+    },
+    {
+      "en": "Kunming Lake covers about three-quarters of the park's 300-hectare area, while Longevity Hill rises 60 meters above the water. This composition of hill and water was carefully designed to evoke the famous West Lake in Hangzhou and other scenic landscapes of southern China.",
+      "zh": "昆明湖占据了颐和园300公顷总面积的四分之三，万寿山高出水面60米。这一山一水的格局精心模仿了杭州西湖以及江南其他名胜的风景意境。"
+    },
+    {
+      "en": "The Long Corridor, stretching 728 meters along the northern shore of Kunming Lake, is the longest painted corridor in the world. Its beams and ceilings are decorated with over 14,000 colorful paintings depicting Chinese myths, historical scenes, and natural landscapes.",
+      "zh": "长廊沿着昆明湖北岸延伸728米，是世界上最长的彩绘长廊。其横梁和天花板上绘有超过14000幅彩画，描绘了中国神话、历史故事和山水风景。"
+    },
+    {
+      "en": "The Marble Boat, or the Boat of Purity and Ease, is a lakeside pavilion built entirely of stone and wood to resemble a paddle steamer. Commissioned by Empress Dowager Cixi using funds originally intended for the navy, it has become a poignant symbol of the late Qing Dynasty's decline.",
+      "zh": "石舫，又名清晏舫，是一座完全由石材和木材建成的湖滨楼阁，形似一艘明轮汽船。它由慈禧太后挪用海军经费修建，已成为晚清衰落的深刻象征。"
+    }
+  ],
+  "sentences": [
+    {
+      "en": "The Summer Palace, located in the northwestern suburbs of Beijing, is the largest and best-preserved imperial garden in China.",
+      "zh": "颐和园位于北京西北郊，是中国现存规模最大、保存最完整的皇家园林。"
+    },
+    {
+      "en": "First built in 1750 during the Qing Dynasty, it served as a royal summer retreat where emperors could escape the sweltering heat of the Forbidden City.",
+      "zh": "它始建于1750年清朝乾隆年间，是皇帝避暑的皇家行宫，让皇室可以远离紫禁城的酷暑。"
+    },
+    {
+      "en": "Kunming Lake covers about three-quarters of the park's 300-hectare area, while Longevity Hill rises 60 meters above the water.",
+      "zh": "昆明湖占据了颐和园300公顷总面积的四分之三，万寿山高出水面60米。"
+    },
+    {
+      "en": "This composition of hill and water was carefully designed to evoke the famous West Lake in Hangzhou and other scenic landscapes of southern China.",
+      "zh": "这一山一水的格局精心模仿了杭州西湖以及江南其他名胜的风景意境。"
+    },
+    {
+      "en": "The Long Corridor, stretching 728 meters along the northern shore of Kunming Lake, is the longest painted corridor in the world.",
+      "zh": "长廊沿着昆明湖北岸延伸728米，是世界上最长的彩绘长廊。"
+    },
+    {
+      "en": "Its beams and ceilings are decorated with over 14,000 colorful paintings depicting Chinese myths, historical scenes, and natural landscapes.",
+      "zh": "其横梁和天花板上绘有超过14000幅彩画，描绘了中国神话、历史故事和山水风景。"
+    },
+    {
+      "en": "The Marble Boat, or the Boat of Purity and Ease, is a lakeside pavilion built entirely of stone and wood to resemble a paddle steamer.",
+      "zh": "石舫，又名清晏舫，是一座完全由石材和木材建成的湖滨楼阁，形似一艘明轮汽船。"
+    },
+    {
+      "en": "Commissioned by Empress Dowager Cixi using funds originally intended for the navy, it has become a poignant symbol of the late Qing Dynasty's decline.",
+      "zh": "它由慈禧太后挪用海军经费修建，已成为晚清衰落的深刻象征。"
+    }
+  ]
+}

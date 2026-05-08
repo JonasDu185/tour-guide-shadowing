@@ -1,0 +1,61 @@
+{
+  "id": "changcheng",
+  "title_zh": "长城",
+  "title_en": "The Great Wall",
+  "paragraphs": [
+    {
+      "en": "The Great Wall of China is one of the most extraordinary engineering achievements in human history. Stretching over 21,000 kilometers across northern China, it was built and expanded over the course of nearly 2,000 years by successive dynasties to defend against invasions from the north.",
+      "zh": "万里长城是人类历史上最非凡的工程成就之一。它横跨中国北方，总长超过21000公里，由历代王朝在近两千年的岁月中不断修建和扩展，以抵御北方的入侵。"
+    },
+    {
+      "en": "The Badaling section, located about 70 kilometers northwest of Beijing, is the most visited and best-preserved part of the Great Wall. Built during the Ming Dynasty with granite and brick, it stands as a formidable barrier with watchtowers spaced at regular intervals along its commanding ridge.",
+      "zh": "八达岭段位于北京西北约70公里处，是长城中游客最多、保存最完好的一段。它建于明朝，采用花岗岩和青砖筑成，沿雄伟的山脊蜿蜒，每隔一段便设有一座敌楼，气势磅礴。"
+    },
+    {
+      "en": "The Mutianyu section offers a slightly less crowded alternative to Badaling, with equally stunning views. Surrounded by dense forests, this section features a unique configuration of three connected watchtowers, a rare architectural design not seen elsewhere on the wall.",
+      "zh": "慕田峪段提供了一个比八达岭稍显清静的选择，景色同样壮丽。这段长城被茂密的森林环绕，其独特的三座敌楼并立的设计在全线长城中独树一帜，十分罕见。"
+    },
+    {
+      "en": "Contrary to popular myth, the Great Wall cannot be seen from space with the naked eye. However, this does not diminish its cultural significance. It was designated a UNESCO World Heritage Site in 1987 and is widely regarded as the symbol of China's ancient civilization.",
+      "zh": "与广为流传的说法不同，肉眼是无法从太空中看到长城的。但这丝毫不减损其文化意义。1987年，长城被联合国教科文组织列为世界文化遗产，被广泛视为中国古代文明的象征。"
+    }
+  ],
+  "sentences": [
+    {
+      "en": "The Great Wall of China is one of the most extraordinary engineering achievements in human history.",
+      "zh": "万里长城是人类历史上最非凡的工程成就之一。"
+    },
+    {
+      "en": "Stretching over 21,000 kilometers across northern China, it was built and expanded over the course of nearly 2,000 years by successive dynasties to defend against invasions from the north.",
+      "zh": "它横跨中国北方，总长超过21000公里，由历代王朝在近两千年的岁月中不断修建和扩展，以抵御北方的入侵。"
+    },
+    {
+      "en": "The Badaling section, located about 70 kilometers northwest of Beijing, is the most visited and best-preserved part of the Great Wall.",
+      "zh": "八达岭段位于北京西北约70公里处，是长城中游客最多、保存最完好的一段。"
+    },
+    {
+      "en": "Built during the Ming Dynasty with granite and brick, it stands as a formidable barrier with watchtowers spaced at regular intervals along its commanding ridge.",
+      "zh": "它建于明朝，采用花岗岩和青砖筑成，沿雄伟的山脊蜿蜒，每隔一段便设有一座敌楼，气势磅礴。"
+    },
+    {
+      "en": "The Mutianyu section offers a slightly less crowded alternative to Badaling, with equally stunning views.",
+      "zh": "慕田峪段提供了一个比八达岭稍显清静的选择，景色同样壮丽。"
+    },
+    {
+      "en": "Surrounded by dense forests, this section features a unique configuration of three connected watchtowers, a rare architectural design not seen elsewhere on the wall.",
+      "zh": "这段长城被茂密的森林环绕，其独特的三座敌楼并立的设计在全线长城中独树一帜，十分罕见。"
+    },
+    {
+      "en": "Contrary to popular myth, the Great Wall cannot be seen from space with the naked eye.",
+      "zh": "与广为流传的说法不同，肉眼是无法从太空中看到长城的。"
+    },
+    {
+      "en": "However, this does not diminish its cultural significance.",
+      "zh": "但这丝毫不减损其文化意义。"
+    },
+    {
+      "en": "It was designated a UNESCO World Heritage Site in 1987 and is widely regarded as the symbol of China's ancient civilization.",
+      "zh": "1987年，长城被联合国教科文组织列为世界文化遗产，被广泛视为中国古代文明的象征。"
+    }
+  ]
+}

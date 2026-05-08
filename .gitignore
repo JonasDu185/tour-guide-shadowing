@@ -1,0 +1,6 @@
+node_modules/
+.env
+cache/
+.DS_Store
+cert.key
+cert.crt

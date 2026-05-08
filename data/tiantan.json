@@ -1,0 +1,73 @@
+{
+  "id": "tiantan",
+  "title_zh": "天坛",
+  "title_en": "The Temple of Heaven",
+  "paragraphs": [
+    {
+      "en": "The Temple of Heaven is a magnificent imperial ceremonial complex located in southern Beijing. Built in 1420 during the reign of the Yongle Emperor, it was where emperors of the Ming and Qing dynasties performed solemn rituals to pray for good harvests.",
+      "zh": "天坛是位于北京南城的一座宏伟的皇家祭祀建筑群。它建于1420年永乐年间，是明清两朝皇帝举行祭天祈谷大典的庄严场所。"
+    },
+    {
+      "en": "The park covers an area of 273 hectares, making it larger than the Forbidden City. Its layout reflects the ancient Chinese cosmological view: the northern section is semicircular, representing Heaven, while the southern section is square, representing Earth.",
+      "zh": "天坛公园占地273公顷，比故宫还要大。它的布局体现了中国古代的宇宙观：北部呈半圆形，代表天；南部呈方形，代表地。"
+    },
+    {
+      "en": "The Hall of Prayer for Good Harvests is the centerpiece of the complex. This magnificent triple-gabled circular wooden structure was built entirely without nails, using intricate interlocking brackets. Its deep blue glazed roof tiles symbolize the color of heaven.",
+      "zh": "祈年殿是天坛的核心建筑。这座宏伟的三重檐圆形木结构大殿完全不用一颗钉子，全凭精密的斗拱结构支撑。其深蓝色琉璃瓦屋顶象征着天的颜色。"
+    },
+    {
+      "en": "The Echo Wall, a circular wall surrounding the Imperial Vault of Heaven, is famous for its acoustic properties. A whisper against one side of the wall can be clearly heard on the opposite side, a feature that fascinated visitors for centuries.",
+      "zh": "回音壁是环绕皇穹宇的一道圆形围墙，以其独特的声学效果闻名。在墙壁一端轻声细语，声音可以清晰地传到另一端，这一奇特现象数百年来令无数游客惊叹不已。"
+    },
+    {
+      "en": "In 1998, the Temple of Heaven was designated a UNESCO World Heritage Site. Today, it is not only a major tourist attraction but also a beloved public park where local residents practice tai chi, play traditional instruments, and fly kites in the early morning hours.",
+      "zh": "1998年，天坛被联合国教科文组织列为世界文化遗产。如今，它不仅是一个重要的旅游景点，也是深受市民喜爱的公园，每天清晨都有居民在这里打太极拳、演奏传统乐器和放风筝。"
+    }
+  ],
+  "sentences": [
+    {
+      "en": "The Temple of Heaven is a magnificent imperial ceremonial complex located in southern Beijing.",
+      "zh": "天坛是位于北京南城的一座宏伟的皇家祭祀建筑群。"
+    },
+    {
+      "en": "Built in 1420 during the reign of the Yongle Emperor, it was where emperors of the Ming and Qing dynasties performed solemn rituals to pray for good harvests.",
+      "zh": "它建于1420年永乐年间，是明清两朝皇帝举行祭天祈谷大典的庄严场所。"
+    },
+    {
+      "en": "The park covers an area of 273 hectares, making it larger than the Forbidden City.",
+      "zh": "天坛公园占地273公顷，比故宫还要大。"
+    },
+    {
+      "en": "Its layout reflects the ancient Chinese cosmological view: the northern section is semicircular, representing Heaven, while the southern section is square, representing Earth.",
+      "zh": "它的布局体现了中国古代的宇宙观：北部呈半圆形，代表天；南部呈方形，代表地。"
+    },
+    {
+      "en": "The Hall of Prayer for Good Harvests is the centerpiece of the complex.",
+      "zh": "祈年殿是天坛的核心建筑。"
+    },
+    {
+      "en": "This magnificent triple-gabled circular wooden structure was built entirely without nails, using intricate interlocking brackets.",
+      "zh": "这座宏伟的三重檐圆形木结构大殿完全不用一颗钉子，全凭精密的斗拱结构支撑。"
+    },
+    {
+      "en": "Its deep blue glazed roof tiles symbolize the color of heaven.",
+      "zh": "其深蓝色琉璃瓦屋顶象征着天的颜色。"
+    },
+    {
+      "en": "The Echo Wall, a circular wall surrounding the Imperial Vault of Heaven, is famous for its acoustic properties.",
+      "zh": "回音壁是环绕皇穹宇的一道圆形围墙，以其独特的声学效果闻名。"
+    },
+    {
+      "en": "A whisper against one side of the wall can be clearly heard on the opposite side, a feature that fascinated visitors for centuries.",
+      "zh": "在墙壁一端轻声细语，声音可以清晰地传到另一端，这一奇特现象数百年来令无数游客惊叹不已。"
+    },
+    {
+      "en": "In 1998, the Temple of Heaven was designated a UNESCO World Heritage Site.",
+      "zh": "1998年，天坛被联合国教科文组织列为世界文化遗产。"
+    },
+    {
+      "en": "Today, it is not only a major tourist attraction but also a beloved public park where local residents practice tai chi, play traditional instruments, and fly kites in the early morning hours.",
+      "zh": "如今，它不仅是一个重要的旅游景点，也是深受市民喜爱的公园，每天清晨都有居民在这里打太极拳、演奏传统乐器和放风筝。"
+    }
+  ]
+}

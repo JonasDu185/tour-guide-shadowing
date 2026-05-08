@@ -1,0 +1,69 @@
+{
+  "id": "gugong",
+  "title_zh": "故宫",
+  "title_en": "The Forbidden City",
+  "paragraphs": [
+    {
+      "en": "The Forbidden City, located at the heart of Beijing, is the world's largest and best-preserved ancient palace complex. It served as the imperial palace for 24 emperors during the Ming and Qing dynasties, spanning nearly 500 years of Chinese history.",
+      "zh": "故宫位于北京市中心，是世界上现存规模最大、保存最完整的古代宫殿建筑群。它曾是明清两朝24位皇帝的皇宫，横跨了近500年的中国历史。"
+    },
+    {
+      "en": "Construction began in 1406 under the Yongle Emperor of the Ming Dynasty and was completed in 1420. The complex covers 72 hectares and contains over 9,000 rooms, showcasing the pinnacle of traditional Chinese palatial architecture.",
+      "zh": "故宫于1406年在明朝永乐皇帝的主持下开始修建，1420年竣工。整个建筑群占地72公顷，拥有超过9000间房屋，展示了中国传统宫殿建筑的最高成就。"
+    },
+    {
+      "en": "The palace is surrounded by a 52-meter-wide moat and a 10-meter-high city wall. At each corner stands an elegant watchtower with intricate roofs. The entire complex is aligned along a central north-south axis, reflecting the ancient Chinese belief in cosmic order and harmony.",
+      "zh": "宫殿四周环绕着52米宽的护城河和10米高的城墙，四角各有一座造型精美的角楼。整个建筑群沿着一条南北中轴线布局，体现了中国古代天人合一的宇宙观。"
+    },
+    {
+      "en": "The Forbidden City houses an extraordinary collection of art and cultural relics, with over 1.8 million items in its collection. These include ancient paintings, calligraphy, ceramics, jade artifacts, and imperial treasures that reflect the splendor of Chinese civilization.",
+      "zh": "故宫收藏了极其丰富的艺术和文物珍品，馆藏超过180万件。这些藏品包括古代绘画、书法、陶瓷、玉器和皇家珍宝，反映了中华文明的辉煌。"
+    },
+    {
+      "en": "Today, the Forbidden City is known as the Palace Museum and welcomes over 16 million visitors annually. It was declared a UNESCO World Heritage Site in 1987 and remains one of the most iconic cultural landmarks in the world.",
+      "zh": "如今，故宫以故宫博物院之名向公众开放，每年接待超过1600万游客。它于1987年被联合国教科文组织列为世界文化遗产，至今仍是全球最具标志性的文化地标之一。"
+    }
+  ],
+  "sentences": [
+    {
+      "en": "The Forbidden City, located at the heart of Beijing, is the world's largest and best-preserved ancient palace complex.",
+      "zh": "故宫位于北京市中心，是世界上现存规模最大、保存最完整的古代宫殿建筑群。"
+    },
+    {
+      "en": "It served as the imperial palace for 24 emperors during the Ming and Qing dynasties, spanning nearly 500 years of Chinese history.",
+      "zh": "它曾是明清两朝24位皇帝的皇宫，横跨了近500年的中国历史。"
+    },
+    {
+      "en": "Construction began in 1406 under the Yongle Emperor of the Ming Dynasty and was completed in 1420.",
+      "zh": "故宫于1406年在明朝永乐皇帝的主持下开始修建，1420年竣工。"
+    },
+    {
+      "en": "The complex covers 72 hectares and contains over 9,000 rooms, showcasing the pinnacle of traditional Chinese palatial architecture.",
+      "zh": "整个建筑群占地72公顷，拥有超过9000间房屋，展示了中国传统宫殿建筑的最高成就。"
+    },
+    {
+      "en": "The palace is surrounded by a 52-meter-wide moat and a 10-meter-high city wall. At each corner stands an elegant watchtower with intricate roofs.",
+      "zh": "宫殿四周环绕着52米宽的护城河和10米高的城墙，四角各有一座造型精美的角楼。"
+    },
+    {
+      "en": "The entire complex is aligned along a central north-south axis, reflecting the ancient Chinese belief in cosmic order and harmony.",
+      "zh": "整个建筑群沿着一条南北中轴线布局，体现了中国古代天人合一的宇宙观。"
+    },
+    {
+      "en": "The Forbidden City houses an extraordinary collection of art and cultural relics, with over 1.8 million items in its collection.",
+      "zh": "故宫收藏了极其丰富的艺术和文物珍品，馆藏超过180万件。"
+    },
+    {
+      "en": "These include ancient paintings, calligraphy, ceramics, jade artifacts, and imperial treasures that reflect the splendor of Chinese civilization.",
+      "zh": "这些藏品包括古代绘画、书法、陶瓷、玉器和皇家珍宝，反映了中华文明的辉煌。"
+    },
+    {
+      "en": "Today, the Forbidden City is known as the Palace Museum and welcomes over 16 million visitors annually.",
+      "zh": "如今，故宫以故宫博物院之名向公众开放，每年接待超过1600万游客。"
+    },
+    {
+      "en": "It was declared a UNESCO World Heritage Site in 1987 and remains one of the most iconic cultural landmarks in the world.",
+      "zh": "它于1987年被联合国教科文组织列为世界文化遗产，至今仍是全球最具标志性的文化地标之一。"
+    }
+  ]
+}

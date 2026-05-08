@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>阅读 · Tour Guide Shadowing</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body>
+  <!-- Top Bar -->
+  <nav class="top-bar">
+    <button class="top-bar-btn" id="backBtn" onclick="history.back()">← 返回</button>
+    <span class="top-bar-title" id="pageTitle">阅读模式</span>
+    <button class="top-bar-btn" id="modeToggleBtn" onclick="toggleMode()">跟读 →</button>
+  </nav>
+
+  <!-- ====== Reading View ====== -->
+  <main class="reading-content" id="readingView">
+    <p style="text-align:center;color:var(--text-light);padding:60px 0;">加载中...</p>
+  </main>
+
+  <!-- ====== Shadowing View ====== -->
+  <main class="shadowing-view" id="shadowingView" style="display:none;">
+    <!-- Progress -->
+    <div class="shadow-progress">
+      <button class="progress-btn" id="shadowProgress" onclick="openSentenceList()">1 / 1</button>
+    </div>
+
+    <!-- Sentence Card -->
+    <div class="sentence-card" id="sentenceCard">
+      <p class="sentence-en" id="sentenceEn"></p>
+      <p class="sentence-zh" id="sentenceZh"></p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="shadow-actions">
+      <button class="btn-action" id="btnPlay" onclick="playOriginal()">
+        🔊 <span class="btn-label">听原音</span>
+      </button>
+      <div class="speed-selector">
+        <button class="speed-btn" id="speedBtn" onclick="cycleSpeed()">1×</button>
+      </div>
+      <button class="btn-action btn-rec" id="btnRecord" onclick="toggleRecording()">
+        🎙 <span class="btn-label" id="btnRecordLabel">录音</span>
+      </button>
+    </div>
+
+    <!-- TTS audio element (hidden) -->
+    <audio id="ttsAudio" style="display:none;" onended="onTTSEnded()"></audio>
+
+    <!-- Recording playback (hidden until recording done) -->
+    <div class="recording-section" id="recordingSection" style="display:none;">
+      <div class="recording-label">🎙 我的录音</div>
+      <audio id="recordingAudio" controls class="recording-player"></audio>
+    </div>
+
+    <!-- STT comparison placeholder (hidden for now) -->
+    <div class="comparison-section" id="comparisonSection" style="display:none;">
+      <div class="comparison-label">📝 对比结果</div>
+      <div class="comparison-content" id="comparisonContent"></div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="shadow-nav">
+      <button class="btn-nav" id="btnPrev" onclick="prevSentence()">← 上一句</button>
+      <span class="nav-spacer"></span>
+      <button class="btn-nav" id="btnNext" onclick="nextSentence()">下一句 →</button>
+    </div>
+  </main>
+
+  <!-- Bottom Bar (reading mode only) -->
+  <div class="bottom-bar" id="readingBottomBar">
+    <button class="btn-primary" onclick="toggleMode()">🎤 进入影子跟读</button>
+  </div>
+
+  <!-- Dictionary Popover -->
+  <div class="popover" id="popover" style="display:none;">
+    <div class="popover-head">
+      <span class="popover-word" id="popWord"></span>
+      <button class="popover-audio-btn" id="popAudioBtn" style="display:none;" title="发音">🔊</button>
+    </div>
+    <div class="popover-phonetic" id="popPhonetic"></div>
+    <div id="popMeanings"></div>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/reading.js"></script>
+  <script src="/js/shadowing.js"></script>
+</body>
+</html>
