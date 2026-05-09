@@ -2,68 +2,356 @@
   "id": "shisanling",
   "title_zh": "明十三陵",
   "title_en": "The Ming Tombs",
-  "paragraphs": [
+  "sections": [
     {
-      "en": "The Ming Tombs, located in a tranquil valley at the foot of Tianshou Mountain about 50 kilometers north of Beijing, are the final resting place of 13 emperors of the Ming Dynasty. The site was carefully chosen according to feng shui principles, with mountains forming a natural protective embrace.",
-      "zh": "明十三陵位于北京以北约50公里的天寿山麓一处幽静的山谷中，是明朝13位皇帝的陵寝所在地。陵址依据风水理论精心选定，群山环抱，形成天然的屏障。"
+      "heading_zh": "",
+      "heading_en": "Intro: The Ming Tombs",
+      "paragraphs": [
+        {
+          "en": "Dear friends, the area we're entering now—surrounded by Tianshou Mountain and shaded by dense pines and cypresses—is the Ming Tombs in Beijing, the eternal resting place of 13 emperors from the Ming Dynasty. I'm your tour guide, Miya, and it's my great honor to be your companion today. We will follow the classic tour route: \"Divine Way → Changling Tomb → Dingling Tomb.\" Let's set off right now!",
+          "zh": "各位朋友，咱们现在走进的这片被天寿山环抱、松柏掩映的区域，就是明朝13位皇帝的长眠之地——北京明十三陵！咱们顺着\"神道→长陵→定陵\"的经典路线逛。咱们这就出发！"
+        }
+      ]
     },
     {
-      "en": "The Sacred Way, a 7-kilometer path lined with 24 stone animal and 12 human statues, leads to the entrance of the tomb complex. Walking along this impressive avenue, visitors pass pairs of lions, camels, elephants, and mythical beasts, all standing as eternal guardians of the imperial tombs.",
-      "zh": "神道是一条7公里长的道路，两侧排列着24尊石兽和12尊石人像，通向陵区入口。沿着这条气势恢宏的大道前行，游客会经过成对的狮子、骆驼、大象和传说中的神兽，它们都是皇陵永恒的守护者。"
+      "heading_zh": "",
+      "heading_en": "I. Overview & Historical Evolution — 1. Location & Layout",
+      "paragraphs": [
+        {
+          "en": "The Ming Tombs are located at the southern foot of Tianshou Mountain in Changping District, covering about 120 square kilometers. The layout follows the ancient Chinese \"feng shui treasure land\" principle: backing onto Tianshou Mountain, facing a gentle river, 13 mausoleums distributed around Changling Tomb like stars surrounding the moon. The entire cemetery is led by the Divine Way, lined with stone figures and stone animals.",
+          "zh": "明十三陵位于北京昌平区天寿山南麓，占地约120平方公里，整体布局遵循\"风水宝地\"原则：背靠天寿山，前临蜿蜒小河，13座陵寝以长陵为中心环绕分布。整个陵区以神道为先导，两旁排列着石人石兽。"
+        }
+      ]
     },
     {
-      "en": "The Dingling Tomb, the underground palace of Emperor Wanli, is the only Ming tomb to have been fully excavated by archaeologists. Discovered in 1956, its underground chambers revealed a vast treasure trove of gold, jade, porcelain, and silk that illuminated the lavish lifestyle of Ming royalty.",
-      "zh": "定陵是明神宗万历皇帝的地下宫殿，也是唯一一座经过考古完整发掘的明陵。1956年发掘后，其地宫出土了大量的金器、玉器、瓷器和丝织品，揭示了明朝皇室的奢华生活。"
+      "heading_zh": "",
+      "heading_en": "2. Names of the 13 Mausoleums",
+      "paragraphs": [
+        {
+          "en": "Sorted chronologically: Changling (Yongle), Xianling (Hongxi), Jingling (Xuande), Yuling (Zhengtong/Tianshun), Maoling (Chenghua), Tailing (Hongzhi), Kangling (Zhengde), Yongling (Jiajing), Zhaoling (Longqing), Dingling (Wanli), Qingling (Taichang), Deling (Tianqi), Siling (Chongzhen). Changling is the largest; Dingling is the only one excavated and open to the public.",
+          "zh": "按时间排序：长陵（永乐）、献陵（洪熙）、景陵（宣德）、裕陵（正统/天顺）、茂陵（成化）、泰陵（弘治）、康陵（正德）、永陵（嘉靖）、昭陵（隆庆）、定陵（万历）、庆陵（泰昌）、德陵（天启）、思陵（崇祯）。长陵规模最大，定陵唯一发掘开放。"
+        }
+      ]
     },
     {
-      "en": "The Changling Tomb, the largest and oldest of the Ming Tombs, belongs to Emperor Yongle, the third emperor of the Ming Dynasty who moved the capital to Beijing and commissioned the Forbidden City. Its Hall of Eminent Favor, built entirely of nanmu wood, is one of the finest surviving Ming dynasty wooden structures.",
-      "zh": "长陵是十三陵中规模最大、年代最久的一座，属于明朝第三位皇帝永乐帝——正是他迁都北京并下令修建了紫禁城。其祾恩殿全部由楠木建成，是现存最精美的明代木结构建筑之一。"
+      "heading_zh": "",
+      "heading_en": "3. Ming Imperial Mausoleum Norms",
+      "paragraphs": [
+        {
+          "en": "All Ming imperial mausoleums follow a unified \"square front and round back\" layout. The front half is a square sacrificial area; the rear half is a round burial area called the Treasure City. This symbolizes \"heaven is round and earth is square.\"",
+          "zh": "明代帝陵都遵循\"前方后圆\"布局：前半部分为方形祭祀区，后半部分为圆形安葬区宝城。象征\"天圆地方\"。"
+        }
+      ]
     },
     {
-      "en": "In 2003, the Ming Tombs were inscribed as a UNESCO World Heritage Site, recognized as an outstanding example of imperial funerary architecture integrated harmoniously with the natural landscape. Today, visitors can explore the site and gain a deeper understanding of China's rich imperial history.",
-      "zh": "2003年，明十三陵被联合国教科文组织列入世界文化遗产名录，被誉为皇家陵寝建筑与自然山水和谐融合的杰出典范。如今，游客可以实地探访，深入了解中国丰富的皇家历史文化。"
+      "heading_zh": "",
+      "heading_en": "4. Emperors Not Buried in the 13 Mausoleums",
+      "paragraphs": [
+        {
+          "en": "Three emperors were not buried here: Zhu Yuanzhang was buried in Nanjing's Ming Xiaoling Mausoleum; Emperor Jianwen disappeared after the Jingnan Campaign; Emperor Chongzhen was buried in Siling Tomb outside the core area.",
+          "zh": "三位皇帝未入葬：开国皇帝朱元璋葬于南京明孝陵；建文帝朱允炆下落不明；崇祯皇帝葬于十三陵核心区外的思陵。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "5. Changling's Site Selection & Construction",
+      "paragraphs": [
+        {
+          "en": "Changling is the mausoleum of Emperor Yongle. He chose Tianshou Mountain for three reasons: excellent feng shui, the need of capital relocation, and highlighting imperial power. Construction started in 1409, using precious golden nanmu from Yunnan and Sichuan.",
+          "zh": "长陵是永乐皇帝的陵寝。选定天寿山有三大原因：风水绝佳、迁都需求、彰显皇权。1409年动工，选用云南、四川的金丝楠木。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "II. Changling Tomb – The \"Wooden Miracle\" — 1. Emperor Yongle's Life",
+      "paragraphs": [
+        {
+          "en": "Emperor Yongle was the third emperor of the Ming Dynasty, reigning for 22 years. He accomplished three milestone events: launching the Jingnan Campaign, relocating the capital to Beijing, and building Changling Tomb.",
+          "zh": "永乐皇帝在位22年，完成三件大事：发动靖难之役、迁都北京、修建长陵。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "2. Central Axis Buildings — From outside to inside: Tomb Gate, Gate of Eminent Favor, Hall of Eminent Favor, Inner Red Gate, Ming Tower, Treasure City.",
+      "paragraphs": [
+        {
+          "en": "",
+          "zh": "从外到内：陵门、祾恩门、祾恩殿、内红门、明楼、宝城。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "3. Hall of Eminent Favor",
+      "paragraphs": [
+        {
+          "en": "This grand hall, 29 meters high with 9 bays in width, is the largest existing wooden structural hall in China. It has 60 huge golden nanmu pillars—the thickest one has a diameter of 1.17 meters. The entire hall is built with wooden mortise and tenon joints without a single nail.",
+          "zh": "祾恩殿高29米、面宽9间，是中国现存最大的木构大殿。殿内60根金丝楠木柱，最粗的直径1.17米。全靠木榫卯拼接，没用一根钉子。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "III. Dingling Tomb – The \"Underground Palace\" — 1. Tomb Owner & Ground Buildings",
+      "paragraphs": [
+        {
+          "en": "Dingling is the mausoleum of Emperor Wanli, who reigned for 48 years—the longest in the Ming Dynasty. Most ground buildings were damaged by wars; our key visit is the underground palace, 27 meters deep.",
+          "zh": "定陵是万历皇帝的陵寝，在位48年，明朝最久。地面建筑大部分损毁，重点参观地下27米深处的地宫。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "2. Excavation Process",
+      "paragraphs": [
+        {
+          "en": "Excavation started in 1956. The team found the Diamond Wall, the thick wall sealing the underground palace. The underground palace had been sealed for over 200 years with severe hypoxia. It opened to the public in 1959. Due to lessons learned, the country later banned active excavation of imperial tombs.",
+          "zh": "1956年启动发掘，找到金刚墙。地宫封闭200多年，严重缺氧。1959年对外开放。因惨痛教训，国家后来规定不再主动发掘帝王陵寝。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "3. Underground Palace Layout",
+      "paragraphs": [
+        {
+          "en": "The underground palace covers 1,195 square meters, divided into five halls: Front Hall (entrance), Middle Hall (three white marble thrones and ever-burning lamps), Rear Hall (main burial area with Emperor Wanli's coffin and 26 red-lacquered boxes of treasures), and two empty Side Halls.",
+          "zh": "地宫总面积1195平方米，分五殿：前殿（入口）、中殿（三座汉白玉宝座和长明灯）、后殿（万历皇帝棺椁及26个红漆木箱的珍宝）、左右配殿（空置）。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "4. Burial with Jade in the Golden Well",
+      "paragraphs": [
+        {
+          "en": "In the center of the coffin platform is the \"Golden Well,\" only 30 centimeters in diameter, containing Emperor Wanli's jade articles. This \"Burial with Jade in the Golden Well\" ritual symbolizes connecting with earth's vitality and eternal immortality.",
+          "zh": "棺床正中间的\"金井\"直径仅30厘米，内藏万历皇帝玉器。\"金井玉葬\"仪式寓意接地气、灵魂不朽。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "IV. World Honor — In 2003, the Ming Tombs were inscribed on the UNESCO World Heritage List, praised as \"an outstanding representative of Ming imperial mausoleums.\"",
+      "paragraphs": [
+        {
+          "en": "",
+          "zh": "2003年，明十三陵被列入《世界遗产名录》，获评\"明朝皇家陵寝的杰出代表\"。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "Farewell Speech",
+      "paragraphs": [
+        {
+          "en": "Dear friends, our tour of the Ming Tombs has come to a perfect end. I hope today's explanation can help you remember the wooden structural miracle of Changling and the secrets of Dingling's underground palace. Wish you a pleasant journey, goodbye!",
+          "zh": "各位朋友，明十三陵之旅到这里就圆满结束啦！希望今天的讲解能让大家记住长陵的木构奇迹、定陵的地宫秘密。祝大家旅途愉快，再见！"
+        }
+      ]
     }
   ],
   "sentences": [
     {
-      "en": "The Ming Tombs, located in a tranquil valley at the foot of Tianshou Mountain about 50 kilometers north of Beijing, are the final resting place of 13 emperors of the Ming Dynasty.",
-      "zh": "明十三陵位于北京以北约50公里的天寿山麓一处幽静的山谷中，是明朝13位皇帝的陵寝所在地。"
+      "en": "Dear friends, the area we're entering now—surrounded by Tianshou Mountain and shaded by dense pines and cypresses—is the Ming Tombs in Beijing, the eternal resting place of 13 emperors from the Ming Dynasty.",
+      "zh": "各位朋友，咱们现在走进的这片被天寿山环抱、松柏掩映的区域，就是明朝13位皇帝的长眠之地——北京明十三陵！咱们顺着\"神道→长陵→定陵\"的经典路线逛。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Ming Tombs"
     },
     {
-      "en": "The site was carefully chosen according to feng shui principles, with mountains forming a natural protective embrace.",
-      "zh": "陵址依据风水理论精心选定，群山环抱，形成天然的屏障。"
+      "en": "I'm your tour guide, Miya, and it's my great honor to be your companion today.",
+      "zh": "各位朋友，咱们现在走进的这片被天寿山环抱、松柏掩映的区域，就是明朝13位皇帝的长眠之地——北京明十三陵！咱们顺着\"神道→长陵→定陵\"的经典路线逛。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Ming Tombs"
     },
     {
-      "en": "The Sacred Way, a 7-kilometer path lined with 24 stone animal and 12 human statues, leads to the entrance of the tomb complex.",
-      "zh": "神道是一条7公里长的道路，两侧排列着24尊石兽和12尊石人像，通向陵区入口。"
+      "en": "We will follow the classic tour route: \"Divine Way → Changling Tomb → Dingling Tomb.\" Let's set off right now!",
+      "zh": "各位朋友，咱们现在走进的这片被天寿山环抱、松柏掩映的区域，就是明朝13位皇帝的长眠之地——北京明十三陵！咱们顺着\"神道→长陵→定陵\"的经典路线逛。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Ming Tombs"
     },
     {
-      "en": "Walking along this impressive avenue, visitors pass pairs of lions, camels, elephants, and mythical beasts, all standing as eternal guardians of the imperial tombs.",
-      "zh": "沿着这条气势恢宏的大道前行，游客会经过成对的狮子、骆驼、大象和传说中的神兽，它们都是皇陵永恒的守护者。"
+      "en": "The Ming Tombs are located at the southern foot of Tianshou Mountain in Changping District, covering about 120 square kilometers.",
+      "zh": "明十三陵位于北京昌平区天寿山南麓，占地约120平方公里，整体布局遵循\"风水宝地\"原则：背靠天寿山，前临蜿蜒小河，13座陵寝以长陵为中心环绕分布。整个陵区以神道为先导，两旁排列着石人石兽。",
+      "heading_zh": "",
+      "heading_en": "I. Overview & Historical Evolution — 1. Location & Layout"
     },
     {
-      "en": "The Dingling Tomb, the underground palace of Emperor Wanli, is the only Ming tomb to have been fully excavated by archaeologists.",
-      "zh": "定陵是明神宗万历皇帝的地下宫殿，也是唯一一座经过考古完整发掘的明陵。"
+      "en": "The layout follows the ancient Chinese \"feng shui treasure land\" principle: backing onto Tianshou Mountain, facing a gentle river, 13 mausoleums distributed around Changling Tomb like stars surrounding the moon.",
+      "zh": "明十三陵位于北京昌平区天寿山南麓，占地约120平方公里，整体布局遵循\"风水宝地\"原则：背靠天寿山，前临蜿蜒小河，13座陵寝以长陵为中心环绕分布。整个陵区以神道为先导，两旁排列着石人石兽。",
+      "heading_zh": "",
+      "heading_en": "I. Overview & Historical Evolution — 1. Location & Layout"
     },
     {
-      "en": "Discovered in 1956, its underground chambers revealed a vast treasure trove of gold, jade, porcelain, and silk that illuminated the lavish lifestyle of Ming royalty.",
-      "zh": "1956年发掘后，其地宫出土了大量的金器、玉器、瓷器和丝织品，揭示了明朝皇室的奢华生活。"
+      "en": "The entire cemetery is led by the Divine Way, lined with stone figures and stone animals.",
+      "zh": "明十三陵位于北京昌平区天寿山南麓，占地约120平方公里，整体布局遵循\"风水宝地\"原则：背靠天寿山，前临蜿蜒小河，13座陵寝以长陵为中心环绕分布。整个陵区以神道为先导，两旁排列着石人石兽。",
+      "heading_zh": "",
+      "heading_en": "I. Overview & Historical Evolution — 1. Location & Layout"
     },
     {
-      "en": "The Changling Tomb, the largest and oldest of the Ming Tombs, belongs to Emperor Yongle, the third emperor of the Ming Dynasty who moved the capital to Beijing and commissioned the Forbidden City.",
-      "zh": "长陵是十三陵中规模最大、年代最久的一座，属于明朝第三位皇帝永乐帝——正是他迁都北京并下令修建了紫禁城。"
+      "en": "Sorted chronologically: Changling (Yongle), Xianling (Hongxi), Jingling (Xuande), Yuling (Zhengtong/Tianshun), Maoling (Chenghua), Tailing (Hongzhi), Kangling (Zhengde), Yongling (Jiajing), Zhaoling (Longqing), Dingling (Wanli), Qingling (Taichang), Deling (Tianqi), Siling (Chongzhen).",
+      "zh": "按时间排序：长陵（永乐）、献陵（洪熙）、景陵（宣德）、裕陵（正统/天顺）、茂陵（成化）、泰陵（弘治）、康陵（正德）、永陵（嘉靖）、昭陵（隆庆）、定陵（万历）、庆陵（泰昌）、德陵（天启）、思陵（崇祯）。长陵规模最大，定陵唯一发掘开放。",
+      "heading_zh": "",
+      "heading_en": "2. Names of the 13 Mausoleums"
     },
     {
-      "en": "Its Hall of Eminent Favor, built entirely of nanmu wood, is one of the finest surviving Ming dynasty wooden structures.",
-      "zh": "其祾恩殿全部由楠木建成，是现存最精美的明代木结构建筑之一。"
+      "en": "Changling is the largest; Dingling is the only one excavated and open to the public.",
+      "zh": "按时间排序：长陵（永乐）、献陵（洪熙）、景陵（宣德）、裕陵（正统/天顺）、茂陵（成化）、泰陵（弘治）、康陵（正德）、永陵（嘉靖）、昭陵（隆庆）、定陵（万历）、庆陵（泰昌）、德陵（天启）、思陵（崇祯）。长陵规模最大，定陵唯一发掘开放。",
+      "heading_zh": "",
+      "heading_en": "2. Names of the 13 Mausoleums"
     },
     {
-      "en": "In 2003, the Ming Tombs were inscribed as a UNESCO World Heritage Site, recognized as an outstanding example of imperial funerary architecture integrated harmoniously with the natural landscape.",
-      "zh": "2003年，明十三陵被联合国教科文组织列入世界文化遗产名录，被誉为皇家陵寝建筑与自然山水和谐融合的杰出典范。"
+      "en": "All Ming imperial mausoleums follow a unified \"square front and round back\" layout.",
+      "zh": "明代帝陵都遵循\"前方后圆\"布局：前半部分为方形祭祀区，后半部分为圆形安葬区宝城。象征\"天圆地方\"。",
+      "heading_zh": "",
+      "heading_en": "3. Ming Imperial Mausoleum Norms"
     },
     {
-      "en": "Today, visitors can explore the site and gain a deeper understanding of China's rich imperial history.",
-      "zh": "如今，游客可以实地探访，深入了解中国丰富的皇家历史文化。"
+      "en": "The front half is a square sacrificial area; the rear half is a round burial area called the Treasure City.",
+      "zh": "明代帝陵都遵循\"前方后圆\"布局：前半部分为方形祭祀区，后半部分为圆形安葬区宝城。象征\"天圆地方\"。",
+      "heading_zh": "",
+      "heading_en": "3. Ming Imperial Mausoleum Norms"
+    },
+    {
+      "en": "This symbolizes \"heaven is round and earth is square.\"",
+      "zh": "明代帝陵都遵循\"前方后圆\"布局：前半部分为方形祭祀区，后半部分为圆形安葬区宝城。象征\"天圆地方\"。",
+      "heading_zh": "",
+      "heading_en": "3. Ming Imperial Mausoleum Norms"
+    },
+    {
+      "en": "Three emperors were not buried here: Zhu Yuanzhang was buried in Nanjing's Ming Xiaoling Mausoleum; Emperor Jianwen disappeared after the Jingnan Campaign; Emperor Chongzhen was buried in Siling Tomb outside the core area.",
+      "zh": "三位皇帝未入葬：开国皇帝朱元璋葬于南京明孝陵；建文帝朱允炆下落不明；崇祯皇帝葬于十三陵核心区外的思陵。",
+      "heading_zh": "",
+      "heading_en": "4. Emperors Not Buried in the 13 Mausoleums"
+    },
+    {
+      "en": "Changling is the mausoleum of Emperor Yongle.",
+      "zh": "长陵是永乐皇帝的陵寝。选定天寿山有三大原因：风水绝佳、迁都需求、彰显皇权。1409年动工，选用云南、四川的金丝楠木。",
+      "heading_zh": "",
+      "heading_en": "5. Changling's Site Selection & Construction"
+    },
+    {
+      "en": "He chose Tianshou Mountain for three reasons: excellent feng shui, the need of capital relocation, and highlighting imperial power.",
+      "zh": "长陵是永乐皇帝的陵寝。选定天寿山有三大原因：风水绝佳、迁都需求、彰显皇权。1409年动工，选用云南、四川的金丝楠木。",
+      "heading_zh": "",
+      "heading_en": "5. Changling's Site Selection & Construction"
+    },
+    {
+      "en": "Construction started in 1409, using precious golden nanmu from Yunnan and Sichuan.",
+      "zh": "长陵是永乐皇帝的陵寝。选定天寿山有三大原因：风水绝佳、迁都需求、彰显皇权。1409年动工，选用云南、四川的金丝楠木。",
+      "heading_zh": "",
+      "heading_en": "5. Changling's Site Selection & Construction"
+    },
+    {
+      "en": "Emperor Yongle was the third emperor of the Ming Dynasty, reigning for 22 years.",
+      "zh": "永乐皇帝在位22年，完成三件大事：发动靖难之役、迁都北京、修建长陵。",
+      "heading_zh": "",
+      "heading_en": "II. Changling Tomb – The \"Wooden Miracle\" — 1. Emperor Yongle's Life"
+    },
+    {
+      "en": "He accomplished three milestone events: launching the Jingnan Campaign, relocating the capital to Beijing, and building Changling Tomb.",
+      "zh": "永乐皇帝在位22年，完成三件大事：发动靖难之役、迁都北京、修建长陵。",
+      "heading_zh": "",
+      "heading_en": "II. Changling Tomb – The \"Wooden Miracle\" — 1. Emperor Yongle's Life"
+    },
+    {
+      "en": "This grand hall, 29 meters high with 9 bays in width, is the largest existing wooden structural hall in China.",
+      "zh": "祾恩殿高29米、面宽9间，是中国现存最大的木构大殿。殿内60根金丝楠木柱，最粗的直径1.17米。全靠木榫卯拼接，没用一根钉子。",
+      "heading_zh": "",
+      "heading_en": "3. Hall of Eminent Favor"
+    },
+    {
+      "en": "It has 60 huge golden nanmu pillars—the thickest one has a diameter of 1.17 meters.",
+      "zh": "祾恩殿高29米、面宽9间，是中国现存最大的木构大殿。殿内60根金丝楠木柱，最粗的直径1.17米。全靠木榫卯拼接，没用一根钉子。",
+      "heading_zh": "",
+      "heading_en": "3. Hall of Eminent Favor"
+    },
+    {
+      "en": "The entire hall is built with wooden mortise and tenon joints without a single nail.",
+      "zh": "祾恩殿高29米、面宽9间，是中国现存最大的木构大殿。殿内60根金丝楠木柱，最粗的直径1.17米。全靠木榫卯拼接，没用一根钉子。",
+      "heading_zh": "",
+      "heading_en": "3. Hall of Eminent Favor"
+    },
+    {
+      "en": "Dingling is the mausoleum of Emperor Wanli, who reigned for 48 years—the longest in the Ming Dynasty.",
+      "zh": "定陵是万历皇帝的陵寝，在位48年，明朝最久。地面建筑大部分损毁，重点参观地下27米深处的地宫。",
+      "heading_zh": "",
+      "heading_en": "III. Dingling Tomb – The \"Underground Palace\" — 1. Tomb Owner & Ground Buildings"
+    },
+    {
+      "en": "Most ground buildings were damaged by wars; our key visit is the underground palace, 27 meters deep.",
+      "zh": "定陵是万历皇帝的陵寝，在位48年，明朝最久。地面建筑大部分损毁，重点参观地下27米深处的地宫。",
+      "heading_zh": "",
+      "heading_en": "III. Dingling Tomb – The \"Underground Palace\" — 1. Tomb Owner & Ground Buildings"
+    },
+    {
+      "en": "Excavation started in 1956. The team found the Diamond Wall, the thick wall sealing the underground palace.",
+      "zh": "1956年启动发掘，找到金刚墙。地宫封闭200多年，严重缺氧。1959年对外开放。因惨痛教训，国家后来规定不再主动发掘帝王陵寝。",
+      "heading_zh": "",
+      "heading_en": "2. Excavation Process"
+    },
+    {
+      "en": "The underground palace had been sealed for over 200 years with severe hypoxia.",
+      "zh": "1956年启动发掘，找到金刚墙。地宫封闭200多年，严重缺氧。1959年对外开放。因惨痛教训，国家后来规定不再主动发掘帝王陵寝。",
+      "heading_zh": "",
+      "heading_en": "2. Excavation Process"
+    },
+    {
+      "en": "It opened to the public in 1959.",
+      "zh": "1956年启动发掘，找到金刚墙。地宫封闭200多年，严重缺氧。1959年对外开放。因惨痛教训，国家后来规定不再主动发掘帝王陵寝。",
+      "heading_zh": "",
+      "heading_en": "2. Excavation Process"
+    },
+    {
+      "en": "Due to lessons learned, the country later banned active excavation of imperial tombs.",
+      "zh": "1956年启动发掘，找到金刚墙。地宫封闭200多年，严重缺氧。1959年对外开放。因惨痛教训，国家后来规定不再主动发掘帝王陵寝。",
+      "heading_zh": "",
+      "heading_en": "2. Excavation Process"
+    },
+    {
+      "en": "The underground palace covers 1,195 square meters, divided into five halls:",
+      "zh": "地宫总面积1195平方米，分五殿：前殿（入口）、中殿（三座汉白玉宝座和长明灯）、后殿（万历皇帝棺椁及26个红漆木箱的珍宝）、左右配殿（空置）。",
+      "heading_zh": "",
+      "heading_en": "3. Underground Palace Layout"
+    },
+    {
+      "en": "Front Hall (entrance), Middle Hall (three white marble thrones and ever-burning lamps), Rear Hall (main burial area with Emperor Wanli's coffin and 26 red-lacquered boxes of treasures), and two empty Side Halls.",
+      "zh": "地宫总面积1195平方米，分五殿：前殿（入口）、中殿（三座汉白玉宝座和长明灯）、后殿（万历皇帝棺椁及26个红漆木箱的珍宝）、左右配殿（空置）。",
+      "heading_zh": "",
+      "heading_en": "3. Underground Palace Layout"
+    },
+    {
+      "en": "In the center of the coffin platform is the \"Golden Well,\" only 30 centimeters in diameter, containing Emperor Wanli's jade articles.",
+      "zh": "棺床正中间的\"金井\"直径仅30厘米，内藏万历皇帝玉器。\"金井玉葬\"仪式寓意接地气、灵魂不朽。",
+      "heading_zh": "",
+      "heading_en": "4. Burial with Jade in the Golden Well"
+    },
+    {
+      "en": "This \"Burial with Jade in the Golden Well\" ritual symbolizes connecting with earth's vitality and eternal immortality.",
+      "zh": "棺床正中间的\"金井\"直径仅30厘米，内藏万历皇帝玉器。\"金井玉葬\"仪式寓意接地气、灵魂不朽。",
+      "heading_zh": "",
+      "heading_en": "4. Burial with Jade in the Golden Well"
+    },
+    {
+      "en": "Dear friends, our tour of the Ming Tombs has come to a perfect end.",
+      "zh": "各位朋友，明十三陵之旅到这里就圆满结束啦！希望今天的讲解能让大家记住长陵的木构奇迹、定陵的地宫秘密。祝大家旅途愉快，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
+    },
+    {
+      "en": "I hope today's explanation can help you remember the wooden structural miracle of Changling and the secrets of Dingling's underground palace.",
+      "zh": "各位朋友，明十三陵之旅到这里就圆满结束啦！希望今天的讲解能让大家记住长陵的木构奇迹、定陵的地宫秘密。祝大家旅途愉快，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
+    },
+    {
+      "en": "Wish you a pleasant journey, goodbye!",
+      "zh": "各位朋友，明十三陵之旅到这里就圆满结束啦！希望今天的讲解能让大家记住长陵的木构奇迹、定陵的地宫秘密。祝大家旅途愉快，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
     }
   ]
 }

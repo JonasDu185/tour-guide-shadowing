@@ -52,12 +52,21 @@ function updateTitle(mode) {
 function renderParagraphs() {
   const container = document.getElementById('readingView');
   container.style.display = '';
-  const html = currentScript.paragraphs.map((p, i) => `
-    <div class="para-block">
-      <p class="para-en">${escapeHTML(p.en)}</p>
-      <p class="para-zh">${escapeHTML(p.zh)}</p>
-    </div>
-    ${i < currentScript.paragraphs.length - 1 ? '<hr class="para-divider">' : ''}
+  const sections = currentScript.sections || [];
+  const html = sections.map((sec, i) => `
+    ${sec.heading_zh || sec.heading_en ? `
+      <div class="section-heading">
+        <h3 class="heading-zh">${escapeHTML(sec.heading_zh)}</h3>
+        ${sec.heading_en ? `<h4 class="heading-en">${escapeHTML(sec.heading_en)}</h4>` : ''}
+      </div>
+    ` : ''}
+    ${(sec.paragraphs || []).map(p => `
+      <div class="para-block">
+        ${p.en ? `<p class="para-en">${escapeHTML(p.en)}</p>` : ''}
+        ${p.zh ? `<p class="para-zh">${escapeHTML(p.zh)}</p>` : ''}
+      </div>
+    `).join('')}
+    ${i < sections.length - 1 ? '<hr class="section-divider">' : ''}
   `).join('');
   container.innerHTML = html;
 }
@@ -261,21 +270,20 @@ function closeAiSheet() {
 
 function toggleMode() {
   isShadowingMode = !isShadowingMode;
+  const fab = document.getElementById('shadowingFab');
   if (isShadowingMode) {
     document.getElementById('readingView').style.display = 'none';
-    document.getElementById('readingBottomBar').style.display = 'none';
     document.getElementById('shadowingView').style.display = '';
-    document.getElementById('modeToggleBtn').textContent = '阅读 ←';
     document.getElementById('backBtn').setAttribute('onclick', 'toggleMode()');
+    if (fab) fab.style.display = 'none';
     hideFab();
     closeAiSheet();
     initShadowing();
   } else {
     document.getElementById('shadowingView').style.display = 'none';
     document.getElementById('readingView').style.display = '';
-    document.getElementById('readingBottomBar').style.display = '';
-    document.getElementById('modeToggleBtn').textContent = '跟读 →';
     document.getElementById('backBtn').setAttribute('onclick', 'history.back()');
+    if (fab) fab.style.display = '';
     updateTitle('阅读');
     cleanupShadowing();
   }

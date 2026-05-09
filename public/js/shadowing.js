@@ -69,7 +69,28 @@ function renderSentence() {
   if (!sentences.length) return;
   const s = sentences[currentIdx];
   document.getElementById('sentenceEn').textContent = s.en;
-  document.getElementById('sentenceZh').textContent = s.zh;
+
+  // Section 面包屑
+  const sectionEl = document.getElementById('sentenceSection');
+  const heading = s.heading_en || s.heading_zh || '';
+  if (heading) {
+    sectionEl.innerHTML = '<span class="section-breadcrumb">' + escapeHTML(heading) + '</span>';
+    sectionEl.style.display = '';
+  } else {
+    sectionEl.style.display = 'none';
+  }
+
+  // 中文改为完整段落上下文
+  const zhEl = document.getElementById('sentenceZh');
+  const contextZh = s.zh || '';
+  if (contextZh) {
+    zhEl.textContent = contextZh;
+    zhEl.className = 'sentence-zh sentence-context';
+  } else {
+    zhEl.textContent = '';
+    zhEl.className = 'sentence-zh';
+  }
+
   document.getElementById('shadowProgress').textContent =
     `${currentIdx + 1} / ${sentences.length}`;
 
@@ -102,8 +123,17 @@ function openSentenceList() {
   html += `<h3>${currentScript.title_zh} · 全部句子</h3>`;
   html += '<button class="sentence-list-close" onclick="closeSentenceList()">✕</button>';
   html += '</div><div class="sentence-list-body">';
+  let lastHeading = '';
   sentences.forEach((s, i) => {
     const active = i === currentIdx ? ' active' : '';
+    const heading = s.heading_en || s.heading_zh || '';
+    // 标题变化时插入分隔
+    let headingHTML = '';
+    if (heading && heading !== lastHeading) {
+      headingHTML = `<div class="sentence-list-heading">${escapeHTML(heading)}</div>`;
+      lastHeading = heading;
+    }
+    html += headingHTML;
     html += `<div class="sentence-list-item${active}" onclick="jumpToSentence(${i})">`;
     html += `<span class="sentence-list-num">${i + 1}</span>`;
     html += `<span class="sentence-list-text">${escapeHTML(s.en.slice(0, 80))}${s.en.length > 80 ? '...' : ''}</span>`;

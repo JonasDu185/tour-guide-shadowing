@@ -14,7 +14,7 @@
   <nav class="top-bar">
     <button class="top-bar-btn" id="backBtn" onclick="history.back()">← 返回</button>
     <span class="top-bar-title" id="pageTitle">阅读模式</span>
-    <button class="top-bar-btn" id="modeToggleBtn" onclick="toggleMode()">跟读 →</button>
+  <!-- modeToggleBtn 已移除 -->
   </nav>
 
   <!-- ====== Reading View ====== -->
@@ -31,6 +31,7 @@
 
     <!-- Sentence Card -->
     <div class="sentence-card" id="sentenceCard">
+      <div class="sentence-section-label" id="sentenceSection"></div>
       <p class="sentence-en" id="sentenceEn"></p>
       <p class="sentence-zh" id="sentenceZh"></p>
     </div>
@@ -72,9 +73,8 @@
   </main>
 
   <!-- Bottom Bar (reading mode only) -->
-  <div class="bottom-bar" id="readingBottomBar">
-    <button class="btn-primary" onclick="toggleMode()">🎤 进入影子跟读</button>
-  </div>
+  <!-- 影子跟读悬浮按钮 -->
+  <button class="shadowing-fab" id="shadowingFab" onclick="toggleMode()">🎤 跟读</button>
 
   <!-- AI Floating Button (选中文本后出现) -->
   <button class="ai-fab" id="aiFab" style="display:none;" onclick="openAiSheet()">✨</button>

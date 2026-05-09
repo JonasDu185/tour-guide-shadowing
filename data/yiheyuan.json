@@ -2,56 +2,398 @@
   "id": "yiheyuan",
   "title_zh": "颐和园",
   "title_en": "The Summer Palace",
-  "paragraphs": [
+  "sections": [
     {
-      "en": "The Summer Palace, located in the northwestern suburbs of Beijing, is the largest and best-preserved imperial garden in China. First built in 1750 during the Qing Dynasty, it served as a royal summer retreat where emperors could escape the sweltering heat of the Forbidden City.",
-      "zh": "颐和园位于北京西北郊，是中国现存规模最大、保存最完整的皇家园林。它始建于1750年清朝乾隆年间，是皇帝避暑的皇家行宫，让皇室可以远离紫禁城的酷暑。"
+      "heading_zh": "",
+      "heading_en": "Intro: The Summer Palace",
+      "paragraphs": [
+        {
+          "en": "Good morning, everyone! Welcome to this amazing journey. I'm your tour guide, Miya, and it's my great honor to be your companion today. The garden in front of us, shimmering with the waves of Kunming Lake and surrounded by the greenery of Longevity Hill, is the Summer Palace in Beijing — the largest and best-preserved imperial garden still existing in China! In the next 15 minutes, we will start from the East Palace Gate and follow the route of \"Palace Area → Front Hill of Longevity Hill\". First, we will visit the daily residences of Empress Dowager Cixi and Emperor Guangxu, then walk along the world's longest Long Corridor, and climb up to the Tower of Buddhist Incense, the landmark of the Summer Palace. Together, we will explore the thousand-year history of this garden from the Liao and Jin dynasties to the Qing Dynasty. Let's set off right now!",
+          "zh": "咱们眼前这片被昆明湖波光映照着、万寿山绿意环绕的园林，就是中国现存规模最大、保存最完整的皇家园林——北京颐和园！接下来15分钟，咱们从东宫门开始，顺着\"宫廷区→万寿山前山\"的路线逛：先看慈禧和光绪的日常居所，再走世界最长的长廊、登颐和园的标志性佛香阁，一起解锁这座园林从辽金到清代的千年故事。咱们这就出发！"
+        }
+      ]
     },
     {
-      "en": "Kunming Lake covers about three-quarters of the park's 300-hectare area, while Longevity Hill rises 60 meters above the water. This composition of hill and water was carefully designed to evoke the famous West Lake in Hangzhou and other scenic landscapes of southern China.",
-      "zh": "昆明湖占据了颐和园300公顷总面积的四分之三，万寿山高出水面60米。这一山一水的格局精心模仿了杭州西湖以及江南其他名胜的风景意境。"
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\"",
+      "paragraphs": [
+        {
+          "en": "Before we start our tour, let's go through the past and present of the Summer Palace. Its history can be traced back more than 1,000 years: In the Liao Dynasty (10th-12th centuries), this place was called \"Golden Hill Palace\", a summer resort for Liao emperors. In the Jin Dynasty (12th-13th centuries), it was renamed \"Yuquan Mountain Palace\". Emperor Zhangzong of the Jin Dynasty built pavilions and pools here. In the Yuan Dynasty (13th-14th centuries), it was known as \"Wengshan Lake\". Famous water conservancy expert Guo Shoujing built water projects here. In the Ming Dynasty (14th-17th centuries), Emperor Xiaozong renamed it \"Haoshan Garden\". The Qing Dynasty (17th-20th centuries) was the golden age. In 1750, Emperor Qianlong built \"Qingyi Garden\" to honor his mother. In 1860, the Anglo-French Allied Forces burned it down. In 1888, Empress Dowager Cixi misappropriated naval funds to rebuild it and renamed it \"Summer Palace\".",
+          "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。"
+        }
+      ]
     },
     {
-      "en": "The Long Corridor, stretching 728 meters along the northern shore of Kunming Lake, is the longest painted corridor in the world. Its beams and ceilings are decorated with over 14,000 colorful paintings depicting Chinese myths, historical scenes, and natural landscapes.",
-      "zh": "长廊沿着昆明湖北岸延伸728米，是世界上最长的彩绘长廊。其横梁和天花板上绘有超过14000幅彩画，描绘了中国神话、历史故事和山水风景。"
+      "heading_zh": "",
+      "heading_en": "II. Overall Layout: An \"Imperial Scroll\" of Intertwined Mountains and Water",
+      "paragraphs": [
+        {
+          "en": "The Summer Palace covers an area of about 2.9 million square meters, equivalent to four times the size of the Forbidden City. It borders Longevity Hill to the north and faces Kunming Lake to the south. The whole garden is divided into three major areas: the Palace Area, the Front Hill of Longevity Hill Area, and the Kunming Lake Area. All main buildings are arranged along the north-south central axis.",
+          "zh": "颐和园占地约290万平方米，相当于4个故宫！北边靠万寿山，南边临昆明湖。整个园林分三大区：宫廷区、万寿山前山区、昆明湖区。所有主要建筑都沿着南北中轴线排列。"
+        }
+      ]
     },
     {
-      "en": "The Marble Boat, or the Boat of Purity and Ease, is a lakeside pavilion built entirely of stone and wood to resemble a paddle steamer. Commissioned by Empress Dowager Cixi using funds originally intended for the navy, it has become a poignant symbol of the late Qing Dynasty's decline.",
-      "zh": "石舫，又名清晏舫，是一座完全由石材和木材建成的湖滨楼阁，形似一艘明轮汽船。它由慈禧太后挪用海军经费修建，已成为晚清衰落的深刻象征。"
+      "heading_zh": "",
+      "heading_en": "III. Palace Area – The Imperial \"Political & Living Zone\" — 1. Hanxu Yanxiu Archway & East Palace Gate",
+      "paragraphs": [
+        {
+          "en": "The exquisitely carved archway in front of us is the Hanxu Yanxiu Archway, the landmark gateway of the Summer Palace. Passing through it, we reach the East Palace Gate. Look at the three big characters \"Yi He Yuan\" on the door lintel, personally written by Emperor Guangxu.",
+          "zh": "眼前这座雕梁画栋的牌坊就是\"涵虚罨秀坊\"。穿过牌坊就是颐和园的正门\"东宫门\"，门楣上的\"颐和园\"三个大字是光绪皇帝亲笔写的。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "2. Hall of Benevolent Longevity",
+      "paragraphs": [
+        {
+          "en": "The Hall of Benevolent Longevity is the largest palace in the Summer Palace, equivalent to the Hall of Supreme Harmony in the Forbidden City. The name \"Renshou\" comes from The Analects, meaning \"the benevolent live a long life.\" The most interesting part is the bronze dragon and phoenix outside the hall: here the phoenix is on the left and the dragon on the right—because Cixi held real power, this \"phoenix suppressing dragon\" arrangement was a silent declaration of her supreme power.",
+          "zh": "仁寿殿是颐和园里最大的宫殿，相当于故宫的太和殿。\"仁寿\"取自《论语》\"仁者寿\"。最有意思的是殿外的铜龙铜凤：这儿的铜凤在左、铜龙在右——因为慈禧垂帘听政，这\"凤压龙\"的摆放，就是她权力的\"无声宣言\"！"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "3. Hall of Jade Ripples",
+      "paragraphs": [
+        {
+          "en": "The Hall of Jade Ripples was Emperor Guangxu's bedroom and study. After the failure of the Hundred Days' Reform in 1898, Cixi placed Guangxu under house arrest here, brick walls were built to block the outer corridors. Guangxu never stepped out until his death.",
+          "zh": "玉澜堂是光绪皇帝的寝宫兼书房。1898年戊戌变法失败后，慈禧把光绪软禁在这儿，殿外的走廊被砌上砖墙，直到光绪去世都没踏出半步。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "4. Yiyun Hall",
+      "paragraphs": [
+        {
+          "en": "Yiyun Hall was the residence of Empress Longyu, Emperor Guangxu's queen. The name means \"suitable for reading and studying.\" The interior decoration is very simple and plain, reflecting Empress Longyu's modest status in the palace.",
+          "zh": "宜芸馆是光绪皇后隆裕的居所。\"宜芸\"意思是\"适合读书治学\"。馆内装饰特别素净，跟慈禧的乐寿堂比低调太多。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "5. Hall of Joyful Longevity",
+      "paragraphs": [
+        {
+          "en": "The Hall of Joyful Longevity was Empress Dowager Cixi's main residence. In front stands a huge Taihu stone named \"Qingzhi Xiu\", specially transported from Fangshan by Emperor Qianlong. The interior furnishings are extremely luxurious: there are Western electric lights and telephones, as well as a large red sandalwood wardrobe carved with \"hundreds of birds paying homage to the phoenix.\"",
+          "zh": "乐寿堂是慈禧的\"主卧\"。堂前有块超大的太湖石\"青芝岫\"，是乾隆从房山运来的。堂内有慈禧用过的西洋电灯、电话机，还有紫檀木大衣柜，上面雕着\"百鸟朝凤\"。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "IV. Front Hill of Longevity Hill – \"Architectural Essence\" — 1. Long Corridor",
+      "paragraphs": [
+        {
+          "en": "The Long Corridor starts from the Moon-inviting Gate in the east and ends at the Stone Zhang Pavilion in the west, with a total length of 728 meters and 273 bays. It was listed in the Guinness World Records in 1992. Its most amazing feature is the colored paintings on the beams—more than 14,000 paintings in total and no two identical ones.",
+          "zh": "长廊东起邀月门，西到石丈亭，全长728米，有273间，1992年列入《吉尼斯世界纪录》。最绝的是廊顶的彩绘——14000多幅，没有一幅重样的！"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "2. Main Buildings on the Front Hill's Central Axis",
+      "paragraphs": [
+        {
+          "en": "From bottom to top: Hall of Dispelling Clouds—the core hall and banquet hall for Cixi's birthday celebrations; Tower of Buddhist Incense—41 meters high, the landmark of the Summer Palace, originally housing a thousand-hand Guanyin statue; Sea of Wisdom—a beamless hall built entirely of bricks and stones, its outer wall inlaid with 1,008 small glazed Buddha statues.",
+          "zh": "从下往上依次是：排云殿——慈禧过寿的\"宴会厅\"；佛香阁——高41米，颐和园的\"标志\"；智慧海——全用砖石砌成的\"无梁殿\"，外墙镶嵌1008尊琉璃小佛。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "V. World Honor — In 1998, the Summer Palace was inscribed on the UNESCO World Heritage List, praised as a masterpiece that embodies the essence of Chinese classical garden art.",
+      "paragraphs": [
+        {
+          "en": "",
+          "zh": "1998年，颐和园被列入《世界遗产名录》，评价它是\"集中国古典园林艺术之大成的杰作\"。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "Farewell Speech",
+      "paragraphs": [
+        {
+          "en": "Dear friends, our 15-minute tour of the Summer Palace has come to an end! I hope today's explanation can help you remember the clear waves, red walls and colored paintings of the Summer Palace. Wish you a pleasant and smooth journey, goodbye!",
+          "zh": "各位朋友，15分钟的颐和园之旅到这儿就结束啦！希望今天的讲解，能让大家记住颐和园的碧波、红墙和彩绘。祝大家旅途顺利，再见！"
+        }
+      ]
     }
   ],
   "sentences": [
     {
-      "en": "The Summer Palace, located in the northwestern suburbs of Beijing, is the largest and best-preserved imperial garden in China.",
-      "zh": "颐和园位于北京西北郊，是中国现存规模最大、保存最完整的皇家园林。"
+      "en": "Good morning, everyone! Welcome to this amazing journey.",
+      "zh": "咱们眼前这片被昆明湖波光映照着、万寿山绿意环绕的园林，就是中国现存规模最大、保存最完整的皇家园林——北京颐和园！接下来15分钟，咱们从东宫门开始，顺着\"宫廷区→万寿山前山\"的路线逛：先看慈禧和光绪的日常居所，再走世界最长的长廊、登颐和园的标志性佛香阁，一起解锁这座园林从辽金到清代的千年故事。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Summer Palace"
     },
     {
-      "en": "First built in 1750 during the Qing Dynasty, it served as a royal summer retreat where emperors could escape the sweltering heat of the Forbidden City.",
-      "zh": "它始建于1750年清朝乾隆年间，是皇帝避暑的皇家行宫，让皇室可以远离紫禁城的酷暑。"
+      "en": "I'm your tour guide, Miya, and it's my great honor to be your companion today.",
+      "zh": "咱们眼前这片被昆明湖波光映照着、万寿山绿意环绕的园林，就是中国现存规模最大、保存最完整的皇家园林——北京颐和园！接下来15分钟，咱们从东宫门开始，顺着\"宫廷区→万寿山前山\"的路线逛：先看慈禧和光绪的日常居所，再走世界最长的长廊、登颐和园的标志性佛香阁，一起解锁这座园林从辽金到清代的千年故事。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Summer Palace"
     },
     {
-      "en": "Kunming Lake covers about three-quarters of the park's 300-hectare area, while Longevity Hill rises 60 meters above the water.",
-      "zh": "昆明湖占据了颐和园300公顷总面积的四分之三，万寿山高出水面60米。"
+      "en": "The garden in front of us, shimmering with the waves of Kunming Lake and surrounded by the greenery of Longevity Hill, is the Summer Palace in Beijing — the largest and best-preserved imperial garden still existing in China!",
+      "zh": "咱们眼前这片被昆明湖波光映照着、万寿山绿意环绕的园林，就是中国现存规模最大、保存最完整的皇家园林——北京颐和园！接下来15分钟，咱们从东宫门开始，顺着\"宫廷区→万寿山前山\"的路线逛：先看慈禧和光绪的日常居所，再走世界最长的长廊、登颐和园的标志性佛香阁，一起解锁这座园林从辽金到清代的千年故事。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Summer Palace"
     },
     {
-      "en": "This composition of hill and water was carefully designed to evoke the famous West Lake in Hangzhou and other scenic landscapes of southern China.",
-      "zh": "这一山一水的格局精心模仿了杭州西湖以及江南其他名胜的风景意境。"
+      "en": "In the next 15 minutes, we will start from the East Palace Gate and follow the route of \"Palace Area → Front Hill of Longevity Hill\".",
+      "zh": "咱们眼前这片被昆明湖波光映照着、万寿山绿意环绕的园林，就是中国现存规模最大、保存最完整的皇家园林——北京颐和园！接下来15分钟，咱们从东宫门开始，顺着\"宫廷区→万寿山前山\"的路线逛：先看慈禧和光绪的日常居所，再走世界最长的长廊、登颐和园的标志性佛香阁，一起解锁这座园林从辽金到清代的千年故事。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Summer Palace"
     },
     {
-      "en": "The Long Corridor, stretching 728 meters along the northern shore of Kunming Lake, is the longest painted corridor in the world.",
-      "zh": "长廊沿着昆明湖北岸延伸728米，是世界上最长的彩绘长廊。"
+      "en": "First, we will visit the daily residences of Empress Dowager Cixi and Emperor Guangxu, then walk along the world's longest Long Corridor, and climb up to the Tower of Buddhist Incense, the landmark of the Summer Palace.",
+      "zh": "咱们眼前这片被昆明湖波光映照着、万寿山绿意环绕的园林，就是中国现存规模最大、保存最完整的皇家园林——北京颐和园！接下来15分钟，咱们从东宫门开始，顺着\"宫廷区→万寿山前山\"的路线逛：先看慈禧和光绪的日常居所，再走世界最长的长廊、登颐和园的标志性佛香阁，一起解锁这座园林从辽金到清代的千年故事。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Summer Palace"
     },
     {
-      "en": "Its beams and ceilings are decorated with over 14,000 colorful paintings depicting Chinese myths, historical scenes, and natural landscapes.",
-      "zh": "其横梁和天花板上绘有超过14000幅彩画，描绘了中国神话、历史故事和山水风景。"
+      "en": "Together, we will explore the thousand-year history of this garden from the Liao and Jin dynasties to the Qing Dynasty.",
+      "zh": "咱们眼前这片被昆明湖波光映照着、万寿山绿意环绕的园林，就是中国现存规模最大、保存最完整的皇家园林——北京颐和园！接下来15分钟，咱们从东宫门开始，顺着\"宫廷区→万寿山前山\"的路线逛：先看慈禧和光绪的日常居所，再走世界最长的长廊、登颐和园的标志性佛香阁，一起解锁这座园林从辽金到清代的千年故事。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Summer Palace"
     },
     {
-      "en": "The Marble Boat, or the Boat of Purity and Ease, is a lakeside pavilion built entirely of stone and wood to resemble a paddle steamer.",
-      "zh": "石舫，又名清晏舫，是一座完全由石材和木材建成的湖滨楼阁，形似一艘明轮汽船。"
+      "en": "Let's set off right now!",
+      "zh": "咱们眼前这片被昆明湖波光映照着、万寿山绿意环绕的园林，就是中国现存规模最大、保存最完整的皇家园林——北京颐和园！接下来15分钟，咱们从东宫门开始，顺着\"宫廷区→万寿山前山\"的路线逛：先看慈禧和光绪的日常居所，再走世界最长的长廊、登颐和园的标志性佛香阁，一起解锁这座园林从辽金到清代的千年故事。咱们这就出发！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Summer Palace"
     },
     {
-      "en": "Commissioned by Empress Dowager Cixi using funds originally intended for the navy, it has become a poignant symbol of the late Qing Dynasty's decline.",
-      "zh": "它由慈禧太后挪用海军经费修建，已成为晚清衰落的深刻象征。"
+      "en": "Before we start our tour, let's go through the past and present of the Summer Palace.",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "Its history can be traced back more than 1,000 years: In the Liao Dynasty (10th-12th centuries), this place was called \"Golden Hill Palace\", a summer resort for Liao emperors.",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "In the Jin Dynasty (12th-13th centuries), it was renamed \"Yuquan Mountain Palace\".",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "Emperor Zhangzong of the Jin Dynasty built pavilions and pools here.",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "In the Yuan Dynasty (13th-14th centuries), it was known as \"Wengshan Lake\".",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "Famous water conservancy expert Guo Shoujing built water projects here.",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "In the Ming Dynasty (14th-17th centuries), Emperor Xiaozong renamed it \"Haoshan Garden\".",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "The Qing Dynasty (17th-20th centuries) was the golden age.",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "In 1750, Emperor Qianlong built \"Qingyi Garden\" to honor his mother.",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "In 1860, the Anglo-French Allied Forces burned it down.",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "In 1888, Empress Dowager Cixi misappropriated naval funds to rebuild it and renamed it \"Summer Palace\".",
+      "zh": "逛之前先跟大家捋捋颐和园的\"前世今生\"：辽代叫\"金山行宫\"；金代改名\"玉泉山行宫\"；元代叫\"瓮山泊\"，郭守敬还在这儿修了水利工程；明代改成\"好山园\"；清代才是颐和园的\"黄金时期\"——乾隆十五（1750年）建了\"清漪园\"；1860年英法联军烧毁；1888年慈禧挪用海军经费重建，改名\"颐和园\"。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: From \"Golden Hill\" to \"Imperial Summer Palace\""
+    },
+    {
+      "en": "The Summer Palace covers an area of about 2.9 million square meters, equivalent to four times the size of the Forbidden City.",
+      "zh": "颐和园占地约290万平方米，相当于4个故宫！北边靠万寿山，南边临昆明湖。整个园林分三大区：宫廷区、万寿山前山区、昆明湖区。所有主要建筑都沿着南北中轴线排列。",
+      "heading_zh": "",
+      "heading_en": "II. Overall Layout: An \"Imperial Scroll\" of Intertwined Mountains and Water"
+    },
+    {
+      "en": "It borders Longevity Hill to the north and faces Kunming Lake to the south.",
+      "zh": "颐和园占地约290万平方米，相当于4个故宫！北边靠万寿山，南边临昆明湖。整个园林分三大区：宫廷区、万寿山前山区、昆明湖区。所有主要建筑都沿着南北中轴线排列。",
+      "heading_zh": "",
+      "heading_en": "II. Overall Layout: An \"Imperial Scroll\" of Intertwined Mountains and Water"
+    },
+    {
+      "en": "The whole garden is divided into three major areas: the Palace Area, the Front Hill of Longevity Hill Area, and the Kunming Lake Area.",
+      "zh": "颐和园占地约290万平方米，相当于4个故宫！北边靠万寿山，南边临昆明湖。整个园林分三大区：宫廷区、万寿山前山区、昆明湖区。所有主要建筑都沿着南北中轴线排列。",
+      "heading_zh": "",
+      "heading_en": "II. Overall Layout: An \"Imperial Scroll\" of Intertwined Mountains and Water"
+    },
+    {
+      "en": "All main buildings are arranged along the north-south central axis.",
+      "zh": "颐和园占地约290万平方米，相当于4个故宫！北边靠万寿山，南边临昆明湖。整个园林分三大区：宫廷区、万寿山前山区、昆明湖区。所有主要建筑都沿着南北中轴线排列。",
+      "heading_zh": "",
+      "heading_en": "II. Overall Layout: An \"Imperial Scroll\" of Intertwined Mountains and Water"
+    },
+    {
+      "en": "The exquisitely carved archway in front of us is the Hanxu Yanxiu Archway, the landmark gateway of the Summer Palace.",
+      "zh": "眼前这座雕梁画栋的牌坊就是\"涵虚罨秀坊\"。穿过牌坊就是颐和园的正门\"东宫门\"，门楣上的\"颐和园\"三个大字是光绪皇帝亲笔写的。",
+      "heading_zh": "",
+      "heading_en": "III. Palace Area – The Imperial \"Political & Living Zone\" — 1. Hanxu Yanxiu Archway & East Palace Gate"
+    },
+    {
+      "en": "Passing through it, we reach the East Palace Gate.",
+      "zh": "眼前这座雕梁画栋的牌坊就是\"涵虚罨秀坊\"。穿过牌坊就是颐和园的正门\"东宫门\"，门楣上的\"颐和园\"三个大字是光绪皇帝亲笔写的。",
+      "heading_zh": "",
+      "heading_en": "III. Palace Area – The Imperial \"Political & Living Zone\" — 1. Hanxu Yanxiu Archway & East Palace Gate"
+    },
+    {
+      "en": "Look at the three big characters \"Yi He Yuan\" on the door lintel, personally written by Emperor Guangxu.",
+      "zh": "眼前这座雕梁画栋的牌坊就是\"涵虚罨秀坊\"。穿过牌坊就是颐和园的正门\"东宫门\"，门楣上的\"颐和园\"三个大字是光绪皇帝亲笔写的。",
+      "heading_zh": "",
+      "heading_en": "III. Palace Area – The Imperial \"Political & Living Zone\" — 1. Hanxu Yanxiu Archway & East Palace Gate"
+    },
+    {
+      "en": "The Hall of Benevolent Longevity is the largest palace in the Summer Palace, equivalent to the Hall of Supreme Harmony in the Forbidden City.",
+      "zh": "仁寿殿是颐和园里最大的宫殿，相当于故宫的太和殿。\"仁寿\"取自《论语》\"仁者寿\"。最有意思的是殿外的铜龙铜凤：这儿的铜凤在左、铜龙在右——因为慈禧垂帘听政，这\"凤压龙\"的摆放，就是她权力的\"无声宣言\"！",
+      "heading_zh": "",
+      "heading_en": "2. Hall of Benevolent Longevity"
+    },
+    {
+      "en": "The name \"Renshou\" comes from The Analects, meaning \"the benevolent live a long life.\" The most interesting part is the bronze dragon and phoenix outside the hall:",
+      "zh": "仁寿殿是颐和园里最大的宫殿，相当于故宫的太和殿。\"仁寿\"取自《论语》\"仁者寿\"。最有意思的是殿外的铜龙铜凤：这儿的铜凤在左、铜龙在右——因为慈禧垂帘听政，这\"凤压龙\"的摆放，就是她权力的\"无声宣言\"！",
+      "heading_zh": "",
+      "heading_en": "2. Hall of Benevolent Longevity"
+    },
+    {
+      "en": "here the phoenix is on the left and the dragon on the right—because Cixi held real power, this \"phoenix suppressing dragon\" arrangement was a silent declaration of her supreme power.",
+      "zh": "仁寿殿是颐和园里最大的宫殿，相当于故宫的太和殿。\"仁寿\"取自《论语》\"仁者寿\"。最有意思的是殿外的铜龙铜凤：这儿的铜凤在左、铜龙在右——因为慈禧垂帘听政，这\"凤压龙\"的摆放，就是她权力的\"无声宣言\"！",
+      "heading_zh": "",
+      "heading_en": "2. Hall of Benevolent Longevity"
+    },
+    {
+      "en": "The Hall of Jade Ripples was Emperor Guangxu's bedroom and study.",
+      "zh": "玉澜堂是光绪皇帝的寝宫兼书房。1898年戊戌变法失败后，慈禧把光绪软禁在这儿，殿外的走廊被砌上砖墙，直到光绪去世都没踏出半步。",
+      "heading_zh": "",
+      "heading_en": "3. Hall of Jade Ripples"
+    },
+    {
+      "en": "After the failure of the Hundred Days' Reform in 1898, Cixi placed Guangxu under house arrest here, brick walls were built to block the outer corridors.",
+      "zh": "玉澜堂是光绪皇帝的寝宫兼书房。1898年戊戌变法失败后，慈禧把光绪软禁在这儿，殿外的走廊被砌上砖墙，直到光绪去世都没踏出半步。",
+      "heading_zh": "",
+      "heading_en": "3. Hall of Jade Ripples"
+    },
+    {
+      "en": "Guangxu never stepped out until his death.",
+      "zh": "玉澜堂是光绪皇帝的寝宫兼书房。1898年戊戌变法失败后，慈禧把光绪软禁在这儿，殿外的走廊被砌上砖墙，直到光绪去世都没踏出半步。",
+      "heading_zh": "",
+      "heading_en": "3. Hall of Jade Ripples"
+    },
+    {
+      "en": "Yiyun Hall was the residence of Empress Longyu, Emperor Guangxu's queen.",
+      "zh": "宜芸馆是光绪皇后隆裕的居所。\"宜芸\"意思是\"适合读书治学\"。馆内装饰特别素净，跟慈禧的乐寿堂比低调太多。",
+      "heading_zh": "",
+      "heading_en": "4. Yiyun Hall"
+    },
+    {
+      "en": "The name means \"suitable for reading and studying.\" The interior decoration is very simple and plain, reflecting Empress Longyu's modest status in the palace.",
+      "zh": "宜芸馆是光绪皇后隆裕的居所。\"宜芸\"意思是\"适合读书治学\"。馆内装饰特别素净，跟慈禧的乐寿堂比低调太多。",
+      "heading_zh": "",
+      "heading_en": "4. Yiyun Hall"
+    },
+    {
+      "en": "The Hall of Joyful Longevity was Empress Dowager Cixi's main residence.",
+      "zh": "乐寿堂是慈禧的\"主卧\"。堂前有块超大的太湖石\"青芝岫\"，是乾隆从房山运来的。堂内有慈禧用过的西洋电灯、电话机，还有紫檀木大衣柜，上面雕着\"百鸟朝凤\"。",
+      "heading_zh": "",
+      "heading_en": "5. Hall of Joyful Longevity"
+    },
+    {
+      "en": "In front stands a huge Taihu stone named \"Qingzhi Xiu\", specially transported from Fangshan by Emperor Qianlong.",
+      "zh": "乐寿堂是慈禧的\"主卧\"。堂前有块超大的太湖石\"青芝岫\"，是乾隆从房山运来的。堂内有慈禧用过的西洋电灯、电话机，还有紫檀木大衣柜，上面雕着\"百鸟朝凤\"。",
+      "heading_zh": "",
+      "heading_en": "5. Hall of Joyful Longevity"
+    },
+    {
+      "en": "The interior furnishings are extremely luxurious: there are Western electric lights and telephones, as well as a large red sandalwood wardrobe carved with \"hundreds of birds paying homage to the phoenix.\"",
+      "zh": "乐寿堂是慈禧的\"主卧\"。堂前有块超大的太湖石\"青芝岫\"，是乾隆从房山运来的。堂内有慈禧用过的西洋电灯、电话机，还有紫檀木大衣柜，上面雕着\"百鸟朝凤\"。",
+      "heading_zh": "",
+      "heading_en": "5. Hall of Joyful Longevity"
+    },
+    {
+      "en": "The Long Corridor starts from the Moon-inviting Gate in the east and ends at the Stone Zhang Pavilion in the west, with a total length of 728 meters and 273 bays.",
+      "zh": "长廊东起邀月门，西到石丈亭，全长728米，有273间，1992年列入《吉尼斯世界纪录》。最绝的是廊顶的彩绘——14000多幅，没有一幅重样的！",
+      "heading_zh": "",
+      "heading_en": "IV. Front Hill of Longevity Hill – \"Architectural Essence\" — 1. Long Corridor"
+    },
+    {
+      "en": "It was listed in the Guinness World Records in 1992.",
+      "zh": "长廊东起邀月门，西到石丈亭，全长728米，有273间，1992年列入《吉尼斯世界纪录》。最绝的是廊顶的彩绘——14000多幅，没有一幅重样的！",
+      "heading_zh": "",
+      "heading_en": "IV. Front Hill of Longevity Hill – \"Architectural Essence\" — 1. Long Corridor"
+    },
+    {
+      "en": "Its most amazing feature is the colored paintings on the beams—more than 14,000 paintings in total and no two identical ones.",
+      "zh": "长廊东起邀月门，西到石丈亭，全长728米，有273间，1992年列入《吉尼斯世界纪录》。最绝的是廊顶的彩绘——14000多幅，没有一幅重样的！",
+      "heading_zh": "",
+      "heading_en": "IV. Front Hill of Longevity Hill – \"Architectural Essence\" — 1. Long Corridor"
+    },
+    {
+      "en": "From bottom to top: Hall of Dispelling Clouds—the core hall and banquet hall for Cixi's birthday celebrations;",
+      "zh": "从下往上依次是：排云殿——慈禧过寿的\"宴会厅\"；佛香阁——高41米，颐和园的\"标志\"；智慧海——全用砖石砌成的\"无梁殿\"，外墙镶嵌1008尊琉璃小佛。",
+      "heading_zh": "",
+      "heading_en": "2. Main Buildings on the Front Hill's Central Axis"
+    },
+    {
+      "en": "Tower of Buddhist Incense—41 meters high, the landmark of the Summer Palace, originally housing a thousand-hand Guanyin statue;",
+      "zh": "从下往上依次是：排云殿——慈禧过寿的\"宴会厅\"；佛香阁——高41米，颐和园的\"标志\"；智慧海——全用砖石砌成的\"无梁殿\"，外墙镶嵌1008尊琉璃小佛。",
+      "heading_zh": "",
+      "heading_en": "2. Main Buildings on the Front Hill's Central Axis"
+    },
+    {
+      "en": "Sea of Wisdom—a beamless hall built entirely of bricks and stones, its outer wall inlaid with 1,008 small glazed Buddha statues.",
+      "zh": "从下往上依次是：排云殿——慈禧过寿的\"宴会厅\"；佛香阁——高41米，颐和园的\"标志\"；智慧海——全用砖石砌成的\"无梁殿\"，外墙镶嵌1008尊琉璃小佛。",
+      "heading_zh": "",
+      "heading_en": "2. Main Buildings on the Front Hill's Central Axis"
+    },
+    {
+      "en": "Dear friends, our 15-minute tour of the Summer Palace has come to an end!",
+      "zh": "各位朋友，15分钟的颐和园之旅到这儿就结束啦！希望今天的讲解，能让大家记住颐和园的碧波、红墙和彩绘。祝大家旅途顺利，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
+    },
+    {
+      "en": "I hope today's explanation can help you remember the clear waves, red walls and colored paintings of the Summer Palace.",
+      "zh": "各位朋友，15分钟的颐和园之旅到这儿就结束啦！希望今天的讲解，能让大家记住颐和园的碧波、红墙和彩绘。祝大家旅途顺利，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
+    },
+    {
+      "en": "Wish you a pleasant and smooth journey, goodbye!",
+      "zh": "各位朋友，15分钟的颐和园之旅到这儿就结束啦！希望今天的讲解，能让大家记住颐和园的碧波、红墙和彩绘。祝大家旅途顺利，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
     }
   ]
 }

@@ -2,60 +2,266 @@
   "id": "changcheng",
   "title_zh": "长城",
   "title_en": "The Great Wall",
-  "paragraphs": [
+  "sections": [
     {
-      "en": "The Great Wall of China is one of the most extraordinary engineering achievements in human history. Stretching over 21,000 kilometers across northern China, it was built and expanded over the course of nearly 2,000 years by successive dynasties to defend against invasions from the north.",
-      "zh": "万里长城是人类历史上最非凡的工程成就之一。它横跨中国北方，总长超过21000公里，由历代王朝在近两千年的岁月中不断修建和扩展，以抵御北方的入侵。"
+      "heading_zh": "",
+      "heading_en": "Intro: The Great Wall",
+      "paragraphs": [
+        {
+          "en": "Dear friends, the city wall under our feet now is the Great Wall of China, known as one of the \"Seven Wonders of the World\"! I'm your tour guide, Miya, and it's my great honor to be your companion today. Over the next 15 minutes, we'll follow the classic route of \"Guangou Gorge's Peril—Juyongguan Pass's Majesty—Badaling's Barrier.\" Let's start with Guangou Gorge and feel the momentum of this \"Oriental Dragon\" together!",
+          "zh": "各位朋友，咱们此刻脚下的城墙，就是被誉为\"世界七大奇迹之一\"的中国万里长城！接下来15分钟，咱们沿着\"关沟天险—居庸雄关—八达岭屏障\"的经典路线逛。咱们先从关沟开始，一起感受\"东方巨龙\"的气势！"
+        }
+      ]
     },
     {
-      "en": "The Badaling section, located about 70 kilometers northwest of Beijing, is the most visited and best-preserved part of the Great Wall. Built during the Ming Dynasty with granite and brick, it stands as a formidable barrier with watchtowers spaced at regular intervals along its commanding ridge.",
-      "zh": "八达岭段位于北京西北约70公里处，是长城中游客最多、保存最完好的一段。它建于明朝，采用花岗岩和青砖筑成，沿雄伟的山脊蜿蜒，每隔一段便设有一座敌楼，气势磅礴。"
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: A Millennium-old \"Military Epic\"",
+      "paragraphs": [
+        {
+          "en": "Origin (Western Zhou Dynasty, c. 1046-771 BC): Small \"fortress walls\" built by vassals. Early Representatives (Spring and Autumn, Warring States): Chu Great Wall, Qi Great Wall. Three Major Construction Peaks: Qin Dynasty (221-206 BC)—Emperor Qin Shi Huang connected the Great Walls, about 5,000 km; Han Dynasty (202 BC-220 AD)—extended westward, about 10,000 km, the longest; Ming Dynasty (1368-1644)—the Beijing section we see now, about 8,851 km, paved with blue bricks.",
+          "zh": "起源（西周）：诸侯修的小段\"列城\"。早期代表（春秋战国）：楚长城、齐长城。三大修建高峰：秦朝（约5000公里）；汉朝（约10000公里，最长）；明朝（约8851公里，咱们现在看到的北京长城）。"
+        }
+      ]
     },
     {
-      "en": "The Mutianyu section offers a slightly less crowded alternative to Badaling, with equally stunning views. Surrounded by dense forests, this section features a unique configuration of three connected watchtowers, a rare architectural design not seen elsewhere on the wall.",
-      "zh": "慕田峪段提供了一个比八达岭稍显清静的选择，景色同样壮丽。这段长城被茂密的森林环绕，其独特的三座敌楼并立的设计在全线长城中独树一帜，十分罕见。"
+      "heading_zh": "",
+      "heading_en": "II. Basic Structure: Ancient \"Defense High-tech\"",
+      "paragraphs": [
+        {
+          "en": "Watchtower: One every 300-500 meters, two floors—lower for soldiers and supplies, upper for observation and shooting. Wall Platform: Half a meter higher than the wall, with battlements for defense. Beacon Tower: Built on mountain tops, using \"beacon and fire system\"—smoke by day, flames by night. Messages could reach the capital in half a day.",
+          "zh": "敌台：每隔300-500米一座，上下两层。墙台：比城墙高半米，有垛口。烽火台：建在山顶，白天烧狼粪冒烟（烽），晚上点柴火（燧），几百里军情半天到京城。"
+        }
+      ]
     },
     {
-      "en": "Contrary to popular myth, the Great Wall cannot be seen from space with the naked eye. However, this does not diminish its cultural significance. It was designated a UNESCO World Heritage Site in 1987 and is widely regarded as the symbol of China's ancient civilization.",
-      "zh": "与广为流传的说法不同，肉眼是无法从太空中看到长城的。但这丝毫不减损其文化意义。1987年，长城被联合国教科文组织列为世界文化遗产，被广泛视为中国古代文明的象征。"
+      "heading_zh": "",
+      "heading_en": "III. Guangou Gorge – The Perilous \"One-man Defense\" Gorge — 1. Geography & Strategy",
+      "paragraphs": [
+        {
+          "en": "This 18-kilometer gorge is the \"throat passage\" from Beijing to the northern frontier. Jundu Mountain on the left and Taihang Mountain on the right—truly \"one man guarding the pass can hold off ten thousand enemies.\"",
+          "zh": "这条18公里的峡谷是北京通往塞外的\"咽喉要道\"。左边军都山，右边太行山，真应了\"一夫当关，万夫莫开\"！"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "2. Jingzhang Railway",
+      "paragraphs": [
+        {
+          "en": "The railway designed by Zhan Tianyou—completed in 1909, China's first independently designed railway. The \"herringbone\" railway at Qinglongqiao Station solved the problem of trains climbing steep slopes.",
+          "zh": "詹天佑设计的京张铁路——1909年建成，中国第一条自主设计的铁路。青龙桥车站的\"人\"字形铁路解决了火车爬陡坡的难题。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "3. Juyong Pass in Green — One of the Eight Scenic Spots of Yanjing! Mountains covered with pines, cypresses and wild flowers.",
+      "paragraphs": [
+        {
+          "en": "",
+          "zh": "\"居庸叠翠\"——燕京八景之一！满山松柏和野花，层层叠叠的绿色映着峡谷。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "IV. Juyongguan Pass – \"The First Majestic Pass Under Heaven\" — 1. Historical Evolution — Juyongguan Pass had a prototype as early as the Western Zhou Dynasty, was rebuilt during the Ming Dynasty's Zhengtong reign (1436-1449). It has an inner city, an outer city, and a barbican.",
+      "paragraphs": [
+        {
+          "en": "",
+          "zh": "居庸关早在西周就有雏形，明朝正统年间重修。有内城、外城，还有瓮城。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "2. Yuntai Platform",
+      "paragraphs": [
+        {
+          "en": "The \"treasure of Juyongguan Pass\"—originally the base of a Yuan Dynasty street-crossing pagoda, built with white marble, 9.5 meters high. It's engraved with scriptures in six languages: Sanskrit, Tibetan, Chinese, Phags-pa script, Uighur script, and Western Xia script. There are also statues of the Four Heavenly Kings.",
+          "zh": "云台是居庸关的\"镇关之宝\"——元朝过街塔的基座，汉白玉砌成，高9.5米。刻着六种文字经文：梵文、藏文、汉文、八思巴文、回鹘文、西夏文。还有四大天王像。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "V. Badaling – The \"Top of the Great Wall\" — 1. Pass City Plaque — The west gate plaque reads \"Beimengsuoyue\" (Northern Gateway); the east gate reads \"Juyong Waizhen\" (Outer Fortress of Juyong).",
+      "paragraphs": [
+        {
+          "en": "",
+          "zh": "西门匾额\"北门锁钥\"，东门匾额\"居庸外镇\"。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "2. Wall Structure",
+      "paragraphs": [
+        {
+          "en": "7.8 meters high on average and 5.8 meters wide, enough for two horses side by side. Outer layer paved with blue bricks, joints filled with glutinous rice mortar. Watchtowers every 200-300 meters—denser than elsewhere, because if breached, enemies could directly attack Beijing.",
+          "zh": "平均高7.8米，宽5.8米，能并排走两匹马。外层青砖包砌，砖缝灌糯米灰浆。敌台每隔200-300米一座，比别处都密。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "VI. World Honor — In 1987, the Great Wall was inscribed on the UNESCO World Heritage List, described as \"the greatest military defense project in human history.\"",
+      "paragraphs": [
+        {
+          "en": "",
+          "zh": "1987年，长城被列入《世界遗产名录》，评价为\"人类历史上最伟大的军事防御工程\"。"
+        }
+      ]
+    },
+    {
+      "heading_zh": "",
+      "heading_en": "Farewell Speech",
+      "paragraphs": [
+        {
+          "en": "Dear friends, our Great Wall tour ends here! This \"Oriental Dragon\" is not just a city wall, but a spiritual symbol of the Chinese nation—tenacious, united, and wise. Wish you a smooth journey, goodbye!",
+          "zh": "各位朋友，长城之旅到这儿就结束啦！这座\"东方巨龙\"不只是城墙，更是中华民族的精神象征——坚韧、团结、智慧。祝大家旅途顺利，再见！"
+        }
+      ]
     }
   ],
   "sentences": [
     {
-      "en": "The Great Wall of China is one of the most extraordinary engineering achievements in human history.",
-      "zh": "万里长城是人类历史上最非凡的工程成就之一。"
+      "en": "Dear friends, the city wall under our feet now is the Great Wall of China, known as one of the \"Seven Wonders of the World\"!",
+      "zh": "各位朋友，咱们此刻脚下的城墙，就是被誉为\"世界七大奇迹之一\"的中国万里长城！接下来15分钟，咱们沿着\"关沟天险—居庸雄关—八达岭屏障\"的经典路线逛。咱们先从关沟开始，一起感受\"东方巨龙\"的气势！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Great Wall"
     },
     {
-      "en": "Stretching over 21,000 kilometers across northern China, it was built and expanded over the course of nearly 2,000 years by successive dynasties to defend against invasions from the north.",
-      "zh": "它横跨中国北方，总长超过21000公里，由历代王朝在近两千年的岁月中不断修建和扩展，以抵御北方的入侵。"
+      "en": "I'm your tour guide, Miya, and it's my great honor to be your companion today.",
+      "zh": "各位朋友，咱们此刻脚下的城墙，就是被誉为\"世界七大奇迹之一\"的中国万里长城！接下来15分钟，咱们沿着\"关沟天险—居庸雄关—八达岭屏障\"的经典路线逛。咱们先从关沟开始，一起感受\"东方巨龙\"的气势！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Great Wall"
     },
     {
-      "en": "The Badaling section, located about 70 kilometers northwest of Beijing, is the most visited and best-preserved part of the Great Wall.",
-      "zh": "八达岭段位于北京西北约70公里处，是长城中游客最多、保存最完好的一段。"
+      "en": "Over the next 15 minutes, we'll follow the classic route of \"Guangou Gorge's Peril—Juyongguan Pass's Majesty—Badaling's Barrier.\" Let's start with Guangou Gorge and feel the momentum of this \"Oriental Dragon\" together!",
+      "zh": "各位朋友，咱们此刻脚下的城墙，就是被誉为\"世界七大奇迹之一\"的中国万里长城！接下来15分钟，咱们沿着\"关沟天险—居庸雄关—八达岭屏障\"的经典路线逛。咱们先从关沟开始，一起感受\"东方巨龙\"的气势！",
+      "heading_zh": "",
+      "heading_en": "Intro: The Great Wall"
     },
     {
-      "en": "Built during the Ming Dynasty with granite and brick, it stands as a formidable barrier with watchtowers spaced at regular intervals along its commanding ridge.",
-      "zh": "它建于明朝，采用花岗岩和青砖筑成，沿雄伟的山脊蜿蜒，每隔一段便设有一座敌楼，气势磅礴。"
+      "en": "Origin (Western Zhou Dynasty, c. 1046-771 BC): Small \"fortress walls\" built by vassals.",
+      "zh": "起源（西周）：诸侯修的小段\"列城\"。早期代表（春秋战国）：楚长城、齐长城。三大修建高峰：秦朝（约5000公里）；汉朝（约10000公里，最长）；明朝（约8851公里，咱们现在看到的北京长城）。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: A Millennium-old \"Military Epic\""
     },
     {
-      "en": "The Mutianyu section offers a slightly less crowded alternative to Badaling, with equally stunning views.",
-      "zh": "慕田峪段提供了一个比八达岭稍显清静的选择，景色同样壮丽。"
+      "en": "Early Representatives (Spring and Autumn, Warring States): Chu Great Wall, Qi Great Wall.",
+      "zh": "起源（西周）：诸侯修的小段\"列城\"。早期代表（春秋战国）：楚长城、齐长城。三大修建高峰：秦朝（约5000公里）；汉朝（约10000公里，最长）；明朝（约8851公里，咱们现在看到的北京长城）。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: A Millennium-old \"Military Epic\""
     },
     {
-      "en": "Surrounded by dense forests, this section features a unique configuration of three connected watchtowers, a rare architectural design not seen elsewhere on the wall.",
-      "zh": "这段长城被茂密的森林环绕，其独特的三座敌楼并立的设计在全线长城中独树一帜，十分罕见。"
+      "en": "Three Major Construction Peaks: Qin Dynasty (221-206 BC)—Emperor Qin Shi Huang connected the Great Walls, about 5,000 km; Han Dynasty (202 BC-220 AD)—extended westward, about 10,000 km, the longest; Ming Dynasty (1368-1644)—the Beijing section we see now, about 8,851 km, paved with blue bricks.",
+      "zh": "起源（西周）：诸侯修的小段\"列城\"。早期代表（春秋战国）：楚长城、齐长城。三大修建高峰：秦朝（约5000公里）；汉朝（约10000公里，最长）；明朝（约8851公里，咱们现在看到的北京长城）。",
+      "heading_zh": "",
+      "heading_en": "I. Historical Evolution: A Millennium-old \"Military Epic\""
     },
     {
-      "en": "Contrary to popular myth, the Great Wall cannot be seen from space with the naked eye.",
-      "zh": "与广为流传的说法不同，肉眼是无法从太空中看到长城的。"
+      "en": "Watchtower: One every 300-500 meters, two floors—lower for soldiers and supplies, upper for observation and shooting.",
+      "zh": "敌台：每隔300-500米一座，上下两层。墙台：比城墙高半米，有垛口。烽火台：建在山顶，白天烧狼粪冒烟（烽），晚上点柴火（燧），几百里军情半天到京城。",
+      "heading_zh": "",
+      "heading_en": "II. Basic Structure: Ancient \"Defense High-tech\""
     },
     {
-      "en": "However, this does not diminish its cultural significance.",
-      "zh": "但这丝毫不减损其文化意义。"
+      "en": "Wall Platform: Half a meter higher than the wall, with battlements for defense.",
+      "zh": "敌台：每隔300-500米一座，上下两层。墙台：比城墙高半米，有垛口。烽火台：建在山顶，白天烧狼粪冒烟（烽），晚上点柴火（燧），几百里军情半天到京城。",
+      "heading_zh": "",
+      "heading_en": "II. Basic Structure: Ancient \"Defense High-tech\""
     },
     {
-      "en": "It was designated a UNESCO World Heritage Site in 1987 and is widely regarded as the symbol of China's ancient civilization.",
-      "zh": "1987年，长城被联合国教科文组织列为世界文化遗产，被广泛视为中国古代文明的象征。"
+      "en": "Beacon Tower: Built on mountain tops, using \"beacon and fire system\"—smoke by day, flames by night.",
+      "zh": "敌台：每隔300-500米一座，上下两层。墙台：比城墙高半米，有垛口。烽火台：建在山顶，白天烧狼粪冒烟（烽），晚上点柴火（燧），几百里军情半天到京城。",
+      "heading_zh": "",
+      "heading_en": "II. Basic Structure: Ancient \"Defense High-tech\""
+    },
+    {
+      "en": "Messages could reach the capital in half a day.",
+      "zh": "敌台：每隔300-500米一座，上下两层。墙台：比城墙高半米，有垛口。烽火台：建在山顶，白天烧狼粪冒烟（烽），晚上点柴火（燧），几百里军情半天到京城。",
+      "heading_zh": "",
+      "heading_en": "II. Basic Structure: Ancient \"Defense High-tech\""
+    },
+    {
+      "en": "This 18-kilometer gorge is the \"throat passage\" from Beijing to the northern frontier.",
+      "zh": "这条18公里的峡谷是北京通往塞外的\"咽喉要道\"。左边军都山，右边太行山，真应了\"一夫当关，万夫莫开\"！",
+      "heading_zh": "",
+      "heading_en": "III. Guangou Gorge – The Perilous \"One-man Defense\" Gorge — 1. Geography & Strategy"
+    },
+    {
+      "en": "Jundu Mountain on the left and Taihang Mountain on the right—truly \"one man guarding the pass can hold off ten thousand enemies.\"",
+      "zh": "这条18公里的峡谷是北京通往塞外的\"咽喉要道\"。左边军都山，右边太行山，真应了\"一夫当关，万夫莫开\"！",
+      "heading_zh": "",
+      "heading_en": "III. Guangou Gorge – The Perilous \"One-man Defense\" Gorge — 1. Geography & Strategy"
+    },
+    {
+      "en": "The railway designed by Zhan Tianyou—completed in 1909, China's first independently designed railway.",
+      "zh": "詹天佑设计的京张铁路——1909年建成，中国第一条自主设计的铁路。青龙桥车站的\"人\"字形铁路解决了火车爬陡坡的难题。",
+      "heading_zh": "",
+      "heading_en": "2. Jingzhang Railway"
+    },
+    {
+      "en": "The \"herringbone\" railway at Qinglongqiao Station solved the problem of trains climbing steep slopes.",
+      "zh": "詹天佑设计的京张铁路——1909年建成，中国第一条自主设计的铁路。青龙桥车站的\"人\"字形铁路解决了火车爬陡坡的难题。",
+      "heading_zh": "",
+      "heading_en": "2. Jingzhang Railway"
+    },
+    {
+      "en": "The \"treasure of Juyongguan Pass\"—originally the base of a Yuan Dynasty street-crossing pagoda, built with white marble, 9.5 meters high.",
+      "zh": "云台是居庸关的\"镇关之宝\"——元朝过街塔的基座，汉白玉砌成，高9.5米。刻着六种文字经文：梵文、藏文、汉文、八思巴文、回鹘文、西夏文。还有四大天王像。",
+      "heading_zh": "",
+      "heading_en": "2. Yuntai Platform"
+    },
+    {
+      "en": "It's engraved with scriptures in six languages: Sanskrit, Tibetan, Chinese, Phags-pa script, Uighur script, and Western Xia script.",
+      "zh": "云台是居庸关的\"镇关之宝\"——元朝过街塔的基座，汉白玉砌成，高9.5米。刻着六种文字经文：梵文、藏文、汉文、八思巴文、回鹘文、西夏文。还有四大天王像。",
+      "heading_zh": "",
+      "heading_en": "2. Yuntai Platform"
+    },
+    {
+      "en": "There are also statues of the Four Heavenly Kings.",
+      "zh": "云台是居庸关的\"镇关之宝\"——元朝过街塔的基座，汉白玉砌成，高9.5米。刻着六种文字经文：梵文、藏文、汉文、八思巴文、回鹘文、西夏文。还有四大天王像。",
+      "heading_zh": "",
+      "heading_en": "2. Yuntai Platform"
+    },
+    {
+      "en": "7.8 meters high on average and 5.8 meters wide, enough for two horses side by side.",
+      "zh": "平均高7.8米，宽5.8米，能并排走两匹马。外层青砖包砌，砖缝灌糯米灰浆。敌台每隔200-300米一座，比别处都密。",
+      "heading_zh": "",
+      "heading_en": "2. Wall Structure"
+    },
+    {
+      "en": "Outer layer paved with blue bricks, joints filled with glutinous rice mortar.",
+      "zh": "平均高7.8米，宽5.8米，能并排走两匹马。外层青砖包砌，砖缝灌糯米灰浆。敌台每隔200-300米一座，比别处都密。",
+      "heading_zh": "",
+      "heading_en": "2. Wall Structure"
+    },
+    {
+      "en": "Watchtowers every 200-300 meters—denser than elsewhere, because if breached, enemies could directly attack Beijing.",
+      "zh": "平均高7.8米，宽5.8米，能并排走两匹马。外层青砖包砌，砖缝灌糯米灰浆。敌台每隔200-300米一座，比别处都密。",
+      "heading_zh": "",
+      "heading_en": "2. Wall Structure"
+    },
+    {
+      "en": "Dear friends, our Great Wall tour ends here!",
+      "zh": "各位朋友，长城之旅到这儿就结束啦！这座\"东方巨龙\"不只是城墙，更是中华民族的精神象征——坚韧、团结、智慧。祝大家旅途顺利，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
+    },
+    {
+      "en": "This \"Oriental Dragon\" is not just a city wall, but a spiritual symbol of the Chinese nation—tenacious, united, and wise.",
+      "zh": "各位朋友，长城之旅到这儿就结束啦！这座\"东方巨龙\"不只是城墙，更是中华民族的精神象征——坚韧、团结、智慧。祝大家旅途顺利，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
+    },
+    {
+      "en": "Wish you a smooth journey, goodbye!",
+      "zh": "各位朋友，长城之旅到这儿就结束啦！这座\"东方巨龙\"不只是城墙，更是中华民族的精神象征——坚韧、团结、智慧。祝大家旅途顺利，再见！",
+      "heading_zh": "",
+      "heading_en": "Farewell Speech"
     }
   ]
 }

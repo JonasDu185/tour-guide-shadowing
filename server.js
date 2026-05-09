@@ -49,7 +49,7 @@ app.get('/api/scripts', (req, res) => {
     const scripts = files.map(f => {
       const raw = fs.readFileSync(path.join(DATA_DIR, f), 'utf-8');
       const data = JSON.parse(raw);
-      return { id: data.id, title_zh: data.title_zh, title_en: data.title_en };
+      return { id: data.id, title_zh: data.title_zh, title_en: data.title_en, sentence_count: (data.sentences || []).length };
     });
     res.json({ scripts });
   } catch (err) {

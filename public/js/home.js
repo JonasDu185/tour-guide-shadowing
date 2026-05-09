@@ -8,7 +8,7 @@ const ICONS = {
   yiheyuan: '🌸',
   shisanling: '🏛',
   changcheng: '🧱',
-  beihai: '🌊',
+  damen: '🏛',
 };
 
 async function loadHome() {
@@ -24,6 +24,7 @@ async function loadHome() {
         <div class="card-icon">${ICONS[s.id] || '📍'}</div>
         <div class="card-zh">${escapeHTML(s.title_zh)}</div>
         <div class="card-en">${escapeHTML(s.title_en)}</div>
+        <span class="card-count">${s.sentence_count || 0} 句</span>
       </div>
     `).join('');
   } catch (err) {
