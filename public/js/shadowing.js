@@ -193,9 +193,9 @@ function stopTTS() { ttsAudio.pause(); ttsAudio.currentTime = 0; ttsState = 'idl
 function updateTTSButton() {
   const btn = document.getElementById('btnPlay');
   const label = btn.querySelector('.btn-label');
-  if (ttsState === 'loading') { label.textContent = '生成中...'; btn.disabled = true; }
-  else if (ttsState === 'playing') { label.textContent = '⏹ 停止'; btn.disabled = false; }
-  else { label.textContent = '听原音'; btn.disabled = false; }
+  if (ttsState === 'loading') { label.textContent = '生成中...'; btn.disabled = true; btn.classList.remove('playing'); }
+  else if (ttsState === 'playing') { label.textContent = '停止'; btn.disabled = false; btn.classList.add('playing'); }
+  else { label.textContent = '听原音'; btn.disabled = false; btn.classList.remove('playing'); }
 }
 
 // ---------- Speed Control ----------
@@ -257,7 +257,7 @@ function stopRecording() {
 function updateRecordingUI(recording) {
   const btn = document.getElementById('btnRecord');
   const label = document.getElementById('btnRecordLabel');
-  if (recording) { label.textContent = '停止'; btn.classList.add('recording'); }
+  if (recording) { label.textContent = '录音中...'; btn.classList.add('recording'); }
   else { label.textContent = '录音'; btn.classList.remove('recording'); }
 }
 

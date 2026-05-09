@@ -39,13 +39,15 @@
     <!-- Action Buttons -->
     <div class="shadow-actions">
       <button class="btn-action" id="btnPlay" onclick="playOriginal()">
-        🔊 <span class="btn-label">听原音</span>
+        <span class="play-icon"></span>
+        <span class="btn-label">听原音</span>
       </button>
       <div class="speed-selector">
         <button class="speed-btn" id="speedBtn" onclick="cycleSpeed()">1×</button>
       </div>
       <button class="btn-action btn-rec" id="btnRecord" onclick="toggleRecording()">
-        🎙 <span class="btn-label" id="btnRecordLabel">录音</span>
+        <span class="rec-dot"></span>
+        <span class="btn-label" id="btnRecordLabel">录音</span>
       </button>
     </div>
 
@@ -54,13 +56,13 @@
 
     <!-- Recording playback (hidden until recording done) -->
     <div class="recording-section" id="recordingSection" style="display:none;">
-      <div class="recording-label">🎙 我的录音</div>
+      <div class="recording-label">我的录音</div>
       <audio id="recordingAudio" controls class="recording-player"></audio>
     </div>
 
     <!-- STT comparison placeholder (hidden for now) -->
     <div class="comparison-section" id="comparisonSection" style="display:none;">
-      <div class="comparison-label">📝 对比结果</div>
+      <div class="comparison-label">对比结果</div>
       <div class="comparison-content" id="comparisonContent"></div>
     </div>
 
@@ -74,10 +76,10 @@
 
   <!-- Bottom Bar (reading mode only) -->
   <!-- 影子跟读悬浮按钮 -->
-  <button class="shadowing-fab" id="shadowingFab" onclick="toggleMode()">🎤 跟读</button>
+  <button class="shadowing-fab" id="shadowingFab" onclick="toggleMode()">跟读模式</button>
 
   <!-- AI Floating Button (选中文本后出现) -->
-  <button class="ai-fab" id="aiFab" style="display:none;" onclick="openAiSheet()">✨</button>
+  <button class="ai-fab" id="aiFab" style="display:none;" onclick="openAiSheet()">AI</button>
 
   <!-- AI Bottom Sheet -->
   <div class="ai-sheet-backdrop" id="aiSheetBackdrop" style="display:none;" onclick="closeAiSheet()"></div>
@@ -91,7 +93,7 @@
       <div class="ai-original" id="aiOriginal"></div>
       <div class="ai-translation" id="aiTranslation"></div>
       <div class="ai-phonetic" id="aiPhonetic"></div>
-      <button class="ai-grammar-btn" id="aiGrammarBtn" style="display:none;" onclick="askGrammar()">📖 语法分析</button>
+      <button class="ai-grammar-btn" id="aiGrammarBtn" style="display:none;" onclick="askGrammar()">语法分析</button>
       <div class="ai-grammar-result" id="aiGrammarResult" style="display:none;"></div>
       <div class="ai-chat" id="aiChatArea" style="display:none;">
         <div class="ai-chat-messages" id="aiChatMessages"></div>
