@@ -10,6 +10,8 @@ async function loadHome() {
       grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;">暂无导游词数据</p>';
       return;
     }
+    // 按句子数量从高到低排序
+    data.scripts.sort((a, b) => (b.sentence_count || 0) - (a.sentence_count || 0));
     grid.innerHTML = data.scripts.map((s, idx) => `
       <div class="scenic-card scenic-${s.id}" onclick="openScenic('${s.id}')" style="animation-delay:${idx * 0.1}s">
         <div class="card-zh">${escapeHTML(s.title_zh)}</div>
