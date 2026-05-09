@@ -20,6 +20,7 @@ module.exports = [
         location: 'readonly', history: 'readonly',
         DataView: 'readonly', ArrayBuffer: 'readonly',
         Uint8Array: 'readonly', Int16Array: 'readonly',
+        AbortController: 'readonly', AbortSignal: 'readonly',
         // common.js 导出（被其他文件使用）
         API: 'readonly', blobToWav: 'readonly', fetchJSON: 'readonly',
         getParam: 'readonly', escapeHTML: 'readonly', tokenizeWords: 'readonly',
