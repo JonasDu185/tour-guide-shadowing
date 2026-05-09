@@ -1,6 +1,6 @@
 /* Service worker — 离线缓存 + 自动更新 */
 
-const CACHE = 'tour-guide-v5';
+const CACHE = 'tour-guide-v10';
 
 // 安装后立即激活，不等待旧 SW 释放
 self.addEventListener('install', event => {

@@ -2,15 +2,6 @@
    home.js — Home page logic
    =========================== */
 
-const ICONS = {
-  gugong: '🏯',
-  tiantan: '🌿',
-  yiheyuan: '🌸',
-  shisanling: '🏛',
-  changcheng: '🧱',
-  damen: '🏛',
-};
-
 async function loadHome() {
   const grid = document.getElementById('cardGrid');
   try {
@@ -19,9 +10,8 @@ async function loadHome() {
       grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;">暂无导游词数据</p>';
       return;
     }
-    grid.innerHTML = data.scripts.map(s => `
-      <div class="scenic-card" onclick="openScenic('${s.id}')">
-        <div class="card-icon">${ICONS[s.id] || '📍'}</div>
+    grid.innerHTML = data.scripts.map((s, idx) => `
+      <div class="scenic-card scenic-${s.id}" onclick="openScenic('${s.id}')" style="animation-delay:${idx * 0.1}s">
         <div class="card-zh">${escapeHTML(s.title_zh)}</div>
         <div class="card-en">${escapeHTML(s.title_en)}</div>
         <span class="card-count">${s.sentence_count || 0} 句</span>
