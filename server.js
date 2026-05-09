@@ -538,24 +538,35 @@ app.post('/api/stt', async (req, res) => {
 // Serve data JSON files directly via static
 app.use('/data', express.static(DATA_DIR));
 
-// ---------- Start Server (HTTPS + HTTP redirect) ----------
-const HTTPS_PORT = process.env.PORT || 3443;
+// 健康检查端点（云平台监控用）
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
+
+// ---------- Start Server (本地 HTTPS / 云端 HTTP 双模式) ----------
+const PORT = process.env.PORT || 3443;
 const HTTP_PORT = process.env.HTTP_PORT || 3000;
 
-const sslOptions = {
-  key: fs.readFileSync(path.join(__dirname, 'cert.key')),
-  cert: fs.readFileSync(path.join(__dirname, 'cert.crt')),
-};
+const certKey = path.join(__dirname, 'cert.key');
+const certCrt = path.join(__dirname, 'cert.crt');
+const useHttps = fs.existsSync(certKey) && fs.existsSync(certCrt);
 
-// HTTPS server (main)
-https.createServer(sslOptions, app).listen(HTTPS_PORT, () => {
-  console.log(`HTTPS: https://localhost:${HTTPS_PORT}`);
-});
-
-// HTTP → HTTPS redirect (for convenience)
-http.createServer((req, res) => {
-  res.writeHead(301, { Location: `https://${req.headers.host?.replace(/:3000/, ':3443') || 'localhost:3443'}${req.url}` });
-  res.end();
-}).listen(HTTP_PORT, () => {
-  console.log(`HTTP:  http://localhost:${HTTP_PORT} → redirect to HTTPS`);
-});
+if (useHttps) {
+  // 本地开发：自签证书 HTTPS + HTTP 重定向
+  const sslOptions = {
+    key: fs.readFileSync(certKey),
+    cert: fs.readFileSync(certCrt),
+  };
+  https.createServer(sslOptions, app).listen(PORT, () => {
+    console.log(`HTTPS: https://localhost:${PORT}`);
+  });
+  http.createServer((req, res) => {
+    res.writeHead(301, { Location: `https://${req.headers.host?.replace(/:3000/, ':3443') || 'localhost:3443'}${req.url}` });
+    res.end();
+  }).listen(HTTP_PORT, () => {
+    console.log(`HTTP:  http://localhost:${HTTP_PORT} → redirect to HTTPS`);
+  });
+} else {
+  // 云端部署：纯 HTTP，HTTPS 由反向代理（Caddy/Nginx）处理
+  app.listen(PORT, () => {
+    console.log(`Server: http://localhost:${PORT}`);
+  });
+}
