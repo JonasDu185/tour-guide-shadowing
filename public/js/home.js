@@ -13,7 +13,7 @@ async function loadHome() {
     // 按句子数量从高到低排序
     data.scripts.sort((a, b) => (b.sentence_count || 0) - (a.sentence_count || 0));
     grid.innerHTML = data.scripts.map((s, idx) => `
-      <div class="scenic-card scenic-${s.id}" onclick="openScenic(${JSON.stringify(s.id)})" style="animation-delay:${idx * 0.1}s">
+      <div class="scenic-card scenic-${s.id}" onclick='openScenic(${JSON.stringify(s.id)})' style="animation-delay:${idx * 0.1}s">
         <div class="card-gold-top"></div>
         <div class="card-corners"></div>
         <div class="card-gloss"></div>
