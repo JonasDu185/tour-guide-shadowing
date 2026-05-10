@@ -14,6 +14,9 @@ async function loadHome() {
     data.scripts.sort((a, b) => (b.sentence_count || 0) - (a.sentence_count || 0));
     grid.innerHTML = data.scripts.map((s, idx) => `
       <div class="scenic-card scenic-${s.id}" onclick="openScenic('${s.id}')" style="animation-delay:${idx * 0.1}s">
+        <div class="card-gold-top"></div>
+        <div class="card-corners"></div>
+        <div class="card-gloss"></div>
         <div class="card-zh">${escapeHTML(s.title_zh)}</div>
         <div class="card-en">${escapeHTML(s.title_en)}</div>
         <span class="card-count">${s.sentence_count || 0} 句</span>
