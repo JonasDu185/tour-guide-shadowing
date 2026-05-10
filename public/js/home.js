@@ -13,12 +13,15 @@ async function loadHome() {
     // 按句子数量从高到低排序
     data.scripts.sort((a, b) => (b.sentence_count || 0) - (a.sentence_count || 0));
     grid.innerHTML = data.scripts.map((s, idx) => `
-      <div class="scenic-card scenic-${s.id}" onclick="openScenic('${s.id}')" style="animation-delay:${idx * 0.1}s">
+      <div class="scenic-card scenic-${s.id}" onclick="openScenic(${JSON.stringify(s.id)})" style="animation-delay:${idx * 0.1}s">
         <div class="card-gold-top"></div>
         <div class="card-corners"></div>
         <div class="card-gloss"></div>
-        <div class="card-zh">${escapeHTML(s.title_zh)}</div>
-        <div class="card-en">${escapeHTML(s.title_en)}</div>
+        <div class="card-titles">
+          <div class="card-zh">${escapeHTML(s.title_zh)}</div>
+          <div class="card-en">${escapeHTML(s.title_en)}</div>
+        </div>
+        <div class="card-desc">${escapeHTML(s.description || '')}</div>
         <span class="card-count">${s.sentence_count || 0} 句</span>
       </div>
     `).join('');
@@ -32,4 +35,19 @@ function openScenic(id) {
   window.location.href = `/scenic.html?id=${id}`;
 }
 
+async function loadQuote() {
+  const el = document.getElementById('dailyQuote');
+  try {
+    const data = await fetchJSON(API.quote);
+    el.innerHTML = `
+      <div class="quote-en">${escapeHTML(data.en)}</div>
+      <div class="quote-zh">${escapeHTML(data.zh)}</div>
+    `;
+  } catch (err) {
+    el.innerHTML = '';
+    console.error('Failed to load quote:', err);
+  }
+}
+
 loadHome();
+loadQuote();

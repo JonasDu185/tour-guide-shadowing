@@ -9,11 +9,11 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 
 # ── 景点配置 ──
 SITES_STANDARD = [
-    {"id": "tiantan",    "title_zh": "天坛",     "title_en": "The Temple of Heaven"},
-    {"id": "gugong",     "title_zh": "故宫博物院", "title_en": "The Palace Museum (Forbidden City)"},
-    {"id": "yiheyuan",   "title_zh": "颐和园",     "title_en": "The Summer Palace"},
-    {"id": "shisanling", "title_zh": "明十三陵",   "title_en": "The Ming Tombs"},
-    {"id": "changcheng", "title_zh": "长城",       "title_en": "The Great Wall"},
+    {"id": "tiantan",    "title_zh": "天坛",     "title_en": "The Temple of Heaven",            "description": "帝王与天对话的圣地，一圆一方尽显东方建筑哲思"},
+    {"id": "gugong",     "title_zh": "故宫博物院", "title_en": "The Palace Museum (Forbidden City)", "description": "六百年皇家宫殿，红墙黄瓦间藏尽明清帝王事"},
+    {"id": "yiheyuan",   "title_zh": "颐和园",     "title_en": "The Summer Palace",               "description": "山水一色皇家园林，昆明湖畔万寿山前"},
+    {"id": "shisanling", "title_zh": "明十三陵",   "title_en": "The Ming Tombs",                  "description": "明代十三帝长眠之地，群山环抱气脉绵延"},
+    {"id": "changcheng", "title_zh": "长城",       "title_en": "The Great Wall",                  "description": "万里蜿蜒的古代奇迹，砖石之间刻满千年风霜"},
 ]
 
 # ── 工具函数 ──
@@ -84,7 +84,7 @@ def merge_short_en(sents):
 
 def clean_standard(paras, title_zh, title_en):
     paras = [p for p in paras if p.strip()]
-    if not paras: return [], []
+    if not paras: return []
 
     # P0 是英文景点标题，跳过
     start = 1 if not has_cjk(paras[0]) and len(paras[0]) < 100 else 0
@@ -115,7 +115,7 @@ def clean_standard(paras, title_zh, title_en):
             if buffer_en:
                 sections.append(make_pair(buffer_en, ""))
                 buffer_en = None
-            current_headings.append(p)
+            current_headings = [p]
 
         # ZH 内容 → 与缓存的 EN 配对
         elif has_cjk(p) and cjk_ratio(p) > 0.15:
@@ -142,7 +142,7 @@ def clean_standard(paras, title_zh, title_en):
 
 def clean_tiananmen(paras, title_zh, title_en):
     paras = [p for p in paras if p.strip()]
-    if not paras: return [], []
+    if not paras: return []
 
     sections = []
     en_headings = []
@@ -162,28 +162,30 @@ def clean_tiananmen(paras, title_zh, title_en):
     start = 1 if not has_cjk(paras[0]) and len(paras[0]) < 60 else 0
 
     for p in paras[start:]:
-        # 短英文 → 标题
-        if len(p) < 100 and not has_cjk(p):
+        # 短英文 → 标题（必须是标题模式：罗马数字/数字开头，或 < 60 字符）
+        looks_like_heading = bool(re.match(r'^[IVX]+\.|^\d+\.|^Farewell', p))
+        if not has_cjk(p) and (looks_like_heading or (len(p) < 60 and not has_cjk(p))):
             if buffer_en:
                 sections.append(make_pair(buffer_en, ""))
                 buffer_en = None
-            en_headings.append(p)
+            en_headings = [p]  # 替换，不累积
             continue
 
-        # 短中文 → 中文标题（通常与英文标题冗余）
-        if len(p) < 100 and has_cjk(p) and cjk_ratio(p) > 0.3:
-            zh_headings.append(p)
+        # 短中文 → 中文标题
+        if len(p) < 80 and has_cjk(p) and cjk_ratio(p) > 0.3:
+            zh_headings = [p]  # 替换，不累积
             continue
 
-        # 长英文 → EN 内容（缓存等待 ZH 配对）
-        if not has_cjk(p) and len(p) > 80:
+        # 英文内容 → 累积缓冲（支持多段英文对应一段中文）
+        if not has_cjk(p):
             if buffer_en:
-                sections.append(make_pair(buffer_en, ""))
-            buffer_en = p
+                buffer_en += " " + p  # 合并多段英文
+            else:
+                buffer_en = p
             continue
 
-        # 长中文 → ZH 内容（与缓存的 EN 配对）
-        if has_cjk(p) and len(p) > 50:
+        # 中文内容 → 与缓冲的 EN 配对
+        if has_cjk(p):
             sections.append(make_pair(buffer_en or "", p))
             buffer_en = None
             en_headings = []
@@ -239,7 +241,7 @@ def process_standard(site):
 
     sections = clean_standard(raw["paragraphs"], site["title_zh"], site["title_en"])
     sentences = build_sentences(sections)
-    write_output(sid, site["title_zh"], site["title_en"], sections, sentences)
+    write_output(sid, site["title_zh"], site["title_en"], sections, sentences, site.get("description", ""))
     return sid, len(sections), sum(len(s["paragraphs"]) for s in sections), len(sentences)
 
 
@@ -250,15 +252,16 @@ def process_tiananmen():
 
     sections = clean_tiananmen(raw["paragraphs"], "天安门广场与中轴线", "Tian'anmen Square & Central Axis")
     sentences = build_sentences(sections)
-    write_output("damen", "天安门广场与中轴线", "Tian'anmen Square & Central Axis", sections, sentences)
+    write_output("damen", "天安门广场与中轴线", "Tian'anmen Square & Central Axis", sections, sentences, "古都中轴线的起点，百年风云尽在城楼之下")
     return "damen", len(sections), sum(len(s["paragraphs"]) for s in sections), len(sentences)
 
 
-def write_output(sid, title_zh, title_en, sections, sentences):
+def write_output(sid, title_zh, title_en, sections, sentences, description=""):
     result = {
         "id": sid,
         "title_zh": title_zh,
         "title_en": title_en,
+        "description": description,
         "sections": sections,
         "sentences": sentences,
     }

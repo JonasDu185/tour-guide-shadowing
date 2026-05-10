@@ -28,6 +28,7 @@
   --text-muted:   #8a7060;
 
   /* 强调色 */
+  --primary:      #d4706a;
   --red:          #c0392b;
   --red-dark:     #9b1d19;
   --green:        #5a9a70;
@@ -227,22 +228,41 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 .home-header {
   text-align: center; margin-bottom: 36px;
 }
-.home-header h1 {
-  font-family: var(--font-display);
-  font-size: 1.9rem; font-weight: 700; color: var(--gold);
-  letter-spacing: 0.15em; margin-bottom: 6px;
-}
-.home-header .subtitle {
+.home-title-en {
   font-family: var(--font-en);
-  color: var(--text-light); font-size: 0.82rem;
-  letter-spacing: 0.2em; opacity: 0.75;
-  text-transform: uppercase; font-style: italic;
+  font-size: 2rem; font-weight: 700; color: var(--gold-light);
+  letter-spacing: 0.06em; margin-bottom: 2px;
+  font-style: italic;
 }
 .home-header::after {
   content: ''; display: block;
-  width: 48px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 18px auto 0;
+  width: 72px; height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--gold-dim) 20%,
+    var(--gold-light) 50%,
+    var(--gold-dim) 80%,
+    transparent 100%);
+  margin: 22px auto 0;
+}
+
+/* 每日AI旅行鸡汤 */
+.daily-quote {
+  margin-top: 20px;
+  max-width: 340px; margin-left: auto; margin-right: auto;
+}
+.quote-loading {
+  color: var(--text-muted); font-size: 0.8rem; opacity: 0.5;
+}
+.quote-en {
+  font-family: var(--font-en);
+  font-size: 0.88rem; color: var(--gold);
+  line-height: 1.65; font-style: italic;
+  letter-spacing: 0.03em;
+}
+.quote-zh {
+  font-size: 0.72rem; color: var(--text-muted);
+  margin-top: 6px; letter-spacing: 0.05em;
 }
 
 /* ── 杂志瀑布流：CSS Grid + nth-child ── */
@@ -253,17 +273,18 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   gap: 14px;
 }
 
-/* 景点卡片 — 基类（纯漆器，无图片） */
+/* 景点卡片 — 基类（毛玻璃虚化照片） */
 .scenic-card {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  display: flex; flex-direction: column; justify-content: flex-end;
+  display: flex; flex-direction: column; justify-content: flex-start;
   transition: border-color 0.35s, transform 0.3s, box-shadow 0.3s;
   background-color: var(--card);
   border-radius: var(--radius-lg);
   border: 1px solid var(--gold-line);
   min-height: 155px;
+  padding: 20px 16px 16px;
   animation: cardEnter 0.5s ease-out backwards;
 }
 .scenic-card:hover {
@@ -275,6 +296,23 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* 毛玻璃虚化背景照片 */
+.scenic-card::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background-size: cover; background-position: center;
+  filter: blur(6px);
+  opacity: 0.4;
+  transform: scale(1.15);
+  border-radius: inherit;
+}
+.scenic-gugong::before   { background-image: url('/img/gugong.jpg'); }
+.scenic-tiantan::before  { background-image: url('/img/tiantan.jpg'); }
+.scenic-yiheyuan::before { background-image: url('/img/yiheyuan.jpg'); }
+.scenic-shisanling::before { background-image: url('/img/shisanling.jpg'); }
+.scenic-changcheng::before { background-image: url('/img/changcheng.jpg'); }
+.scenic-damen::before    { background-image: url('/img/damen.jpg'); }
 
 /* 顶部金线 */
 .scenic-card .card-gold-top {
@@ -307,20 +345,30 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 }
 .scenic-card:hover .card-gloss { transform: translateX(100%); transition: transform 0.6s ease; }
 
-/* 卡片文字 */
+/* 标题区 — 左上角 */
+.card-titles {
+  position: relative; z-index: 5;
+}
 .scenic-card .card-zh {
   font-size: 1.05rem; font-weight: 700; color: var(--gold-light);
-  position: relative; z-index: 5;
-  padding: 0 16px; margin-bottom: 2px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.08em; margin-bottom: 2px;
 }
 .scenic-card .card-en {
   font-family: var(--font-en);
-  font-size: 0.7rem; color: var(--text-light);
-  position: relative; z-index: 5;
-  padding: 0 16px 18px;
+  font-size: 0.7rem; color: var(--text);
   letter-spacing: 0.05em; font-style: italic;
 }
+
+/* 景点介绍 — 左对齐，垂直居中 */
+.card-desc {
+  position: relative; z-index: 5;
+  flex: 1;
+  display: flex; align-items: center; justify-content: flex-start;
+  text-align: left;
+  font-size: 0.8rem; color: var(--text);
+  line-height: 1.65; letter-spacing: 0.05em;
+}
+
 .scenic-card .card-count {
   position: absolute; top: 12px; right: 12px; z-index: 5;
   font-size: 0.62rem; color: var(--gold);
@@ -334,6 +382,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 .scenic-card:nth-child(1) {
   grid-column: 1 / -1;
   min-height: 200px;
+  padding: 24px 18px 18px;
   background-color: #1f100c;
   border-color: rgba(201,160,80,0.2);
 }
@@ -349,8 +398,9 @@ h3 { font-size: 1.15rem; font-weight: 600; }
     linear-gradient(45deg, rgba(224,200,120,0.55) 0%, rgba(224,200,120,0.55) 1px, transparent 1px, transparent 12px) bottom left / 22px 22px no-repeat,
     linear-gradient(315deg, rgba(224,200,120,0.55) 0%, rgba(224,200,120,0.55) 1px, transparent 1px, transparent 12px) bottom right / 22px 22px no-repeat;
 }
-.scenic-card:nth-child(1) .card-zh { font-size: 1.3rem; padding: 0 18px; }
-.scenic-card:nth-child(1) .card-en { font-size: 0.78rem; padding: 0 18px 20px; }
+.scenic-card:nth-child(1) .card-zh { font-size: 1.25rem; }
+.scenic-card:nth-child(1) .card-en { font-size: 0.78rem; }
+.scenic-card:nth-child(1) .card-desc { font-size: 0.88rem; }
 
 /* 第2-3张 → 自动占两列（grid 默认） */
 /* 第4张 → 中号单列（跨两列·稍矮） */

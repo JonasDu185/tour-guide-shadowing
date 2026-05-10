@@ -32,7 +32,7 @@ const TTS_URL = 'https://openspeech.bytedance.com/api/v3/tts/unidirectional';
 const ARK_URL = 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
 const ARK_KEY = process.env.ARK_API_KEY;  // 火山方舟 API Key（豆包模型）
 const ARK_MODEL = process.env.ARK_MODEL || 'ep-20260509013108-hhw96';  // Doubao-lite 接入点
-// Ensure cache directory exists
+// 确保缓存目录存在
 if (!fs.existsSync(CACHE_DIR)) {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
 }
@@ -49,7 +49,7 @@ app.get('/api/scripts', (req, res) => {
     const scripts = files.map(f => {
       const raw = fs.readFileSync(path.join(DATA_DIR, f), 'utf-8');
       const data = JSON.parse(raw);
-      return { id: data.id, title_zh: data.title_zh, title_en: data.title_en, sentence_count: (data.sentences || []).length };
+      return { id: data.id, title_zh: data.title_zh, title_en: data.title_en, description: data.description || '', sentence_count: (data.sentences || []).length };
     });
     res.json({ scripts });
   } catch (err) {
@@ -103,6 +103,55 @@ function buildSystemPrompt(action, text) {
       return '你是一个英语学习助手。';
   }
 }
+
+// 每日鸡汤：英文旅行励志语 + 中文翻译（每日缓存，一天只调一次 AI）
+app.get('/api/quote', async (req, res) => {
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD (UTC)
+  const cacheFile = path.join(CACHE_DIR, `quote_${today}.json`);
+
+  // 命中缓存直接返回
+  if (fs.existsSync(cacheFile)) {
+    try {
+      return res.json(JSON.parse(fs.readFileSync(cacheFile, 'utf-8')));
+    } catch { /* 损坏则重新生成 */ }
+  }
+
+  if (!ARK_KEY) {
+    return res.json({ en: 'The world is a book, and those who do not travel read only one page.', zh: '世界是一本书，不旅行的人只读了其中一页。' });
+  }
+
+  try {
+    const aiRes = await axios.post(ARK_URL, {
+      model: ARK_MODEL,
+      messages: [
+        { role: 'system', content: '你是一位旅行作家。每天生成一句简短有力、适合朗读的英文旅行励志语（20词以内），并附中文翻译。\n格式：\nEN: <英文>\nZH: <中文>' },
+        { role: 'user', content: '今天的一句话' },
+      ],
+      temperature: 0.9,
+      max_tokens: 120,
+      thinking: { type: 'disabled' },
+    }, {
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${ARK_KEY}` },
+      timeout: 15000,
+    });
+
+    const content = aiRes.data?.choices?.[0]?.message?.content || '';
+    const enMatch = content.match(/EN:\s*(.+)/);
+    const zhMatch = content.match(/ZH:\s*(.+)/);
+    const result = {
+      en: (enMatch ? enMatch[1] : 'The world is a book, and those who do not travel read only one page.').trim(),
+      zh: (zhMatch ? zhMatch[1] : '世界是一本书，不旅行的人只读了其中一页。').trim(),
+    };
+
+    fs.writeFileSync(cacheFile, JSON.stringify(result));
+    res.json(result);
+  } catch (err) {
+    console.error('Quote AI error:', err.message);
+    // 兜底
+    const fallback = { en: 'The world is a book, and those who do not travel read only one page.', zh: '世界是一本书，不旅行的人只读了其中一页。' };
+    res.json(fallback);
+  }
+});
 
 // AI 翻译 / 语法分析 / 追问（豆包 Lite）
 app.post('/api/ai', async (req, res) => {
@@ -162,7 +211,7 @@ app.post('/api/ai', async (req, res) => {
     const detail = err.response?.data || err.message;
     console.error('AI error:', detail);
     if (!res.headersSent) {
-      res.status(500).json({ error: 'AI 请求失败', detail });
+      res.status(500).json({ error: 'AI 请求失败' });
     }
   }
 });
@@ -256,7 +305,7 @@ app.post('/api/tts', async (req, res) => {
     const detail = err.response?.data || err.message;
     console.error('TTS error:', detail);
     if (!res.headersSent) {
-      res.status(500).json({ error: 'TTS request failed', detail });
+      res.status(500).json({ error: 'TTS 请求失败' });
     }
   }
 });
@@ -530,7 +579,7 @@ app.post('/api/stt', async (req, res) => {
   } catch (err) {
     console.error('ASR error:', err.message);
     if (!res.headersSent) {
-      res.status(500).json({ error: 'ASR request failed', detail: err.message });
+      res.status(500).json({ error: 'ASR 请求失败' });
     }
   }
 });
@@ -559,7 +608,7 @@ if (useHttps) {
     console.log(`HTTPS: https://localhost:${PORT}`);
   });
   http.createServer((req, res) => {
-    res.writeHead(301, { Location: `https://${req.headers.host?.replace(/:3000/, ':3443') || 'localhost:3443'}${req.url}` });
+    res.writeHead(301, { Location: `https://localhost:3443${req.url}` });
     res.end();
   }).listen(HTTP_PORT, () => {
     console.log(`HTTP:  http://localhost:${HTTP_PORT} → redirect to HTTPS`);

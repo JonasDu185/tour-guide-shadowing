@@ -7,6 +7,7 @@ const API = {
   script:   (id) => `/api/scripts/${id}`,
   ai:       '/api/ai',
   stt:      '/api/stt',
+  quote:    '/api/quote',
 };
 
 // Convert audio blob to 16kHz mono WAV for ASR

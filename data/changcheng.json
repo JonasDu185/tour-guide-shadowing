@@ -2,6 +2,7 @@
   "id": "changcheng",
   "title_zh": "长城",
   "title_en": "The Great Wall",
+  "description": "万里蜿蜒的古代奇迹，砖石之间刻满千年风霜",
   "sections": [
     {
       "heading_zh": "",
@@ -35,7 +36,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "III. Guangou Gorge – The Perilous \"One-man Defense\" Gorge — 1. Geography & Strategy",
+      "heading_en": "1. Geography & Strategy",
       "paragraphs": [
         {
           "en": "This 18-kilometer gorge is the \"throat passage\" from Beijing to the northern frontier. Jundu Mountain on the left and Taihang Mountain on the right—truly \"one man guarding the pass can hold off ten thousand enemies.\"",
@@ -55,7 +56,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "3. Juyong Pass in Green — One of the Eight Scenic Spots of Yanjing! Mountains covered with pines, cypresses and wild flowers.",
+      "heading_en": "One of the Eight Scenic Spots of Yanjing! Mountains covered with pines, cypresses and wild flowers.",
       "paragraphs": [
         {
           "en": "",
@@ -65,7 +66,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "IV. Juyongguan Pass – \"The First Majestic Pass Under Heaven\" — 1. Historical Evolution — Juyongguan Pass had a prototype as early as the Western Zhou Dynasty, was rebuilt during the Ming Dynasty's Zhengtong reign (1436-1449). It has an inner city, an outer city, and a barbican.",
+      "heading_en": "Juyongguan Pass had a prototype as early as the Western Zhou Dynasty, was rebuilt during the Ming Dynasty's Zhengtong reign (1436-1449). It has an inner city, an outer city, and a barbican.",
       "paragraphs": [
         {
           "en": "",
@@ -85,7 +86,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "V. Badaling – The \"Top of the Great Wall\" — 1. Pass City Plaque — The west gate plaque reads \"Beimengsuoyue\" (Northern Gateway); the east gate reads \"Juyong Waizhen\" (Outer Fortress of Juyong).",
+      "heading_en": "The west gate plaque reads \"Beimengsuoyue\" (Northern Gateway); the east gate reads \"Juyong Waizhen\" (Outer Fortress of Juyong).",
       "paragraphs": [
         {
           "en": "",
@@ -105,7 +106,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "VI. World Honor — In 1987, the Great Wall was inscribed on the UNESCO World Heritage List, described as \"the greatest military defense project in human history.\"",
+      "heading_en": "In 1987, the Great Wall was inscribed on the UNESCO World Heritage List, described as \"the greatest military defense project in human history.\"",
       "paragraphs": [
         {
           "en": "",
@@ -189,13 +190,13 @@
       "en": "This 18-kilometer gorge is the \"throat passage\" from Beijing to the northern frontier.",
       "zh": "这条18公里的峡谷是北京通往塞外的\"咽喉要道\"。左边军都山，右边太行山，真应了\"一夫当关，万夫莫开\"！",
       "heading_zh": "",
-      "heading_en": "III. Guangou Gorge – The Perilous \"One-man Defense\" Gorge — 1. Geography & Strategy"
+      "heading_en": "1. Geography & Strategy"
     },
     {
       "en": "Jundu Mountain on the left and Taihang Mountain on the right—truly \"one man guarding the pass can hold off ten thousand enemies.\"",
       "zh": "这条18公里的峡谷是北京通往塞外的\"咽喉要道\"。左边军都山，右边太行山，真应了\"一夫当关，万夫莫开\"！",
       "heading_zh": "",
-      "heading_en": "III. Guangou Gorge – The Perilous \"One-man Defense\" Gorge — 1. Geography & Strategy"
+      "heading_en": "1. Geography & Strategy"
     },
     {
       "en": "The railway designed by Zhan Tianyou—completed in 1909, China's first independently designed railway.",

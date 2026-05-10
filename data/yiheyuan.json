@@ -2,6 +2,7 @@
   "id": "yiheyuan",
   "title_zh": "颐和园",
   "title_en": "The Summer Palace",
+  "description": "山水一色皇家园林，昆明湖畔万寿山前",
   "sections": [
     {
       "heading_zh": "",
@@ -35,7 +36,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "III. Palace Area – The Imperial \"Political & Living Zone\" — 1. Hanxu Yanxiu Archway & East Palace Gate",
+      "heading_en": "1. Hanxu Yanxiu Archway & East Palace Gate",
       "paragraphs": [
         {
           "en": "The exquisitely carved archway in front of us is the Hanxu Yanxiu Archway, the landmark gateway of the Summer Palace. Passing through it, we reach the East Palace Gate. Look at the three big characters \"Yi He Yuan\" on the door lintel, personally written by Emperor Guangxu.",
@@ -85,7 +86,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "IV. Front Hill of Longevity Hill – \"Architectural Essence\" — 1. Long Corridor",
+      "heading_en": "1. Long Corridor",
       "paragraphs": [
         {
           "en": "The Long Corridor starts from the Moon-inviting Gate in the east and ends at the Stone Zhang Pavilion in the west, with a total length of 728 meters and 273 bays. It was listed in the Guinness World Records in 1992. Its most amazing feature is the colored paintings on the beams—more than 14,000 paintings in total and no two identical ones.",
@@ -105,7 +106,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "V. World Honor — In 1998, the Summer Palace was inscribed on the UNESCO World Heritage List, praised as a masterpiece that embodies the essence of Chinese classical garden art.",
+      "heading_en": "In 1998, the Summer Palace was inscribed on the UNESCO World Heritage List, praised as a masterpiece that embodies the essence of Chinese classical garden art.",
       "paragraphs": [
         {
           "en": "",
@@ -261,19 +262,19 @@
       "en": "The exquisitely carved archway in front of us is the Hanxu Yanxiu Archway, the landmark gateway of the Summer Palace.",
       "zh": "眼前这座雕梁画栋的牌坊就是\"涵虚罨秀坊\"。穿过牌坊就是颐和园的正门\"东宫门\"，门楣上的\"颐和园\"三个大字是光绪皇帝亲笔写的。",
       "heading_zh": "",
-      "heading_en": "III. Palace Area – The Imperial \"Political & Living Zone\" — 1. Hanxu Yanxiu Archway & East Palace Gate"
+      "heading_en": "1. Hanxu Yanxiu Archway & East Palace Gate"
     },
     {
       "en": "Passing through it, we reach the East Palace Gate.",
       "zh": "眼前这座雕梁画栋的牌坊就是\"涵虚罨秀坊\"。穿过牌坊就是颐和园的正门\"东宫门\"，门楣上的\"颐和园\"三个大字是光绪皇帝亲笔写的。",
       "heading_zh": "",
-      "heading_en": "III. Palace Area – The Imperial \"Political & Living Zone\" — 1. Hanxu Yanxiu Archway & East Palace Gate"
+      "heading_en": "1. Hanxu Yanxiu Archway & East Palace Gate"
     },
     {
       "en": "Look at the three big characters \"Yi He Yuan\" on the door lintel, personally written by Emperor Guangxu.",
       "zh": "眼前这座雕梁画栋的牌坊就是\"涵虚罨秀坊\"。穿过牌坊就是颐和园的正门\"东宫门\"，门楣上的\"颐和园\"三个大字是光绪皇帝亲笔写的。",
       "heading_zh": "",
-      "heading_en": "III. Palace Area – The Imperial \"Political & Living Zone\" — 1. Hanxu Yanxiu Archway & East Palace Gate"
+      "heading_en": "1. Hanxu Yanxiu Archway & East Palace Gate"
     },
     {
       "en": "The Hall of Benevolent Longevity is the largest palace in the Summer Palace, equivalent to the Hall of Supreme Harmony in the Forbidden City.",
@@ -345,19 +346,19 @@
       "en": "The Long Corridor starts from the Moon-inviting Gate in the east and ends at the Stone Zhang Pavilion in the west, with a total length of 728 meters and 273 bays.",
       "zh": "长廊东起邀月门，西到石丈亭，全长728米，有273间，1992年列入《吉尼斯世界纪录》。最绝的是廊顶的彩绘——14000多幅，没有一幅重样的！",
       "heading_zh": "",
-      "heading_en": "IV. Front Hill of Longevity Hill – \"Architectural Essence\" — 1. Long Corridor"
+      "heading_en": "1. Long Corridor"
     },
     {
       "en": "It was listed in the Guinness World Records in 1992.",
       "zh": "长廊东起邀月门，西到石丈亭，全长728米，有273间，1992年列入《吉尼斯世界纪录》。最绝的是廊顶的彩绘——14000多幅，没有一幅重样的！",
       "heading_zh": "",
-      "heading_en": "IV. Front Hill of Longevity Hill – \"Architectural Essence\" — 1. Long Corridor"
+      "heading_en": "1. Long Corridor"
     },
     {
       "en": "Its most amazing feature is the colored paintings on the beams—more than 14,000 paintings in total and no two identical ones.",
       "zh": "长廊东起邀月门，西到石丈亭，全长728米，有273间，1992年列入《吉尼斯世界纪录》。最绝的是廊顶的彩绘——14000多幅，没有一幅重样的！",
       "heading_zh": "",
-      "heading_en": "IV. Front Hill of Longevity Hill – \"Architectural Essence\" — 1. Long Corridor"
+      "heading_en": "1. Long Corridor"
     },
     {
       "en": "From bottom to top: Hall of Dispelling Clouds—the core hall and banquet hall for Cixi's birthday celebrations;",

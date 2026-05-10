@@ -2,6 +2,7 @@
   "id": "shisanling",
   "title_zh": "明十三陵",
   "title_en": "The Ming Tombs",
+  "description": "明代十三帝长眠之地，群山环抱气脉绵延",
   "sections": [
     {
       "heading_zh": "",
@@ -15,7 +16,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "I. Overview & Historical Evolution — 1. Location & Layout",
+      "heading_en": "1. Location & Layout",
       "paragraphs": [
         {
           "en": "The Ming Tombs are located at the southern foot of Tianshou Mountain in Changping District, covering about 120 square kilometers. The layout follows the ancient Chinese \"feng shui treasure land\" principle: backing onto Tianshou Mountain, facing a gentle river, 13 mausoleums distributed around Changling Tomb like stars surrounding the moon. The entire cemetery is led by the Divine Way, lined with stone figures and stone animals.",
@@ -65,7 +66,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "II. Changling Tomb – The \"Wooden Miracle\" — 1. Emperor Yongle's Life",
+      "heading_en": "1. Emperor Yongle's Life",
       "paragraphs": [
         {
           "en": "Emperor Yongle was the third emperor of the Ming Dynasty, reigning for 22 years. He accomplished three milestone events: launching the Jingnan Campaign, relocating the capital to Beijing, and building Changling Tomb.",
@@ -75,7 +76,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "2. Central Axis Buildings — From outside to inside: Tomb Gate, Gate of Eminent Favor, Hall of Eminent Favor, Inner Red Gate, Ming Tower, Treasure City.",
+      "heading_en": "From outside to inside: Tomb Gate, Gate of Eminent Favor, Hall of Eminent Favor, Inner Red Gate, Ming Tower, Treasure City.",
       "paragraphs": [
         {
           "en": "",
@@ -95,7 +96,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "III. Dingling Tomb – The \"Underground Palace\" — 1. Tomb Owner & Ground Buildings",
+      "heading_en": "1. Tomb Owner & Ground Buildings",
       "paragraphs": [
         {
           "en": "Dingling is the mausoleum of Emperor Wanli, who reigned for 48 years—the longest in the Ming Dynasty. Most ground buildings were damaged by wars; our key visit is the underground palace, 27 meters deep.",
@@ -135,7 +136,7 @@
     },
     {
       "heading_zh": "",
-      "heading_en": "IV. World Honor — In 2003, the Ming Tombs were inscribed on the UNESCO World Heritage List, praised as \"an outstanding representative of Ming imperial mausoleums.\"",
+      "heading_en": "In 2003, the Ming Tombs were inscribed on the UNESCO World Heritage List, praised as \"an outstanding representative of Ming imperial mausoleums.\"",
       "paragraphs": [
         {
           "en": "",
@@ -177,19 +178,19 @@
       "en": "The Ming Tombs are located at the southern foot of Tianshou Mountain in Changping District, covering about 120 square kilometers.",
       "zh": "明十三陵位于北京昌平区天寿山南麓，占地约120平方公里，整体布局遵循\"风水宝地\"原则：背靠天寿山，前临蜿蜒小河，13座陵寝以长陵为中心环绕分布。整个陵区以神道为先导，两旁排列着石人石兽。",
       "heading_zh": "",
-      "heading_en": "I. Overview & Historical Evolution — 1. Location & Layout"
+      "heading_en": "1. Location & Layout"
     },
     {
       "en": "The layout follows the ancient Chinese \"feng shui treasure land\" principle: backing onto Tianshou Mountain, facing a gentle river, 13 mausoleums distributed around Changling Tomb like stars surrounding the moon.",
       "zh": "明十三陵位于北京昌平区天寿山南麓，占地约120平方公里，整体布局遵循\"风水宝地\"原则：背靠天寿山，前临蜿蜒小河，13座陵寝以长陵为中心环绕分布。整个陵区以神道为先导，两旁排列着石人石兽。",
       "heading_zh": "",
-      "heading_en": "I. Overview & Historical Evolution — 1. Location & Layout"
+      "heading_en": "1. Location & Layout"
     },
     {
       "en": "The entire cemetery is led by the Divine Way, lined with stone figures and stone animals.",
       "zh": "明十三陵位于北京昌平区天寿山南麓，占地约120平方公里，整体布局遵循\"风水宝地\"原则：背靠天寿山，前临蜿蜒小河，13座陵寝以长陵为中心环绕分布。整个陵区以神道为先导，两旁排列着石人石兽。",
       "heading_zh": "",
-      "heading_en": "I. Overview & Historical Evolution — 1. Location & Layout"
+      "heading_en": "1. Location & Layout"
     },
     {
       "en": "Sorted chronologically: Changling (Yongle), Xianling (Hongxi), Jingling (Xuande), Yuling (Zhengtong/Tianshun), Maoling (Chenghua), Tailing (Hongzhi), Kangling (Zhengde), Yongling (Jiajing), Zhaoling (Longqing), Dingling (Wanli), Qingling (Taichang), Deling (Tianqi), Siling (Chongzhen).",
@@ -249,13 +250,13 @@
       "en": "Emperor Yongle was the third emperor of the Ming Dynasty, reigning for 22 years.",
       "zh": "永乐皇帝在位22年，完成三件大事：发动靖难之役、迁都北京、修建长陵。",
       "heading_zh": "",
-      "heading_en": "II. Changling Tomb – The \"Wooden Miracle\" — 1. Emperor Yongle's Life"
+      "heading_en": "1. Emperor Yongle's Life"
     },
     {
       "en": "He accomplished three milestone events: launching the Jingnan Campaign, relocating the capital to Beijing, and building Changling Tomb.",
       "zh": "永乐皇帝在位22年，完成三件大事：发动靖难之役、迁都北京、修建长陵。",
       "heading_zh": "",
-      "heading_en": "II. Changling Tomb – The \"Wooden Miracle\" — 1. Emperor Yongle's Life"
+      "heading_en": "1. Emperor Yongle's Life"
     },
     {
       "en": "This grand hall, 29 meters high with 9 bays in width, is the largest existing wooden structural hall in China.",
@@ -279,13 +280,13 @@
       "en": "Dingling is the mausoleum of Emperor Wanli, who reigned for 48 years—the longest in the Ming Dynasty.",
       "zh": "定陵是万历皇帝的陵寝，在位48年，明朝最久。地面建筑大部分损毁，重点参观地下27米深处的地宫。",
       "heading_zh": "",
-      "heading_en": "III. Dingling Tomb – The \"Underground Palace\" — 1. Tomb Owner & Ground Buildings"
+      "heading_en": "1. Tomb Owner & Ground Buildings"
     },
     {
       "en": "Most ground buildings were damaged by wars; our key visit is the underground palace, 27 meters deep.",
       "zh": "定陵是万历皇帝的陵寝，在位48年，明朝最久。地面建筑大部分损毁，重点参观地下27米深处的地宫。",
       "heading_zh": "",
-      "heading_en": "III. Dingling Tomb – The \"Underground Palace\" — 1. Tomb Owner & Ground Buildings"
+      "heading_en": "1. Tomb Owner & Ground Buildings"
     },
     {
       "en": "Excavation started in 1956. The team found the Diamond Wall, the thick wall sealing the underground palace.",
